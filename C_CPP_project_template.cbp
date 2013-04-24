@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="待命名的C/C++專案(C/C++ project to be named)" />
+		<Option title="待命名的C或C++專案(C or C++ project to be named)" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
