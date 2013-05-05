@@ -17,7 +17,7 @@
         * Eclipse 整合式開發環境專案檔案
     * .cproject
         * Eclipse CDT 專案檔案
-    * README.md.txt
+    * README.md
         * 本說明文件  
           This documentation
 
