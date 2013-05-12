@@ -45,6 +45,7 @@ temp/
 #排除建構出來的Object code檔案
 *.o
 *.obj
+Object_code/
 
 #因為可執行檔可能包含直譯語言所以不排除可執行檔目錄
 ![Bb]in/
@@ -53,6 +54,9 @@ temp/
 #排除整合式開發環境各個profile建構出來的產物
 [Dd]ebug*/
 [Rr]elease*/
+
+#排除建構產物目錄
+[Bb]uild/
 	
 #排除二進位可執行檔常見副檔名
 *.exe
@@ -260,6 +264,10 @@ planAhead.jou
 	#此檔案似乎會由Dev-C++自動生成
 Makefile.win
 
+# CodeLite 整合式開發環境排除規則
+	# 程式碼自動完成功能 tag 資料庫
+*.tags
+
 #Linux作業系統核心開發用排除規則
 .tmp_versions/
 .*.cmd
@@ -268,6 +276,20 @@ modules.order
 *.mod.c
 	#排除建構出來的Linux Kernel Object
 *.ko
+
+#排除 intel HEX 程式
+*.hex
+
+#Keil μVision 整合式開發環境排除規則
+#http://www.keil.com/support/man/docs/uv4/uv4_b_filetypes.htm
+	#µVision4 project screen layout file. The extension [.user-name] is added when working in a work-group environment. When this file is missing, the µVision4 default layout is used. This XML file is not mandatory.
+*.uvgui.*
+*.M51
+
+# Geany 整合是開發環境排除規則
+*.gch
+!.geanyprj
+	#Geany alternate project plugin
 
 #我自己的喜好設定
 	#Resources目錄底下的東西為相關資源不要排除掉
