@@ -9,6 +9,8 @@
     * Source_code/
         * 軟體的來源程式碼  
           Software's source code
+    * Object_code/
+        * 軟體的目標程式碼
     * Build/
         * ${Target or configuration name}/
             * 軟體的建構產物  
