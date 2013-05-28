@@ -7,7 +7,7 @@
 待辦事項(todos)：
   Todos is now stored on github
 智慧財產授權條款：
-*//* Copyright (C) 2012 林博仁(Henry Lin)
+*//* Copyright (C) 2012, 2013 林博仁(Henry Lin)
    *
    * This library is free software; you can redistribute it and/or
    * modify it under the terms of the GNU Lesser General Public
@@ -27,11 +27,9 @@
 /*--------------程式碼開始(Code Started)--------------*/
 /*--------------前期處理器指令(Preprocessor Directive)--------------*/
 /*////////環境設定(Environment Settings)////////*/
-/* we need project specified settings*/
-#include "../Project_specific_configurations/System_category.h"
 
 /*////////程式所include的標頭檔(Included Headers)////////*/
-/* Standard I/O functions */
+/* we need printf and scanf*/
   #include <stdio.h>
 
 /* we need system() */
@@ -53,7 +51,7 @@
 
 
 
-/*暫停運行函式*/
+/* 暫停運行函式 */
 short int pauseProgram(void)
   {
     printf("\n------------------------------------------------\n");
@@ -73,15 +71,26 @@ short int pauseProgram(void)
 
       if(inputChar == 'y' || inputChar == 'Y'){
         /*丟掉換行符號*/
-        scanf("%*c");
+        if(scanf("%*c") > 0){
+#ifndef _NDEBUG
+					printf("[DEBUG]input stream cleared!");
+#endif // _NDEBUG
+        };
 
         /*清空螢幕*/
-        if(SYSTEM_CATEGORY == 0){
-          system("cls");
-        }
-        else{
-          system("clear");
-        }
+#ifdef _WIN32
+				system("cls");
+#elif defined(unix) || defined(__unix__) || defined(__unix)
+				system("clear");
+	#ifndef _NDEBUG
+				printf("[DEBUG]__unix__ cleared the screen!\n");
+	#endif // _NDEBUG
+#else
+				system("clear");
+	#ifndef _NDEBUG
+				printf("[DEBUG]__else__ cleared the screen!\n");
+	#endif // _NDEBUG
+#endif // _WIN32
 
         /*return true*/
         return 1;

@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="待命名的C或C++專案(C or C++ project to be named)" />
+		<Option title="待命名的C或C++專案" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -95,16 +95,15 @@
 		<Unit filename="Source_code/Project_specific_configurations/Math.h" />
 		<Unit filename="Source_code/Project_specific_configurations/Max_value.h" />
 		<Unit filename="Source_code/Project_specific_configurations/Software_info.h" />
-		<Unit filename="Source_code/Project_specific_configurations/System_category.h" />
-		<Unit filename="Source_code/Show_software_info/Show_software_info.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Source_code/Show_software_info/Show_software_info.h" />
 		<Unit filename="Source_code/main.cpp" />
-		<Unit filename="Source_code/pauseProgram/Pause_program.c">
+		<Unit filename="Source_code/pauseProgram/pauseProgram.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Source_code/pauseProgram/Pause_program.h" />
+		<Unit filename="Source_code/pauseProgram/pauseProgram.h" />
+		<Unit filename="Source_code/showSoftwareInfo/showSoftwareInfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Source_code/showSoftwareInfo/showSoftwareInfo.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

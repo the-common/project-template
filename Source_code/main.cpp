@@ -14,9 +14,9 @@
   /* Vdragons_C_CPP_Libraries_Collection
    * https://github.com/Vdragon/Vdragons_C_CPP_Libraries_Collection */
     /* for pausing program definition */
-		  #include "pauseProgram/Pause_program.h"
+		  #include "pauseProgram/pauseProgram.h"
     /* for showing software info */
-		  #include "Show_software_info/Show_software_info.h"
+		  #include "showSoftwareInfo/showSoftwareInfo.h"
 
 /* 常數與巨集
  * Constants & Macros */
@@ -34,7 +34,7 @@
   int main(int argc, char *argv[]){
   /*用來重新運行程式的label*/
   restart_program:
-    show_software_info("主程式");
+    showSoftwareInfo("主程式");
 
     /*暫停程式運行（於main函式中）*/
     if(pauseProgram() == 1){
