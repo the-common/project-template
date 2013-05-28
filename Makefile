@@ -24,18 +24,18 @@ OPTION_MKDIR_CREATE_PARENT_AUTOMATICALLY = --parent
 # Main content
 
 ## Generic build rules
-### C source code
-# %.o : %.c
-# 	${COMPILER_C} ${OPTION_GCC_ONLY_COMPILE} ${OPTION_GCC_OUTPUT} %.o %.c
-# $.o : %.cpp
-# 	${COMPILER_CPP} ${OPTION_GPP_ONLY_COMPILE} ${OPTION_GPP_OUTPUT} %.o %.cpp
+### C/CPP source code
+%.o : %.c
+	${COMPILER_C} ${OPTION_GCC_ONLY_COMPILE} ${OPTION_GCC_OUTPUT} ${DIR_OBJECT_CODE}/${NAME_TARGET}/%.o %.c
+%.o : %.cpp
+	${COMPILER_CPP} ${OPTION_GPP_ONLY_COMPILE} ${OPTION_GPP_OUTPUT} ${DIR_OBJECT_CODE}/${NAME_TARGET}/%.o %.cpp
 
 ## Specific build rules
 .PHONY : build
 build : compile link
 
 .PHONY : compile
-compile :
+compile : 
 	mkdir ${OPTION_MKDIR_CREATE_PARENT_AUTOMATICALLY} ${DIR_OBJECT_CODE}/${NAME_TARGET}
 	${COMPILER_CPP} ${OPTION_GCC_ONLY_COMPILE} ${DIR_SOURCE_CODE}/main.cpp ${OPTION_GPP_OUTPUT} ${DIR_OBJECT_CODE}/${NAME_TARGET}/main.o
 	mkdir ${OPTION_MKDIR_CREATE_PARENT_AUTOMATICALLY} ${DIR_OBJECT_CODE}/${NAME_TARGET}/showSoftwareInfo
