@@ -1,6 +1,7 @@
 # The format of this file is based on GNU_Make_Makefile_templates
 # https://github.com/Vdragon/GNU_Make_Makefile_templates
-# Macros
+# 變數
+# Variables
 NAME_PROJECT = C_CPP_project_template
 NAME_TARGET = Unix_x86_32bit_debug
 NAME_TYPE_EXECUTABLE = exe
@@ -17,12 +18,8 @@ OPTION_GCC_OUTPUT = -o
 OPTION_GPP_OUTPUT = ${OPTION_GCC_OUTPUT}
 OPTION_MKDIR_CREATE_PARENT_AUTOMATICALLY = --parent
 
-# 變數
-# objects = 
-
 # 主要內容
 # Main content
-
 ## Generic build rules
 ### C/CPP source code
 %.o : %.c
