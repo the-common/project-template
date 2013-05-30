@@ -5,8 +5,8 @@
 	This program's frame is based on "C/C++ program templates" project
 		https://github.com/Vdragon/C_CPP_program_templates
 */
-/* 程式所 include 之函式庫的標頭檔
- * Included Library Headers */
+/* 程式所引入(include)之函式庫的標頭(header)檔案
+ * Included library headers */
 	/* Standard C/C++ library */
     /* for EXIT_* return code definition */
 		  #include <stdlib.h>
@@ -18,19 +18,23 @@
     /* for showing software info */
 		  #include "showSoftwareInfo/showSoftwareInfo.h"
 
-/* 常數與巨集
- * Constants & Macros */
+/* 常數與巨集的定義
+ * Definition of constants & macros */
 
-/* Definition of data type, enumeration, data structure and class */
+/* 資料類型、enumeration、資料結構與物件類別的定義
+ * Definition of data type, enumeration, data structure and class */
 
-/* 函式雛型
- * Function Prototypes */
+/* 函式的宣告（函式雛型）
+ * Function declarations (function prototypes)
+     用途
+     Usage 
+       預先告訴編譯器(compiler)子程式的存在 */
 
 /* 全域變數
  * Global Variables */
 
-/* 主要程式碼
- * Main Code */
+/* 函式的實作
+ * Function implementations */
   int main(int argc, char *argv[]){
   /*用來重新運行程式的label*/
   restart_program:
