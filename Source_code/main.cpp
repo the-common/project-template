@@ -1,12 +1,19 @@
 /*
-	主程式
+  請見本檔案的標頭(header)檔案以得到更多關於本檔案的說明
 
-	本程式的框架基於「C/C++ program templates」專案
-	This program's frame is based on "C/C++ program templates" project
-		https://github.com/Vdragon/C_CPP_program_templates
+  本程式的框架基於「C/C++ 程式範本」專案
+  This program's frame is based on "C/C++ program templates" project
+    https://github.com/Vdragon/C_CPP_program_templates
+  建議編輯器設定
+  Recommended editor settings
+    Indentation by tab character
+    Tab character width = 2 space characters
 */
 /* 程式所引入(include)之函式庫的標頭(header)檔案
  * Included library headers */
+  /* 自己的 header 檔案 */
+    #include "main.hpp"
+
   /* 標準 C 函式庫
    * Standard C libraries
    *   C library - C++ Reference
@@ -124,7 +131,7 @@
   int main(int argc, char *argv[]){
   /*用來重新運行程式的label*/
   restart_program:
-    showSoftwareInfo("主程式");
+    showSoftwareInfo(PROGRAM_NAME);
 
     /* 暫停程式運行（於main函式中） */
     if(pauseProgram() == 1){
