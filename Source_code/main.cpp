@@ -40,7 +40,7 @@
   restart_program:
     showSoftwareInfo("主程式");
 
-    /*暫停程式運行（於main函式中）*/
+    /* 暫停程式運行（於main函式中） */
     if(pauseProgram() == 1){
       goto restart_program;
     }
