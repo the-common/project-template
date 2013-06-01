@@ -128,15 +128,16 @@
 
 /* 函式的實作
  * Function implementations */
-  int main(int argc, char *argv[]){
-  /*用來重新運行程式的label*/
-  restart_program:
-    showSoftwareInfo(PROGRAM_NAME);
+  /* main 函式 - C/C++ 程式的進入點(entry point) */
+    int main(int argc, char *argv[]){
+    /*用來重新運行程式的label*/
+    restart_program:
+      showSoftwareInfo(PROGRAM_NAME);
 
-    /* 暫停程式運行（於main函式中） */
-    if(pauseProgram() == 1){
-      goto restart_program;
+      /* 暫停程式運行（於main函式中） */
+      if(pauseProgram() == 1){
+        goto restart_program;
+      }
+
+      return EXIT_SUCCESS;
     }
-
-    return EXIT_SUCCESS;
-  }
