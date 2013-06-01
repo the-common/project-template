@@ -135,9 +135,9 @@
       showSoftwareInfo(PROGRAM_NAME);
 
       /* 暫停程式運行（於main函式中） */
-      if(pauseProgram() == 1){
-        goto restart_program;
-      }
+        if(pauseProgram() == 1){
+          goto restart_program;
+        }
 
       return EXIT_SUCCESS;
     }
