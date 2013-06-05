@@ -23,13 +23,14 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=5
+current_page=6
 FILE_NAME_0=441;C++;0;16;1;1;0;%2Fhome%2FVdragon%2F工作空間%2FProgramming%2FTemplates%2FC_CPP_project_template%2FSource_code%2Fmain.cpp;0;4
 FILE_NAME_1=0;C;0;16;1;1;0;%2Fhome%2FVdragon%2FWorkspace%2FProgramming%2FTemplates%2FC_CPP_project_template%2FSource_code%2FProject_specific_configurations%2FDebug.h;0;4
 FILE_NAME_2=0;C;0;16;1;1;0;%2Fhome%2FVdragon%2FWorkspace%2FProgramming%2FTemplates%2FC_CPP_project_template%2FSource_code%2FProject_specific_configurations%2FMath.h;0;4
 FILE_NAME_3=0;C;0;16;1;1;0;%2Fhome%2FVdragon%2FWorkspace%2FProgramming%2FTemplates%2FC_CPP_project_template%2FSource_code%2FProject_specific_configurations%2FMax_value.h;0;4
 FILE_NAME_4=0;C;0;16;1;1;0;%2Fhome%2FVdragon%2FWorkspace%2FProgramming%2FTemplates%2FC_CPP_project_template%2FSource_code%2FProject_specific_configurations%2FSoftware_info.h;0;4
 FILE_NAME_5=975;Python;0;16;1;1;0;%2Fusr%2Fshare%2Fibus%2Fsetup%2Fmain.py;0;4
+FILE_NAME_6=977;CSS;0;16;1;1;0;%2Fvar%2Ftmp%2Fkdecache-Vdragon%2Fkrun%2F7519_0_Taiwan_SOPA%2B.css;0;4
 
 [VTE]
 last_dir=/home/Vdragon
