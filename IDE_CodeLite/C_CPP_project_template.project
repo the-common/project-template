@@ -5,24 +5,6 @@
       <![CDATA[00010001N0005Debug000000000000]]>
     </Plugin>
   </Plugins>
-  <VirtualDirectory Name="Source_code">
-    <VirtualDirectory Name="Project_specific_configurations">
-      <File Name="Source_code/Project_specific_configurations/Max_value.h"/>
-      <File Name="Source_code/Project_specific_configurations/Debug.h"/>
-      <File Name="Source_code/Project_specific_configurations/Software_info.h"/>
-      <File Name="Source_code/Project_specific_configurations/Math.h"/>
-      <File Name="Source_code/Project_specific_configurations/System_category.h"/>
-    </VirtualDirectory>
-    <VirtualDirectory Name="Show_software_info">
-      <File Name="Source_code/Show_software_info/Show_software_info.h"/>
-      <File Name="Source_code/Show_software_info/Show_software_info.c"/>
-    </VirtualDirectory>
-    <VirtualDirectory Name="pauseProgram">
-      <File Name="Source_code/pauseProgram/Pause_program.h"/>
-      <File Name="Source_code/pauseProgram/Pause_program.c"/>
-    </VirtualDirectory>
-    <File Name="Source_code/main.cpp"/>
-  </VirtualDirectory>
   <Description/>
   <Dependencies/>
   <Settings Type="Executable">
@@ -110,4 +92,22 @@
       </Completion>
     </Configuration>
   </Settings>
+  <VirtualDirectory Name="Source_code">
+    <File Name="../Source_code/main.hpp"/>
+    <File Name="../Source_code/main.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Project_specific_configurations">
+    <File Name="../Source_code/Project_specific_configurations/Max_value.h"/>
+    <File Name="../Source_code/Project_specific_configurations/Debug.h"/>
+    <File Name="../Source_code/Project_specific_configurations/Software_info.h"/>
+    <File Name="../Source_code/Project_specific_configurations/Math.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="pauseProgram">
+    <File Name="../Source_code/pauseProgram/pauseProgram.c"/>
+    <File Name="../Source_code/pauseProgram/pauseProgram.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="showSoftwareInfo">
+    <File Name="../Source_code/showSoftwareInfo/showSoftwareInfo.h"/>
+    <File Name="../Source_code/showSoftwareInfo/showSoftwareInfo.c"/>
+  </VirtualDirectory>
 </CodeLite_Project>

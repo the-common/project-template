@@ -166,9 +166,11 @@ UpgradeLog*.XML
 #Eclipse整合是開發環境排除規則
 	#不排除Eclipse專案檔案
 !.project
+!IDE_Eclipse/.project
 	#CDT Plugin排除規則
 		#不排除CDT專案檔案
 !.cproject
+!IDE_Eclipse/.project
 		#排除CDT於建構專案時產生的檔案
 *.d
 *.mk
@@ -267,6 +269,7 @@ Makefile.win
 # CodeLite 整合式開發環境排除規則
 	# 程式碼自動完成功能 tag 資料庫
 *.tags
+IDE_CodeLite/*.txt
 
 #Linux作業系統核心開發用排除規則
 .tmp_versions/
