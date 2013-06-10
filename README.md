@@ -15,7 +15,7 @@
         * ${Target or configuration name}/
             * 軟體的建構產物  
               Software's built artifacts
-    * IDE_*
+    * IDE_*/
         * 跟 * IDE 相關的檔案與建構產物
     * .project
         * Eclipse 整合式開發環境專案檔案
