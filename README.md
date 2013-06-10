@@ -17,6 +17,8 @@
               Software's built artifacts
     * IDE_*/
         * 跟 * IDE 相關的檔案與建構產物
+    * Translations/
+        * 翻譯資料
     * .project
         * Eclipse 整合式開發環境專案檔案
     * .cproject
