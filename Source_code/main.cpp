@@ -137,7 +137,11 @@
   /* main 函式 - C/C++ 程式的進入點(entry point) */
     int main(int argc, char *argv[]){
     	/* 初始化 GNU gettext 函式庫 */
-
+				/* Use system default locale instead of "C" locale
+					setlocale(LC_MESSAGES, "");
+				bindtextdomain(MESSAGE_DOMAIN, "Translations");
+				textdomain(MESSAGE_DOMAIN);
+				bind_textdomain_codeset(MESSAGE_DOMAIN, MESSAGE_CHARSET); */
 
     /*用來重新運行程式的label*/
     restart_program:
