@@ -43,8 +43,8 @@
 			#include <limits.h>
 			#include <climits> */
 		/* C localization library
-			#include <locale.h>
-			#include <clocale> */
+			#include <locale.h> */
+			#include <clocale>
 		/* C numerics library
 			#include <math.h>
 			#include <cmath> */
@@ -113,7 +113,7 @@
 	 *   https://github.com/Vdragon/Vdragons_C_CPP_Libraries_Collection */
 		#include "pauseProgram/pauseProgram.h"
 		#include "showSoftwareInfo/showSoftwareInfo.h"
-
+		#include "Project_specific_configurations/GNU_gettext_library.h"
 
 /* 常數與巨集的定義
  * Definition of constants & macros */
@@ -137,11 +137,11 @@
   /* main 函式 - C/C++ 程式的進入點(entry point) */
     int main(int argc, char *argv[]){
     	/* 初始化 GNU gettext 函式庫 */
-				/* Use system default locale instead of "C" locale
+				/* Use system default locale instead of "C" locale */
 					setlocale(LC_MESSAGES, "");
-				bindtextdomain(MESSAGE_DOMAIN, "Translations");
+				bindtextdomain(MESSAGE_DOMAIN, LOCALEDIR);
 				textdomain(MESSAGE_DOMAIN);
-				bind_textdomain_codeset(MESSAGE_DOMAIN, MESSAGE_CHARSET); */
+				bind_textdomain_codeset(MESSAGE_DOMAIN, MESSAGE_CHARSET);
 
     /*用來重新運行程式的label*/
     restart_program:
