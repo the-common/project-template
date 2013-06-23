@@ -1,4 +1,4 @@
-（如果此說明文件位於未稱做「C 或 C++ 程式語言專案範本」的專案中則代表本說明文件內容尚未初始化，內　容　僅　供　參　考，請向該專案的開發者詢問實際內容為何）  
+（如果此說明文件位於　未　稱作「C 或 C++ 程式語言專案範本」的專案中則代表本說明文件內容尚未被初始化，內　容　僅　供　參　考，請向該專案的開發者詢問實際內容為何）  
 (If this document is located in project NOT named "C or C++ project template" indicates the content of this docment hasn't been initialized and ONLY FOR REFERENCE, please ask the actual project's developer for the actual content of this document.)
 
 # C 或 C++ 程式語言專案範本<br />C or C++ project template
