@@ -46,7 +46,7 @@
 		/* 常數與巨集的定義
 		* Definition of constants & macros */
 			#define MESSAGE_DOMAIN "undefined.message.domain"
-			#define LOCALEDIR "Translations"
+			#define LOCALEDIR NULL
 			#define MESSAGE_CHARSET "UTF-8"
 
 		/* 資料類型、enumeration、資料結構與物件類別的定義

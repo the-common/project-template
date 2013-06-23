@@ -1,40 +1,36 @@
-/*Show_software_info.c
------------------------------------
-更新紀錄 | Changelog
-  Changelog is now stored on GitHub
-已知問題 | Known Issues
-  Known issues is now stored on GitHub
-待辦事項 | Todos
-  Todos is now stored on GitHub
-著作權宣告 | Copyright notice
-  Copyright 2012 林博仁(Henry Lin, pika1021@gmail.com)
-智慧財產授權條款：
-  Show_software_info.c is part of Show_software_info
-  Show_software_info is free software: you can redistribute it and/or modify
-  it under the terms of the GNU Lesser General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
+/*
+  請見本檔案的標頭(header)檔案以得到更多關於本檔案的說明
 
-  Show_software_info is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU Lesser General Public License for more details.
-
-  You should have received a copy of the GNU Lesser General Public License
-  along with Show_software_info.  If not, see <http://www.gnu.org/licenses/>.
+  本程式的框架基於「C/C++ 程式範本」專案
+  This program's frame is based on "C/C++ program templates" project
+    https://github.com/Vdragon/C_CPP_program_templates
+  建議編輯器設定
+  Recommended editor settings
+    Indentation by tab character
+    Tab character width = 2 space characters
 */
 
 /*--------------程式碼開始(Code Started)--------------*/
 /*--------------前期處理器指令(Preprocessor Directive)--------------*/
 /*////////程式所include之函式庫的標頭檔(Included Library Headers)////////*/
 /*我們需要Project_specific_configurations中定義的軟體訊息*/
+/* 自己的 header */
+#include "showSoftwareInfo.h"
+
 #include "../Project_specific_configurations/Software_info.h"
 
 /*我們需要printf()*/
 #include <stdio.h>
 
-/*////////常數與巨集(Constants & Macros)////////*/
+/* printSomething librfary */
+#include "../printSomething/printSomething.h"
 
+/* GNU gettext library */
+#include <libintl.h>
+#define _(String) dgettext(MODULE_VC_CPP_LIB_SHOWSHOFTWAREINFO, String)
+
+/*////////常數與巨集(Constants & Macros)////////*/
+#define LINE_LENGTH 50
 /*////////其他前期處理器指令(Other Preprocessor Directives////////*/
 
 /*--------------全域宣告與定義(Global Declaration & Definition)--------------*/
@@ -43,31 +39,55 @@
 /*////////函式雛型(Function Prototypes)////////*/
 
 /*////////全域變數(Global Variables)////////*/
+	/* 判斷 gettext 函式庫有無初始化 */
+		static short gettext_is_initialized = 0;
 
 /*--------------主要程式碼(Main Code)--------------*/
 /* 顯示軟體資訊的函式
    *  印出資訊，將控制交還給主要程式*/
 void showSoftwareInfo(const char program_name[])
 {
+	if(gettext_is_initialized == 0){
+		bindtextdomain(MODULE_VC_CPP_LIB_SHOWSHOFTWAREINFO, "Translations");
+		gettext_is_initialized = 1;
+	}
+
+	printLine(
+			PRINTSOMETHING_COMPONENT_HYPHEN_MINUS,
+			LINE_LENGTH);
+
   /*顯示程式名稱及著作權宣告*/
   printf("%s\n", program_name);
-  printf("Copyright " SOFTWARE_RELEASE_YEAR " " DEVELOPER_NAME "<" DEVELOPER_EMAIL ">\n");
+  printf(_("智慧財產權生效年 %s © 擁有人：%s <%s>\n"), SOFTWARE_RELEASE_YEAR, DEVELOPER_NAME, DEVELOPER_EMAIL);
   putchar('\n');
 
   /*顯示授權條款*/
-  printf("%s is part of " SOFTWARE_NAME ".\n", program_name);
-  printf(SOFTWARE_NAME " is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or(at your option) any later version.\n");
+  printf(_("%s 是 %s 的一部份。\n"), program_name, SOFTWARE_NAME);
+  printf(_("%s 為自由軟體：您可以在 Free Software Foundation 所出版的 GNU Lesser General Public License 第 3 版或您可任意選擇之其未來版本的條款限制之下重新散佈或修改此軟體。\n"), SOFTWARE_NAME);
   putchar('\n');
 
   /* 顯示免責條款*/
-  printf(SOFTWARE_NAME " is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.\n");
+  printf(_("%s 以其能發揮用途的期望被散佈，但是　並　不　包　含　任　何　保　證　，甚至不包含商業上使用的隱含保證或特定用途的適用性保證。參閱 GNU Lesser General Public License 以了解更多細節。\n"), SOFTWARE_NAME);
   putchar('\n');
 
   /*顯示附帶說明*/
-  printf("You should have received a copy of the GNU Lesser General Public License along with " SOFTWARE_NAME ".  If not, see <http://www.gnu.org/licenses/>.\n");
+  printf(_("於 %s 中您應該有收到 GNU Lesser General Public License 的副本。如果沒有，請瀏覽 <http://www.gnu.org/licenses/>。\n"), SOFTWARE_NAME);
 
-  /*顯示分隔線*/
-  printf("---------------------------------\n");
+	printLine(
+			PRINTSOMETHING_COMPONENT_HYPHEN_MINUS,
+			LINE_LENGTH);
+
   /* 結束*/
   return ;
+}
+
+void showSoftwareInfoBeforeExit(void){
+	printLine("-", 20);
+	printf(_(
+		"程式運行結束。\n"
+		"本軟體的官方網站位於\n"
+		"	%s\n"
+		"如果發現任何軟體上的缺陷請至下列位址回報。\n"
+		"	%s\n"), SOFTWARE_OFFICIAL_SITE, SOFTWARE_ISSUE_REPORT_ADDRESS);
+	return;
 }

@@ -31,9 +31,15 @@
 /*////////程式所include的標頭檔(Included Headers)////////*/
 /* we need printf and scanf*/
   #include <stdio.h>
+#ifdef __gnu_linux__
+	#include <stdio_ext.h>
+#endif
 
 /* we need system() */
   #include <stdlib.h>
+
+/* definitions of Standard C character handling functions */
+	#include <ctype.h>
 
 /*////////常數與巨集(Constants & Macros)以及其他#define指令////////*/
 
@@ -45,54 +51,73 @@
 /*////////函式雛型(Function Prototypes)////////*/
 
 /*////////全域變數(Global Variables)////////*/
+	int generic_return_value;
 
 /*--------------主要程式碼(Main Code)--------------*/
 /* 暫停運行函式 */
-short int pauseProgram(void)
-  {
-    printf("\n------------------------------------------------\n");
+short int pauseProgram(void){
+	char inputChar;
 
-    printf("顯示運行結果，程式暫停運行...\nProgram paused for displaying execution result...\n");
+	printf(
+		"\n"
+		"------------------------------------------------\n"
+		"顯示運行結果，程式暫停運行...\n"
+		"Program paused for displaying execution result...\n");
 
-    {
-    /*儲存輸入的字元*/
-    char inputChar;
+	/* 迴避 input stream 殘留行結尾字元造成詢問訊息重覆印出的解決方案 */{
+#ifdef __gnu_linux__
+		/* glibc 實作了 __fpurge(3) 可以清除 input buffer */
+			__fpurge(stdin);
 
-    do{
-        printf("請問您要重新運行本程式嗎（Ｙ／Ｎ）？\nDo you want to execute this program again(Y/N)?");
-
-    /*確保輸入是正確的*/
-    }while(!((inputChar = getchar()) == 'y' || inputChar == 'Y'
-                || inputChar == 'n' || inputChar == 'N'));
-
-      if(inputChar == 'y' || inputChar == 'Y'){
-        /*丟掉換行符號*/
-        if(scanf("%*c") > 0){
-#ifndef _NDEBUG
-					printf("[DEBUG]input stream cleared!");
-#endif // _NDEBUG
-        };
-
-        /*清空螢幕*/
-#ifdef _WIN32
-				system("cls");
-#elif defined(unix) || defined(__unix__) || defined(__unix)
-				system("clear");
-	#ifndef _NDEBUG
-				printf("[DEBUG]__unix__ cleared the screen!\n");
-	#endif // _NDEBUG
 #else
-				system("clear");
+		fputs("（如果程式卡在此句末端請按 Enter 鍵繼續）", stdout);
+		if(scanf("%*c") > 0){
 	#ifndef _NDEBUG
-				printf("[DEBUG]__else__ cleared the screen!\n");
-	#endif // _NDEBUG
-#endif // _WIN32
+			printf("[DEBUG]input stream successfully cleared!");
+	#endif /* _NDEBUG */
+		}
+#endif
+	}
 
-        /*return true*/
-        return 1;
-      }
-    }
+	do{
+		printf(
+			"請問您要重新運行本程式嗎（Ｙ／Ｎ）？\n"
+			"Do you want to execute this program again(Y/N)?");
 
-    /*return false*/
-    return 0;
-  }
+		/* 確保輸入是正確的 */
+			inputChar = tolower(getchar());
+			if(inputChar == 'y' || inputChar == 'n'){
+				break;
+			}
+	}while(1);
+
+	if(inputChar == 'y'){
+		/* 可行的話清空螢幕 */{
+#ifdef _WIN32
+			generic_return_value = system("cls");
+#elif defined(unix) || defined(__unix__) || defined(__unix)
+			generic_return_value = system("clear");
+	#ifndef _NDEBUG
+			printf("[DEBUG]__unix__ cleared the screen!\n");
+	#endif /* _NDEBUG */
+#else
+			generic_return_value = system("clear");
+	#ifndef _NDEBUG
+			printf("[DEBUG]__else__ cleared the screen!\n");
+	#endif /* _NDEBUG */
+#endif /* _WIN32 */
+
+			if(generic_return_value != 0){
+				fprintf(
+					stderr,
+					"【警告】清除螢幕失敗！\n"
+					"【警告】回傳碼為 %d\n", generic_return_value);
+			}
+		}
+			/*return true*/
+			return 1;
+		}
+
+	/*return false*/
+	return 0;
+}
