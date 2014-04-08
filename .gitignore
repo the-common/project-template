@@ -163,31 +163,6 @@ UpgradeLog*.XML
 *.old
 *.vcxproj.filters
 
-#Eclipse整合式開發環境排除規則
-	#不排除Eclipse專案檔案
-!.project
-!IDE_Eclipse/.project
-	#CDT Plugin排除規則
-		#不排除CDT專案檔案
-!.cproject
-!IDE_Eclipse/.project
-		#排除CDT於建構專案時產生的檔案
-*.d
-*.mk
-	# External tool builders
-.externalToolBuilders/
-	# Locally stored "Eclipse launch configurations"
-*.launch
-	# PDT-specific
-.buildpath
-.settings/
-*.pydevproject
-.metadata	
-*~.nib
-local.properties
-.classpath
-.loadpath
-
 #HDL模組模擬產生的波形檔
 *.vcd
 
