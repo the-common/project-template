@@ -91,6 +91,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../Source_code/Error/C/Error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../Source_code/Error/C/Error.h" />
 		<Unit filename="../Source_code/Project_specific_configurations/Debug.h" />
 		<Unit filename="../Source_code/Project_specific_configurations/GNU_gettext_library.h" />
 		<Unit filename="../Source_code/Project_specific_configurations/Math.h" />
