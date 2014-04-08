@@ -163,7 +163,7 @@ UpgradeLog*.XML
 *.old
 *.vcxproj.filters
 
-#Eclipse整合是開發環境排除規則
+#Eclipse整合式開發環境排除規則
 	#不排除Eclipse專案檔案
 !.project
 !IDE_Eclipse/.project
