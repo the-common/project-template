@@ -1,0 +1,5 @@
+#Code::Blocks整合式開發環境排除規則
+	#由專案自動產生的檔案
+*.layout
+*.depend
+*.cbTemp
