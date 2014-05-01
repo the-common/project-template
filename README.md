@@ -1,5 +1,6 @@
-（如果此說明文件位於　未　稱作「C 或 C++ 程式語言專案範本」的專案中則代表本說明文件內容尚未被初始化，內　容　僅　供　參　考，請向該專案的開發者詢問實際內容為何）  
-(If this document is located in project NOT named "C or C++ project template" indicates the content of this docment hasn't been initialized and ONLY FOR REFERENCE, please ask the actual project's developer for the actual content of this document.)
+## 內容未初始化說明<br />Content not-initialized note
+如果您看到此段文字代表本檔案尚未被專案開發者自訂為他自己的版本，內容僅供參考。如果您是此專案的開發者請修改成自己需要的內容並移除此段落  
+If you see this paragraph means that this file is NOT customized to the project devloper's version and the content is for reference only.  If you're this project's developer please customize this file's content then remove this paragraph.
 
 # C 或 C++ 程式語言專案範本<br />C or C++ project template
 [https://github.com/Vdragon/C_CPP_project_template](https://github.com/Vdragon/C_CPP_project_template)
