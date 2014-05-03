@@ -1,4 +1,4 @@
-# Templates/README.md templates/
+# Templates/README
 ## 這是什麼？<br />What is this?
 保存說明檔範本的目錄
 

@@ -7,7 +7,7 @@
 	* 本說明檔案
 * Build_artifacts/
 	* 建構產物目錄範本（放在各個 IDE_* 、Toolchain_* 目錄下讓目錄下的版本追蹤排除規則檔案可以指定）
-* README.md templates/
+* README/
 	* 說明檔範本
 
 ## 本目錄底下內容適用之授權條款<br />License of the content under this directory
