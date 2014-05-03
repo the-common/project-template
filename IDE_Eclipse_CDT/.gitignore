@@ -20,3 +20,6 @@
 local.properties
 .classpath
 .loadpath
+
+# C_CPP_project_template ：排除 Build_artifacts/
+Build_artifacts/
