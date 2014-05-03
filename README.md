@@ -2,11 +2,12 @@
 如果您看到此段文字代表本檔案尚未被專案開發者自訂為他自己的版本，內容僅供參考。如果您是此專案的開發者請修改成自己需要的內容並移除此段落  
 If you see this paragraph means that this file is NOT customized to the project devloper's version and the content is for reference only.  If you're this project's developer please customize this file's content then remove this paragraph.
 
-# C 或 C++ 程式語言專案範本<br />C or C++ project template
+C 或 C++ 程式語言專案範本<br />C or C++ project template
 [https://github.com/Vdragon/C_CPP_project_template](https://github.com/Vdragon/C_CPP_project_template)
 
+# 〈專案名稱〉<br />&lt;Project_name&gt;
+
 ## 這是什麼？<br />What is this?
-這是一個用來當作 C 或 C++ 程式語言的專案的範本
 
 ## 檔案與目錄說明<br />File and directory description
 * /
@@ -23,18 +24,14 @@ If you see this paragraph means that this file is NOT customized to the project 
         * 跟 * IDE 相關的檔案與建構產物
     * Translations/
         * 翻譯資料
-    * .project
-        * Eclipse 整合式開發環境專案檔案
-    * .cproject
-        * Eclipse CDT 專案檔案
     * README.md
         * 本說明文件  
           This documentation
 
 ## 如何使用？<br />How to use it?
-1. 下載下來
-2. 將目錄改名為您的專案名稱
-3. 將目錄內的 .git 目錄跟 README.md 移除，將專案相關檔案改名為您的專案名稱
+1. 將程式碼封存檔下載下來並解壓縮
+2. 將 C_CPP_project_template 目錄改名為您的專案名稱
+3. 將上述目錄內的 .git 目錄（Git 版本控制系統的目錄）移除，將專案相關檔案改名為您的專案名稱
 4. 開啟專案，於專案的屬性設定將專案的名稱改為您的專案名稱
 5. Start coding :)
 
