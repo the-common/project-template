@@ -1,4 +1,4 @@
-# Build_artifacts/ —建構產物目錄<br />Build_artifacts/ - Built archifacts directory
+# Templates/Build_artifacts/
 這個目錄用來存放專案的建構產物（如可執行檔、函式庫等）。
 
 ## 目錄架構<br />Directory structure
