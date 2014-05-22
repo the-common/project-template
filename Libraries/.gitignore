@@ -1,0 +1,4 @@
+!libVCCL_Error.a
+!libVCCL_pauseProgram.a
+!libVCCL_printSomething.a
+!.gitignore

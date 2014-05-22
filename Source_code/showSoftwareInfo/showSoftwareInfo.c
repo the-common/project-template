@@ -23,7 +23,7 @@
 #include <stdio.h>
 
 /* printSomething librfary */
-#include "../printSomething/printSomething.h"
+#include <libVCCL_printSomething.h>
 
 /* GNU gettext library */
 #include <libintl.h>
