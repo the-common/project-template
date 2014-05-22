@@ -87,7 +87,7 @@
 				</Linker>
 			</Target>
 			<Target title="Generic_Debug">
-				<Option output="C_CPP_project_template" prefix_auto="1" extension_auto="1" />
+				<Option output="Build/$(TARGET_NAME)/$(PROJECT_NAME)" prefix_auto="0" extension_auto="1" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
@@ -98,7 +98,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Generic_Release">
-				<Option output="C_CPP_project_template" prefix_auto="1" extension_auto="1" />
+				<Option output="Build/$(TARGET_NAME)/$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
