@@ -99,7 +99,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Generic_Release">
-				<Option output="Build/$(TARGET_NAME)/$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option output="Build/$(TARGET_NAME)/$(PROJECT_NAME)" prefix_auto="0" extension_auto="1" />
 				<Option object_output="Object_code/$(TARGET_NAME)/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
