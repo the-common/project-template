@@ -6,6 +6,25 @@
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
+			<Target title="Generic_Debug">
+				<Option output="Build/$(TARGET_NAME)/$(PROJECT_NAME)" prefix_auto="0" extension_auto="1" />
+				<Option object_output="Object_code/$(TARGET_NAME)/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-ansi" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Generic_Release">
+				<Option output="Build/$(TARGET_NAME)/$(PROJECT_NAME)" prefix_auto="0" extension_auto="1" />
+				<Option object_output="Object_code/$(TARGET_NAME)/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+			</Target>
 			<Target title="Debug_Linux_x86_32bit">
 				<Option platforms="Unix;" />
 				<Option output="Build/$(TARGET_NAME)/$(PROJECT_NAME).exe" prefix_auto="0" extension_auto="0" />
@@ -85,25 +104,6 @@
 					<Add option="-s" />
 					<Add option="-lglut" />
 				</Linker>
-			</Target>
-			<Target title="Generic_Debug">
-				<Option output="Build/$(TARGET_NAME)/$(PROJECT_NAME)" prefix_auto="0" extension_auto="1" />
-				<Option object_output="Object_code/$(TARGET_NAME)/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Option use_console_runner="0" />
-				<Compiler>
-					<Add option="-Wall" />
-					<Add option="-ansi" />
-					<Add option="-g" />
-				</Compiler>
-			</Target>
-			<Target title="Generic_Release">
-				<Option output="Build/$(TARGET_NAME)/$(PROJECT_NAME)" prefix_auto="0" extension_auto="1" />
-				<Option object_output="Object_code/$(TARGET_NAME)/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Option use_console_runner="0" />
 			</Target>
 		</Build>
 		<Compiler>
