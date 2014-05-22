@@ -108,11 +108,14 @@
 			<Add option="-Wall" />
 			<Add option="-ansi" />
 			<Add option="-fexceptions" />
+			<Add directory="../Libraries" />
 		</Compiler>
-		<Unit filename="../Source_code/Error/C/Error.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../Source_code/Error/C/Error.h" />
+		<Linker>
+			<Add library="VCCL_pauseProgram" />
+			<Add library="VCCL_printSomething" />
+			<Add library="VCCL_Error" />
+			<Add directory="../Libraries" />
+		</Linker>
 		<Unit filename="../Source_code/Project_specific_configurations/Debug.h" />
 		<Unit filename="../Source_code/Project_specific_configurations/GNU_gettext_library.h" />
 		<Unit filename="../Source_code/Project_specific_configurations/Math.h" />
@@ -120,14 +123,6 @@
 		<Unit filename="../Source_code/Project_specific_configurations/Software_info.h" />
 		<Unit filename="../Source_code/main.cpp" />
 		<Unit filename="../Source_code/main.hpp" />
-		<Unit filename="../Source_code/pauseProgram/pauseProgram.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../Source_code/pauseProgram/pauseProgram.h" />
-		<Unit filename="../Source_code/printSomething/printSomething.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../Source_code/printSomething/printSomething.h" />
 		<Unit filename="../Source_code/showSoftwareInfo/showSoftwareInfo.c">
 			<Option compilerVar="CC" />
 		</Unit>
