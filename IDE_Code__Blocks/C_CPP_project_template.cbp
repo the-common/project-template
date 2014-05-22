@@ -106,6 +106,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-ansi" />
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="../Source_code/Error/C/Error.c">
