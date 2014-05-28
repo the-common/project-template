@@ -23,7 +23,7 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Build/${CMAKE_LIBRARY_AR
 ### set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Build/PDBs)
 
 # 設定額外的函式庫路徑
-link_directories(${CMAKE_SOURCE_DIR}/Libraries)
+link_directories(${CMAKE_SOURCE_DIR}/Libraries/${CMAKE_LIBRARY_ARCHITECTURE}_${CMAKE_BUILD_TYPE})
 include_directories(${CMAKE_SOURCE_DIR}/Library_headers)
 
 # 
