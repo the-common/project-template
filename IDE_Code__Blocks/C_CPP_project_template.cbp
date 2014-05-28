@@ -125,10 +125,6 @@
 		<Unit filename="../Source_code/Project_specific_configurations/Software_info.h" />
 		<Unit filename="../Source_code/main.cpp" />
 		<Unit filename="../Source_code/main.hpp" />
-		<Unit filename="../Source_code/showSoftwareInfo/showSoftwareInfo.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../Source_code/showSoftwareInfo/showSoftwareInfo.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
