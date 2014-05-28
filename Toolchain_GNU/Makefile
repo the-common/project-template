@@ -53,7 +53,3 @@ link : compile
 .PHONY : clean
 clean :
 	rm ${DIR_OBJECT_CODE}/${NAME_TARGET}/*.o
-
-.PHONY : initialize
-initialize : 
-	rm -rf .git .gitignore
