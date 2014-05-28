@@ -126,9 +126,9 @@
 /* 函式的宣告（函式雛型）
  * Function declarations (function prototypes)
      用途
-     Usage 
+     Usage
        預先告訴編譯器(compiler)子程式的存在 */
-
+    void initializeSoftwareInfo(void);
 /* 全域變數
  * Global Variables */
 
@@ -145,6 +145,7 @@
 
     /*用來重新運行程式的label*/
     restart_program:
+      initializeSoftwareInfo();
       showSoftwareInfo(_(PROGRAM_MAIN_NAME));
 
       /* 暫停程式運行（於main函式中） */
@@ -154,3 +155,18 @@
 
       return EXIT_SUCCESS;
     }
+
+void initializeSoftwareInfo(void){
+			global_software_information.software_name = "C_CPP_project_template";
+			global_software_information.software_official_website = NULL;
+			global_software_information.software_issue_tracker = NULL;
+			global_software_information.software_developer_name = NULL;
+			global_software_information.software_developer_email = NULL;
+			global_software_information.software_copyright_valid_year = -1;
+			global_software_information.software_license = SOFTWARE_LICENSE_UNDEFINED;
+			global_software_information.software_license_version = NULL;
+			global_software_information.software_license_version_or_later = 1;
+			global_software_information.software_license_other_url = NULL;
+			global_software_information.software_license_other_name = NULL;
+    return;
+}
