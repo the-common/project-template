@@ -21,7 +21,7 @@ C 或 C++ 程式語言專案範本<br />C or C++ project template
             * 軟體的建構產物  
               Software's built artifacts
     * IDE_*/
-        * 跟 * IDE 相關的檔案與建構產物
+        * 跟 * （整合式開發環境(IDE)）相關的檔案與建構產物
     * Translations/
         * 翻譯資料
     * README.md
