@@ -110,12 +110,13 @@
 			<Add option="-Wall" />
 			<Add option="-ansi" />
 			<Add option="-fexceptions" />
-			<Add directory="../Libraries" />
+			<Add directory="../Library_headers" />
 		</Compiler>
 		<Linker>
 			<Add library="VCCL_pauseProgram" />
+			<Add library="VCCL_showSoftwareInfo" />
 			<Add library="VCCL_printSomething" />
-			<Add library="VCCL_Error" />
+			<Add library="VCCL_Error_C" />
 			<Add directory="../Libraries" />
 		</Linker>
 		<Unit filename="../Source_code/Project_specific_configurations/Debug.h" />
