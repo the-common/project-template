@@ -1,6 +1,6 @@
 #!/bin/bash
 read -p "請輸入新的專案名稱：" NAME_PROJECT
-
+sed 's/C_CPP_project_template/${NAME_PROJECT}/g' Source_code/main.cpp
 sed 's/C_CPP_project_template/${NAME_PROJECT}/g' CMakeLists.txt
 sed 's/C_CPP_project_template/${NAME_PROJECT}/g' IDE_Eclipse_CDT/.*project
 sed 's/C_CPP_project_template/${NAME_PROJECT}/g' IDE_Code__Blocks/C_CPP_project_template.cbp
