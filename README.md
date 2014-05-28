@@ -23,7 +23,7 @@ C 或 C++ 程式語言專案範本<br />C or C++ project template
     * IDE_*/
         * 跟 * （整合式開發環境(IDE)）相關的檔案與建構產物
     * Translations/
-        * 翻譯資料
+        * 軟體介面翻譯的資料
     * README.md
         * 本說明文件  
           This documentation
