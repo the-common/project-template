@@ -111,8 +111,8 @@
 	/* Ｖ字龍的 C/C++ 函式庫蒐集
 	 * Vdragons C CPP Libraries Collection
 	 *   https://github.com/Vdragon/Vdragons_C_CPP_Libraries_Collection */
-		#include <libVCCL_pauseProgram.h>
-		#include "showSoftwareInfo/showSoftwareInfo.h"
+		#include <VCCL/pauseProgram.h>
+		#include <VCCL/showSoftwareInfo.h>
 		#include "Project_specific_configurations/GNU_gettext_library.h"
 
 /* 常數與巨集的定義
