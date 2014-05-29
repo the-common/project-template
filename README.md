@@ -32,7 +32,7 @@ C 或 C++ 程式語言專案範本<br />C or C++ project template
     * ${Target or configuration name}/
     * 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
 * IDE_*/
-    * 跟 * （整合式開發環境(IDE)）相關的檔案與建構產物
+    * 跟 * 整合式開發環境(IDE)相關的檔案與建構產物
 * README.md
     * 本說明文件  
       This documentation
