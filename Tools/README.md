@@ -3,7 +3,7 @@
 存放專案會用到的工具程式的目錄
 
 ## 注意事項<br />Note
-此目錄底下的程式皆需要在專案的根目錄中執行
+此目錄底下的程式皆需要**以專案的根目錄當作當前工作目錄(current working directory)**來執行
 
 ## 本目錄下的項目說明<br />Description of the items under this directory
 * README.md
