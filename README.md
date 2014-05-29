@@ -61,7 +61,7 @@ Please browse our project's issue tracker.
 * Templates/
 	* 可能會用到的檔案範本
 * README.md
-    * 本說明文件  
+	* 本說明文件  
       This documentation
 
 ## 如何使用？<br />How to use it?
