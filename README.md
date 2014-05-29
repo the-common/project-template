@@ -6,7 +6,7 @@ C 或 C++ 程式語言專案範本<br />C or C++ project template
 [https://github.com/Vdragon/C_CPP_project_template](https://github.com/Vdragon/C_CPP_project_template)
 
 ### 如何使用？<br />How to use it?
-1. 將程式碼封存檔下載下來並解壓縮
+1. 將程式碼封存檔下載下來並解封裝
 2. 將 C_CPP_project_template 目錄改名為您的專案名稱
 3. 以專案根目錄作為當前工作目錄(current working directory)在終端機中執行 bash Tools/initializeProject.bash.sh 初始化專案
 4. Start coding :)
