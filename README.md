@@ -16,6 +16,11 @@ C 或 C++ 程式語言專案範本<br />C or C++ project template
           Software's source code
     * Object_code/
         * 軟體的目標程式碼
+    * Library_headers/
+    	* 專案使用的第三方函式庫之標頭(header)檔搜尋目錄
+    * Libraries/
+    	* 專案使用的第三方函式庫搜尋目錄
+    	* ${Target or configuration name}/
     * Translations/
         * 軟體介面翻譯的資料
     * Build_artifacts/
