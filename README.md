@@ -10,6 +10,8 @@ C 或 C++ 程式語言專案範本<br />C or C++ project template
 ## 這是什麼？<br />What is this?
 
 ## 檔案與目錄說明<br />File and directory description
+* Tools/
+	* 專案相關的一些工具
 * Source_code/
     * 軟體的來源程式碼  
       Software's source code
@@ -33,6 +35,16 @@ C 或 C++ 程式語言專案範本<br />C or C++ project template
     * 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
 * IDE_*/
     * 跟 * 整合式開發環境(IDE)相關的檔案與建構產物
+* Toolchain_*/
+	* 跟 * 工具鍊(toolchain)相關的檔案與建構產物
+* Resources/
+	* 跟欲建構的程式無關的檔案
+* Documentation/
+	* 專案的其他說明文件
+* Coding_style_configuration/
+	* 程式碼撰寫風格設定檔
+* Templates/
+	* 可能會用到的檔案範本
 * README.md
     * 本說明文件  
       This documentation
