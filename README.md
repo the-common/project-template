@@ -10,33 +10,32 @@ C 或 C++ 程式語言專案範本<br />C or C++ project template
 ## 這是什麼？<br />What is this?
 
 ## 檔案與目錄說明<br />File and directory description
-* /
-    * Source_code/
-        * 軟體的來源程式碼  
-          Software's source code
-    * Object_code/
-        * 軟體的目標程式碼
-        * 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
-    * Library_headers/
-    	* 專案使用的第三方函式庫之標頭(header)檔搜尋目錄
-    * Libraries/
-    	* 專案使用的第三方函式庫搜尋目錄
-    	* ${Target or configuration name}/
-    * Translations/
-        * 軟體介面翻譯的資料
-    * Build_artifacts/
-    	* 軟體的建構中間產物
-    	* 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
-    * Build/
-        * 建構好的軟體  
-          Built software
-        * ${Target or configuration name}/
-        * 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
-    * IDE_*/
-        * 跟 * （整合式開發環境(IDE)）相關的檔案與建構產物
-    * README.md
-        * 本說明文件  
-          This documentation
+* Source_code/
+    * 軟體的來源程式碼  
+      Software's source code
+* Object_code/
+    * 軟體的目標程式碼
+    * 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
+* Library_headers/
+	* 專案使用的第三方函式庫之標頭(header)檔搜尋目錄
+* Libraries/
+	* 專案使用的第三方函式庫搜尋目錄
+	* ${Target or configuration name}/
+* Translations/
+    * 軟體介面翻譯的資料
+* Build_artifacts/
+	* 軟體的建構中間產物
+	* 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
+* Build/
+    * 建構好的軟體  
+      Built software
+    * ${Target or configuration name}/
+    * 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
+* IDE_*/
+    * 跟 * （整合式開發環境(IDE)）相關的檔案與建構產物
+* README.md
+    * 本說明文件  
+      This documentation
 
 ## 如何使用？<br />How to use it?
 1. 將程式碼封存檔下載下來並解壓縮
