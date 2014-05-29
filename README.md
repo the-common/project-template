@@ -4,6 +4,11 @@ If you see this paragraph means that this file is NOT customized to the project 
 
 C 或 C++ 程式語言專案範本<br />C or C++ project template
 [https://github.com/Vdragon/C_CPP_project_template](https://github.com/Vdragon/C_CPP_project_template)
+### 如何使用？<br />How to use it?
+1. 將程式碼封存檔下載下來並解壓縮
+2. 將 C_CPP_project_template 目錄改名為您的專案名稱
+3. 以專案根目錄作為當前工作目錄(current working directory)在終端機中執行 bash Tools/initializeProject.bash.sh 初始化專案
+4. Start coding :)
 
 # 〈專案名稱〉<br />&lt;Project_name&gt;
 
@@ -50,11 +55,6 @@ C 或 C++ 程式語言專案範本<br />C or C++ project template
       This documentation
 
 ## 如何使用？<br />How to use it?
-1. 將程式碼封存檔下載下來並解壓縮
-2. 將 C_CPP_project_template 目錄改名為您的專案名稱
-3. 將上述目錄內的 .git 目錄（Git 版本控制系統的目錄）移除，將專案相關檔案改名為您的專案名稱
-4. 開啟專案，於專案的屬性設定將專案的名稱改為您的專案名稱
-5. Start coding :)
 
 ## 授權條款<br />License
 This project is licensed as CC0.
