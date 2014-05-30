@@ -68,4 +68,4 @@ Please browse our project's issue tracker.
 
 ## 授權條款<br />License
 
-## 已知問題<br />Known issues
+## 常見問題與解答<br />Frequently Asked Questions and answers
