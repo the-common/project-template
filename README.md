@@ -1,9 +1,6 @@
-## 內容未初始化說明<br />Content not-initialized note
+## 「[C 或 C++ 程式語言專案範本](https://github.com/Vdragon/C_CPP_project_template)」內容未初始化說明<br />"[C or C++ project template](https://github.com/Vdragon/C_CPP_project_template)" content not-initialized note
 如果您看到此段文字代表本檔案尚未被專案開發者自訂為他自己的版本，內容僅供參考。如果您是此專案的開發者請修改成自己需要的內容並移除此段落  
 If you see this paragraph means that this file is NOT customized to the project devloper's version and the content is for reference only.  If you're this project's developer please customize this file's content then remove this paragraph.
-
-C 或 C++ 程式語言專案範本<br />C or C++ project template
-[https://github.com/Vdragon/C_CPP_project_template](https://github.com/Vdragon/C_CPP_project_template)
 
 ### 如何使用？<br />How to use it?
 1. 將程式碼封存檔下載下來並解封裝
@@ -20,6 +17,7 @@ To the extent possible under law, Vdragon(pika1021@gmail.com) has waived all cop
 Please browse our project's issue tracker.  
 [https://github.com/Vdragon/C_CPP_project_template/issues](https://github.com/Vdragon/C_CPP_project_template/issues)
 
+-------------------------------------
 # 〈專案名稱〉<br />&lt;Project_name&gt;
 
 ## 這是什麼？<br />What is this?
