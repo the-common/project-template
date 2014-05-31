@@ -136,12 +136,12 @@
  * Function implementations */
   /* main 函式 - C/C++ 程式的進入點(entry point) */
     int main(int argc, char *argv[]){
-    	/* 初始化 GNU gettext 函式庫 */
-				/* Use system default locale instead of "C" locale */
-					setlocale(LC_MESSAGES, "");
-				bindtextdomain(MESSAGE_DOMAIN, LOCALEDIR);
-				textdomain(MESSAGE_DOMAIN);
-				bind_textdomain_codeset(MESSAGE_DOMAIN, MESSAGE_CHARSET);
+	/* 初始化 GNU gettext 函式庫 */
+		/* Use system default locale instead of "C" locale */
+			setlocale(LC_MESSAGES, "");
+		bindtextdomain(MESSAGE_DOMAIN, LOCALEDIR);
+		textdomain(MESSAGE_DOMAIN);
+		bind_textdomain_codeset(MESSAGE_DOMAIN, MESSAGE_CHARSET);
 
     /*用來重新運行程式的label*/
     restart_program:
@@ -157,16 +157,16 @@
     }
 
 void initializeSoftwareInfo(void){
-			global_software_information.software_name = "C_CPP_project_template";
-			global_software_information.software_official_website = NULL;
-			global_software_information.software_issue_tracker = NULL;
-			global_software_information.software_developer_name = NULL;
-			global_software_information.software_developer_email = NULL;
-			global_software_information.software_copyright_valid_year = -1;
-			global_software_information.software_license = SOFTWARE_LICENSE_UNDEFINED;
-			global_software_information.software_license_version = NULL;
-			global_software_information.software_license_version_or_later = 1;
-			global_software_information.software_license_other_url = NULL;
-			global_software_information.software_license_other_name = NULL;
+	global_software_information.software_name = "C_CPP_project_template";
+	global_software_information.software_official_website = NULL;
+	global_software_information.software_issue_tracker = NULL;
+	global_software_information.software_developer_name = NULL;
+	global_software_information.software_developer_email = NULL;
+	global_software_information.software_copyright_valid_year = -1;
+	global_software_information.software_license = SOFTWARE_LICENSE_UNDEFINED;
+	global_software_information.software_license_version = NULL;
+	global_software_information.software_license_version_or_later = 1;
+	global_software_information.software_license_other_url = NULL;
+	global_software_information.software_license_other_name = NULL;
     return;
 }
