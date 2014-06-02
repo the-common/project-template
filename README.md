@@ -17,7 +17,7 @@ If you see this paragraph means that this file is NOT customized to the project 
 1. 將程式碼封存檔下載下來並解封裝
 2. 將 C_CPP_project_template 目錄改名為您的專案名稱
 3. 以專案根目錄作為當前工作目錄(current working directory)在終端機中執行 bash Tools/initializeProject.bash.sh 初始化專案
-4.將本軟體所需要的函式庫與函式庫標頭檔放到 Libraries/ 與 Library_headers/ 目錄中
+4. 將本軟體所需要的函式庫與函式庫標頭檔放到 Libraries/ 與 Library_headers/ 目錄中
 5. Start coding :)
 
 ### 授權條款<br />License
