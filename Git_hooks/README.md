@@ -6,7 +6,7 @@
 * README.md
 	* 本說明檔案
 * Astyle_before_commit.precommit.sh
-	* 在提交一個版本前自動對來源程式碼進行格式化的範本
+	* 在提交一個版本前自動對來源程式碼進行格式化的 Git hook 程式
 
 ## 本目錄底下內容適用之授權條款<br />License of the content under this directory
 同上層目錄內容採用的授權條款
