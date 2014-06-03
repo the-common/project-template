@@ -9,9 +9,9 @@ else
 fi
  
 # Redirect output to stderr.
-exec 1>&2
+# exec 1>&2
  
 # Run astyle on all .cpp/.hpp files
-exec git diff --name-only | grep -E "*.c|*.h|*.cpp|*.cc|*.hpp" | xargs astyle --options="Coding_style_configurations/C_CPP_code.astylerc" --suffix=none 
+exec git diff --cached --name-only | grep -E ".*(\.c|\.h|\.cpp|\.hpp|\.cc|\.hh)$" | xargs astyle --options="Coding_style_configurations/Project_specified_coding_style.astylerc" --suffix=none 
 
 exit 0
