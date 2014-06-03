@@ -3,7 +3,7 @@
 
 ## 此目錄底下的項目說明
 * Project_specified_coding_style*
-	* 本專案指定的 coding style 設定檔之名稱皆以 Project_specified_coding_style 作為開頭
+	* 本專案指定的 coding style 設定檔之名稱皆以 Project_specified_coding_style 作為開頭（版本控制系統只會追蹤此名稱設定檔）
 * README.md
 	* 本說明文件
 
