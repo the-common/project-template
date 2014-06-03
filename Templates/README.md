@@ -9,6 +9,8 @@
 	* 建構產物目錄範本（放在各個 IDE_* 、Toolchain_* 目錄下讓目錄下的版本追蹤排除規則檔案可以指定）
 * README/
 	* 說明檔範本
+* Git_hooks/
+	* Git 版本控制系統卦勾程式(hook)的範本
 
 ## 本目錄底下內容適用之授權條款<br />License of the content under this directory
 同上層目錄內容採用的授權條款
