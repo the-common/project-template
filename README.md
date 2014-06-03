@@ -70,6 +70,8 @@ Please browse our project's issue tracker.
 	* 程式碼撰寫風格設定檔
 * Templates/
 	* 可能會用到的檔案範本
+* Git_hooks/
+	* 專案使用的 Git 版本控制系統卦勾程式(hook)
 * README.md
 	* 本說明文件  
       This documentation
