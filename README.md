@@ -74,7 +74,16 @@ Please browse our project's issue tracker.
 
 請將函式庫、函式庫標頭檔(library headers)安裝到系統預設搜索目錄，或是放在 Libraries/ 、Library_headers/ 子目錄中再進行軟體建構。
 
-## 如何使用？<br />How to use it?
+## 如何建構專案？<br />How to build the project?
+### 使用整合式開發環境建構專案
+1. 到各整合式開發環境目錄(IDE_*)底下，開啟／匯入專案
+2. 透過整合式開發環境提供的介面來建構專案。
+
+### 使用 CMake 軟體建構系統建構專案
+1. 在終端機軟體中將當前工作目錄切換到 CMake 軟體建構系統的目錄(Buildsystem_CMake)中
+2. 執行 cmake ..
+3. 執行 make
+4. 建構出來的檔案會在當前工作目錄中的 Build/ 目錄底下
 
 ## 授權條款<br />License
 
