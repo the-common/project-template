@@ -9,6 +9,9 @@ cmake ..
 make
 cp --force --recursive Build/Libraries/* ../../../../Libraries
 cp --force --recursive Build/Library_headers/* ../../../../Library_headers
-cd ../../../../
+cd ../../../../Libraries
+ln --symbolic */*.a .
+
+cd ../
 rm -rf Tools/Tools__temporary_working_directory
 exit 0
