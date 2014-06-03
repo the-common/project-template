@@ -1,5 +1,5 @@
 # Coding_style_configuration/
-此目錄存放專案要求的程式碼風格的程式碼美化器(code beautifier)設定檔。
+此目錄存放程式碼風格的程式碼美化器(code beautifier)設定檔。除了專案指定使用的設定檔以外您可以將您慣用的設定檔放在這裡。
 
 ## 此目錄底下的項目說明
 * Project_specified_coding_style*
