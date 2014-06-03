@@ -23,6 +23,28 @@ Please browse our project's issue tracker.
 
 ## 這是什麼？<br />What is this?
 
+### 軟體建構依賴關係<br />Software build dependency
+本專案需要下列函式庫以便建構：
+
+* [Ｖ字龍的C、C++程式語言函式庫收集<br />Vdragons C CPP Libraries Collection](https://github.com/Vdragon/Vdragons_C_CPP_Libraries_Collection)
+	* VCCL_showSoftwareInfo
+	* VCCL_printSomething
+	* VCCL_Error_C
+	* VCCL_pauseProgram 
+
+請將函式庫、函式庫標頭檔(library headers)安裝到系統預設搜索目錄，或是放在 Libraries/ 、Library_headers/ 子目錄中再進行軟體建構。
+
+## 如何建構專案？<br />How to build the project?
+### 使用整合式開發環境建構專案
+1. 到各整合式開發環境目錄(IDE_*)底下，開啟／匯入專案
+2. 透過整合式開發環境提供的介面來建構專案。
+
+### 使用 CMake 軟體建構系統建構專案
+1. 在終端機軟體中將當前工作目錄切換到 CMake 軟體建構系統的目錄(Buildsystem_CMake)中
+2. 執行 cmake ..
+3. 執行 make
+4. 建構出來的檔案會在當前工作目錄中的 Build/ 目錄底下
+
 ## 檔案與目錄說明<br />File and directory description
 * Tools/
 	* 專案相關的一些工具
@@ -62,28 +84,6 @@ Please browse our project's issue tracker.
 * README.md
 	* 本說明文件  
 	  This documentation
-
-### 軟體建構依賴關係<br />Software build dependency
-本專案需要下列函式庫以便建構：
-
-* [Ｖ字龍的C、C++程式語言函式庫收集<br />Vdragons C CPP Libraries Collection](https://github.com/Vdragon/Vdragons_C_CPP_Libraries_Collection)
-	* VCCL_showSoftwareInfo
-	* VCCL_printSomething
-	* VCCL_Error_C
-	* VCCL_pauseProgram 
-
-請將函式庫、函式庫標頭檔(library headers)安裝到系統預設搜索目錄，或是放在 Libraries/ 、Library_headers/ 子目錄中再進行軟體建構。
-
-## 如何建構專案？<br />How to build the project?
-### 使用整合式開發環境建構專案
-1. 到各整合式開發環境目錄(IDE_*)底下，開啟／匯入專案
-2. 透過整合式開發環境提供的介面來建構專案。
-
-### 使用 CMake 軟體建構系統建構專案
-1. 在終端機軟體中將當前工作目錄切換到 CMake 軟體建構系統的目錄(Buildsystem_CMake)中
-2. 執行 cmake ..
-3. 執行 make
-4. 建構出來的檔案會在當前工作目錄中的 Build/ 目錄底下
 
 ## 授權條款<br />License
 
