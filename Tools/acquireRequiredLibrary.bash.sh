@@ -26,6 +26,7 @@
 
 ######## Included files ########
 
+source checkIllegalUsage.bash.source.sh
 ######## Included files ended ########
 
 ######## File scope variable definitions ########
@@ -44,6 +45,8 @@ readonly PROGRAM_ARGUMENT_ORIGINAL_NUMBER=$#
 # idea from http://www.kfirlavi.com/blog/2012/11/14/defensive-bash-programming/
 main() {
 	set -x
+	
+	checkIllegalUsage
 	project_root_path=$(pwd)
 	mkdir --parent 3rd_party_software
 	cd 3rd_party_software
