@@ -25,7 +25,6 @@
 ############## Header block ended ##############
 
 ######## Included files ########
-
 source checkIllegalUsage.bash.source.sh
 ######## Included files ended ########
 
@@ -39,8 +38,6 @@ readonly PROGRAM_ARGUMENT_ORIGINAL_NUMBER=$#
 ######## File scope variable definitions ended ########
 
 ######## Program ########
-
-
 # main function, program entry point
 # idea from http://www.kfirlavi.com/blog/2012/11/14/defensive-bash-programming/
 main() {
