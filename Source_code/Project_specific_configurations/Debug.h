@@ -1,4 +1,4 @@
-﻿#ifndef DEBUG_H_INCLUDED
+#ifndef DEBUG_H_INCLUDED
 #define DEBUG_H_INCLUDED
 /*////////環境設定(Environment Settings)////////*/
 /* 是否顯示偵錯訊息（０為否）？
