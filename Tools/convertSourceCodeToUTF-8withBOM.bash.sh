@@ -63,7 +63,7 @@ main() {
 	prepare3rdPartySoftware
 	
 	# find Source_code -path 'Source_code/CMakeFiles' -prune -o -regextype posix-extended -regex '.*\.(c|cpp|cc|h|hpp|hh)$' -exec bash 3rd_party_software/addUTF-8bomb/Executables/addUTF-8bomb {} \;
-	find Source_code -path 'Source_code/CMakeFiles' -prune -o \( -iname '*.c' -or -iname '*.cpp' -or -iname '*.h' -or -iname '*.hpp' -or -iname '*.cc' -or -iname '*.hh' \) -exec bash  3rd_party_software/addUTF-8bomb/Executables/addUTF-8bomb {} \;
+	find Source_code -path 'Source_code/CMakeFiles' -prune -o \( -iname '*.c' -or -iname '*.cpp' -or -iname '*.h' -or -iname '*.hpp' -or -iname '*.cc' -or -iname '*.hh' \) -exec bash 3rd_party_software/addUTF-8bomb/Executables/addUTF-8bomb {} \;
 # 	find Source_code -path 'Source_code/CMakeFiles' -prune -o -iname '*.cpp' -exec bash  3rd_party_software/addUTF-8bomb/Executables/addUTF-8bomb {} \;
 # 	find Source_code -path 'Source_code/CMakeFiles' -prune -o -iname '*.h' -exec bash  3rd_party_software/addUTF-8bomb/Executables/addUTF-8bomb {} \;
 # 	find Source_code -path 'Source_code/CMakeFiles' -prune -o -iname '*.hpp' -exec bash  3rd_party_software/addUTF-8bomb/Executables/addUTF-8bomb {} \;
