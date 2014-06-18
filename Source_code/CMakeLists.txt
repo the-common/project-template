@@ -2,5 +2,7 @@
 cmake_minimum_required(VERSION 2.8)
 add_executable(${CMAKE_PROJECT_NAME} main.cpp)
 if(CMAKE_HOST_WIN32)
-	target_link_libraries(${CMAKE_PROJECT_NAME} intl)
+	target_link_libraries(${CMAKE_PROJECT_NAME} VCCL_showSoftwareInfo intl VCCL_pauseProgram VCCL_printSomething)
+else()
+	target_link_libraries(${CMAKE_PROJECT_NAME} VCCL_showSoftwareInfo VCCL_pauseProgram VCCL_printSomething)
 endif()
