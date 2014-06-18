@@ -22,6 +22,14 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Build/${CMAKE_LIBRARY_AR
 ## PDB?
 ### set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Build/PDBs)
 
+if(CMAKE_HOST_WIN32)
+	message("### 偵測到目標系統為 Microsoft Windows，將套用其專屬設定。 ###")
+	set(path_library_header_gnu_intl "C:\\Program Files (x86)\\GnuWin32\\include")
+	set(path_library_gnu_intl "C:\\Program Files (x86)\\GnuWin32\\lib")
+	include_directories(${path_library_header_gnu_intl})
+	link_directories(${path_library_gnu_intl})
+endif()
+
 # 設定額外的函式庫路徑
 link_directories(${CMAKE_SOURCE_DIR}/Libraries/${CMAKE_LIBRARY_ARCHITECTURE}_${CMAKE_BUILD_TYPE})
 include_directories(${CMAKE_SOURCE_DIR}/Library_headers)
