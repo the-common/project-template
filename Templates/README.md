@@ -1,6 +1,6 @@
 # Templates/
 ## 這是什麼？<br />What is this?
-存放各種專案用到的檔案範本的目錄
+存放各種專案用到的範本的目錄
 
 ## 本目錄下的項目說明<br />Description of the items under this directory
 * README.md
