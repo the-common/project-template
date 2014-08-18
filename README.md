@@ -1,13 +1,15 @@
-## 「[C 或 C++ 程式語言專案範本](https://github.com/Vdragon/C_CPP_project_template)」內容未初始化說明<br />"[C or C++ project template](https://github.com/Vdragon/C_CPP_project_template)" content not-initialized note
+## 「[通用軟體專案範本](https://github.com/Vdragon/C_CPP_project_template)」內容未初始化說明<br />"[Generic Software Project Template](https://github.com/Vdragon/C_CPP_project_template)" content not-initialized note
 如果您看到此段文字代表本檔案尚未被專案開發者自訂為他自己的版本，內容僅供參考。如果您是此專案的開發者請修改成自己需要的內容並移除下方水平線之上的所有內容。  
 If you see this paragraph means that this file is NOT customized to the project devloper's version and the content is for reference only.  If you're this project's developer please customize this file's content then remove all of the contents up from the horizontal line.
 
 ### 如何使用？<br />How to use it?
 1. 將程式碼封存檔下載下來並解封裝
-2. 將 C_CPP_project_template 目錄改名為您的專案名稱
+2. 將 Generic_Software_Project_Template 目錄改名為您的專案名稱
 3. 以專案根目錄作為當前工作目錄(current working directory)在終端機中執行 bash Tools/initializeProject.bash.sh 初始化專案
-4. 將本軟體所需要的函式庫與函式庫標頭檔放到 Libraries/ 與 Library_headers/ 目錄中
-5. Start coding :)
+4. 依照您要開發的軟體類型將需要的檔案放到他們該在的目錄中
+	* 比方說，將本軟體所需要的函式庫與函式庫標頭檔放到 Libraries/ 與 Library_headers/ 目錄中
+	* 您可以移除您不會用到的目錄
+5. 開始設計軟體 :)
 
 ### 授權條款<br />License
 This project template is licensed as CC0.
@@ -26,15 +28,16 @@ Please browse our project's issue tracker.
 ### 軟體建構依賴關係<br />Software build dependency
 本專案需要下列函式庫以便建構：
 
-* [Ｖ字龍的C、C++程式語言函式庫收集<br />Vdragons C CPP Libraries Collection](https://github.com/Vdragon/Vdragons_C_CPP_Libraries_Collection)
-	* VCCL_showSoftwareInfo
-	* VCCL_printSomething
-	* VCCL_Error_C
-	* VCCL_pauseProgram 
+* 只適用於 C/C++ 語言專案
+	* 標準Ｃ函式庫
+	* [Ｖ字龍的C、C++程式語言函式庫收集<br />Vdragons C CPP Libraries Collection](https://github.com/Vdragon/Vdragons_C_CPP_Libraries_Collection)
+		* VCCL_showSoftwareInfo
+		* VCCL_printSomething
+		* VCCL_Error_C
+		* VCCL_pauseProgram 
+	* 請將函式庫、函式庫標頭檔(library headers)安裝到系統預設搜索目錄，或是放在 Libraries/ 、Library_headers/ 子目錄中再進行軟體建構。
 
-請將函式庫、函式庫標頭檔(library headers)安裝到系統預設搜索目錄，或是放在 Libraries/ 、Library_headers/ 子目錄中再進行軟體建構。
-
-## 如何建構專案？<br />How to build the project?
+## 如何建構專案？（僅適用於需要建構的軟體專案）<br />How to build the project?  (Only applicable to project needed to be built)
 ### 使用整合式開發環境建構專案
 1. 到各整合式開發環境目錄(IDE_*)底下，開啟／匯入專案
 2. 透過整合式開發環境提供的介面來建構專案。
