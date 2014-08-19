@@ -25,6 +25,8 @@ Please browse our project's issue tracker.
 
 ## 這是什麼？<br />What is this?
 
+## 本專案的智慧財產授權條款<br />Intellectual property license of this project
+
 ## 軟體建構依賴關係<br />Software build dependency
 本專案需要下列函式庫以便建構：
 
@@ -89,7 +91,5 @@ Please browse our project's issue tracker.
 * README.md
 	* 本說明文件  
 	  This documentation
-
-## 授權條款<br />License
 
 ## 常見問題與解答<br />Frequently Asked Questions and answers
