@@ -25,7 +25,7 @@ Please browse our project's issue tracker.
 
 ## 這是什麼？<br />What is this?
 
-### 軟體建構依賴關係<br />Software build dependency
+## 軟體建構依賴關係<br />Software build dependency
 本專案需要下列函式庫以便建構：
 
 * 只適用於 C/C++ 語言專案
