@@ -51,6 +51,8 @@ Please browse our project's issue tracker.
 4. 建構出來的檔案會在當前工作目錄中的 Build/ 目錄底下
 
 ## 檔案與目錄說明<br />File and directory description
+* Executables/
+	* This directory stores executable programs, not needed to be in binary form.
 * Tools/
 	* 專案相關的一些工具
 * Source_code/
