@@ -1,4 +1,4 @@
-## 「[通用軟體專案範本](https://github.com/Vdragon/C_CPP_project_template)」內容未初始化說明<br />"[Generic Software Project Template](https://github.com/Vdragon/C_CPP_project_template)" content not-initialized note
+## 「[通用軟體專案範本](https://github.com/Vdragon/Generic_Software_Project_Template)」內容未初始化說明<br />"[Generic Software Project Template](https://github.com/Vdragon/Generic_Software_Project_Template)" content not-initialized note
 如果您看到此段文字代表本檔案尚未被專案開發者自訂為他自己的版本，內容僅供參考。如果您是此專案的開發者請修改成自己需要的內容並移除下方水平線之上的所有內容。  
 If you see this paragraph means that this file is NOT customized to the project devloper's version and the content is for reference only.  If you're this project's developer please customize this file's content then remove all of the contents up from the horizontal line.
 
@@ -18,7 +18,7 @@ To the extent possible under law, Vdragon(Vdragon.Taiwan@gmail.com) has waived a
 ### 已知問題<br />Known issues
 請瀏覽本專案的問題追蹤系統。  
 Please browse our project's issue tracker.  
-[https://github.com/Vdragon/C_CPP_project_template/issues](https://github.com/Vdragon/C_CPP_project_template/issues)
+[https://github.com/Vdragon/Generic_Software_Project_Template/issues](https://github.com/Vdragon/Generic_Software_Project_Template/issues)
 
 -------------------------------------
 # 〈專案名稱〉<br />&lt;Project_name&gt;
