@@ -83,7 +83,7 @@ Please browse our project's issue tracker.
 * Toolchain_*/
 	* 跟 * 工具鍊(toolchain)相關的檔案與建構產物
 * Resources/
-	* 跟欲建構的程式無關的檔案
+	* 跟軟體會使用到但是非程式的資源
 * Documentation/
 	* 專案的其他說明文件
 * Coding_style_configuration/
