@@ -9,7 +9,7 @@ elif [ $# -eq 1 ]; then
 	name_project_original="C_CPP_project_template"
 	name_project="$1"
 else 
-	read -p "請輸入原來的專案名稱（不輸入則使用預設值 C_CPP_project_template）：" name_project_original
+	read -p "請輸入原來的專案名稱（不輸入則使用預設值「C_CPP_project_template」）：" name_project_original
 	if [ -z "${name_project_original}" ]; then
 		name_project_original="C_CPP_project_template"
 	fi
