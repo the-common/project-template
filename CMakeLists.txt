@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 # 設定專案名稱
-project("C_CPP_project_template")
+project("Generic_Software_Project_Template")
 
 # 設定建構類型
 ## Specifies the build type on single-configuration generators

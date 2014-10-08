@@ -6,12 +6,12 @@ elif [ $# -eq 2 ]; then
 	name_project_original="$1"
 	name_project="$2"
 elif [ $# -eq 1 ]; then
-	name_project_original="C_CPP_project_template"
+	name_project_original="Generic_Software_Project_Template"
 	name_project="$1"
 else 
-	read -p "請輸入原來的專案名稱（不輸入則使用預設值「C_CPP_project_template」）：" name_project_original
+	read -p "請輸入原來的專案名稱（不輸入則使用預設值「Generic_Software_Project_Template」）：" name_project_original
 	if [ -z "${name_project_original}" ]; then
-		name_project_original="C_CPP_project_template"
+		name_project_original="Generic_Software_Project_Template"
 	fi
 	read -p "請輸入新的專案名稱：" name_project
 	if [ -z "${name_project_original}" ]; then
