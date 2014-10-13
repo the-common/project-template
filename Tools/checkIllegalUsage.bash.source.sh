@@ -32,7 +32,7 @@
 ######## File scope variable definitions ended ########
 
 checkIllegalUsage() {
-	if [ "Tools" = "$(basename $(pwd))" ]; then
+	if [ "Tools" == "$(basename \"$(pwd)\")" ]; then
 		printf "此目錄底下的程式皆需要**以專案的根目錄當作當前工作目錄(current working directory)**來執行，請參考本目錄的說明文件。\n"
 		exit 1
 	fi
