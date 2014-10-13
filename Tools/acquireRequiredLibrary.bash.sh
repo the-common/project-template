@@ -45,7 +45,7 @@ main() {
 	set -x
 	
 	checkIllegalUsage
-	project_root_path=$(pwd)
+	
 	mkdir --parent 3rd_party_software
 	cd 3rd_party_software
 
