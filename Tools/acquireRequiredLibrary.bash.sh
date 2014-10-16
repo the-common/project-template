@@ -9,7 +9,7 @@
 # 	Ｖ字龍(Vdragon) <Vdragon.Taiwan@gmail.com> (c) 2014
 # 授權條款宣告
 # License Declaration
-# 	請參閱「C 或 C++ 程式語言專案範本」的說明
+# 	請參閱「通用軟體專案範本」的授權條款
 # 傳回值定義
 # Return Value Definition
 # 	0
