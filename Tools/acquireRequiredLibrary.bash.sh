@@ -6,7 +6,7 @@
 # 	獲取本專案所需之函式庫的程式
 # 著作權宣告
 # Copyright Declaration
-# 	Ｖ字龍(Vdragon) <pika1021@gmail.com> (c) 2014
+# 	Ｖ字龍(Vdragon) <Vdragon.Taiwan@gmail.com> (c) 2014
 # 授權條款宣告
 # License Declaration
 # 	請參閱「C 或 C++ 程式語言專案範本」的說明
