@@ -26,6 +26,8 @@ sed --in-place "s/global_software_information.software_name = \"${name_project_o
 
 sed --in-place "s/${name_project_original}/${name_project}/g" IDE_Eclipse_CDT/.*project
 
+sed --in-place "s/${name_project_original}/${name_project}/g" IDE_Eclipse_JDT/.*project
+
 sed --in-place "s/${name_project_original}/${name_project}/g" "IDE_Code__Blocks/${name_project_original}.cbp"
 mv "IDE_Code__Blocks/${name_project_original}.cbp" "IDE_Code__Blocks/${name_project}.cbp"
 
