@@ -156,7 +156,7 @@ restart_program:
 }
 
 void initializeSoftwareInfo(void) {
-	global_software_information.software_name = "Generic Software Project Template"
+	global_software_information.software_name = "Generic Software Project Template";
 	global_software_information.software_official_website = NULL;
 	global_software_information.software_issue_tracker = NULL;
 	global_software_information.software_developer_name = NULL;
