@@ -1,4 +1,6 @@
 #!/bin/bash
+name_project_original="Generic Software Project Template"
+
 if [ $# -gt 2 ]; then
 	echo "參數數量錯誤！"
 	exit 1
@@ -6,12 +8,11 @@ elif [ $# -eq 2 ]; then
 	name_project_original="$1"
 	name_project="$2"
 elif [ $# -eq 1 ]; then
-	name_project_original="Generic Software Project Template"
 	name_project="$1"
 else 
-	read -p "請輸入原來的專案名稱（不輸入則使用預設值「Generic_Software_Project_Template」）：" name_project_original
-	if [ -z "${name_project_original}" ]; then
-		name_project_original="Generic_Software_Project_Template"
+	read -p "請輸入原來的專案名稱（不輸入則使用預設值「${name_project_original}」）：" name_project_original_user_input
+	if [ -n "${name_project_original_user_input}" ]; then
+		name_project_original="${name_project_original_user_input}"
 	fi
 	read -p "請輸入新的專案名稱：" name_project
 	if [ -z "${name_project_original}" ]; then
