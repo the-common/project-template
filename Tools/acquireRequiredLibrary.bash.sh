@@ -56,6 +56,8 @@ main() {
 
 	cd Vdragon_s_C_CPP_Libraries_Collection/Buildsystem_CMake
 	git pull --force
+	# 清掉先前可能有的建構產物，讓 CMake 可以在全空狀態下建構
+	git clean -d -X --force
 	cmake ..
 	make
 	cp --force --recursive Build/Libraries/* "${project_root_path}/Libraries"
