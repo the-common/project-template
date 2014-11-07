@@ -13,7 +13,7 @@ If you see this paragraph means that this file is NOT customized to the project 
 
 ### 授權條款<br />License
 This project template is licensed as CC0.
-To the extent possible under law, Vdragon(Vdragon.Taiwan@gmail.com) has waived all copyright and related or neighboring rights to Ｃ或Ｃ＋＋專案範本 | C or CPP project template. This work is published from: 台灣(Taiwan). 
+To the extent possible under law, Vdragon(Vdragon.Taiwan@gmail.com) has waived all copyright and related or neighboring rights to 通用軟體專案範本(Generic Software Project Template). This work is published from: 台灣(Taiwan). 
 
 ### 已知問題<br />Known issues
 請瀏覽本專案的問題追蹤系統。  
