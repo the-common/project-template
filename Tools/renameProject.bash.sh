@@ -31,6 +31,8 @@ sed --in-place "s/${name_project_original}/${name_project}/g" IDE_Eclipse_JDT/.*
 
 sed --in-place "s/${name_project_original}/${name_project}/g" "IDE_Code__Blocks/${name_project_original}.cbp"
 mv "IDE_Code__Blocks/${name_project_original}.cbp" "IDE_Code__Blocks/${name_project}.cbp"
+mv "IDE_Code__Blocks/${name_project_original}.layout" "IDE_Code__Blocks/${name_project}.layout"
+mv "IDE_Code__Blocks/${name_project_original}.depend" "IDE_Code__Blocks/${name_project}.depend"
 
 sed --in-place "s/${name_project_original}/${name_project}/g" "IDE_CodeLite/${name_project_original}.project"
 mv "IDE_CodeLite/${name_project_original}.project" "IDE_CodeLite/${name_project}.project"
