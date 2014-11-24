@@ -50,7 +50,7 @@ Please browse our project's issue tracker.
 3. 執行 make
 4. 建構出來的檔案會在當前工作目錄中的 Build/ 目錄底下
 
-## 檔案與目錄說明<br />File and directory description
+## 本目錄下的檔案與目錄說明<br />Description of files and directories under this directory
 * Source_code/
     * 軟體的來源程式碼  
       Software's source code
