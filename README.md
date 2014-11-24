@@ -51,15 +51,15 @@ Please browse our project's issue tracker.
 4. 建構出來的檔案會在當前工作目錄中的 Build/ 目錄底下
 
 ## 檔案與目錄說明<br />File and directory description
+* Source_code/
+    * 軟體的來源程式碼  
+      Software's source code
 * 3rd_party_software/
 	* This directory stores 3rd party software used by this project
 * Executables/
 	* This directory stores executable programs, not needed to be in binary form.
 * Tools/
 	* 專案相關的一些工具
-* Source_code/
-    * 軟體的來源程式碼  
-      Software's source code
 * Object_code/
     * 軟體的目標程式碼
     * 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
