@@ -3,8 +3,6 @@
 If you see this paragraph means that this file is NOT customized to the project devloper's version and the content is for reference only.  If you're this project's developer please customize this file's content then remove this paragraph.
 
 # 〈相對目錄路徑〉(&lt;Relative directory path&gt;)
-## 這是什麼？<br />What is this?
-
 
 ## 本目錄下的項目說明<br />Description of the items under this directory
 ### [說明文件.md<br />README.md](README.md)
