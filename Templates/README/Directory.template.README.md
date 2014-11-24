@@ -7,9 +7,8 @@ If you see this paragraph means that this file is NOT customized to the project 
 
 
 ## 本目錄下的項目說明<br />Description of the items under this directory
-* README.md
-	* 本說明檔案
-* 
+### [說明文件.md<br />README.md](README.md)
+本說明文件
 
 ## 本目錄底下內容適用之授權條款<br />License of the content under this directory
 同上層目錄內容採用的授權條款
