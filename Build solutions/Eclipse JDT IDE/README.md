@@ -5,8 +5,11 @@
 ## 本目錄下的項目說明<br />Description of the items under this directory
 ### [說明文件.md<br />README.md](README.md)
 本說明檔案
+### [.gitignore](.gitignore)
+Git 版本控制系統版本追蹤忽略規則
 ### [.project](.project)
 Eclipse 整合式開發環境專案檔案
+### [.classpath](.classpath)
 
 ## 如何用此軟體建構解決方案建構軟體？
 1. 啟動 Eclipse 整合式開發環境。
