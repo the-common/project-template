@@ -25,15 +25,16 @@ sed --in-place "s/${name_project_original}/${name_project}/g" CMakeLists.txt
 
 sed --in-place "s/global_software_information.software_name = \"${name_project_original}\";/global_software_information.software_name = \"${name_project}\";/g" Source_code/main.cpp
 
-sed --in-place "s/${name_project_original}/${name_project}/g" IDE_Eclipse_CDT/.*project
+sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/Eclipse CDT IDE/.*project"
 
-sed --in-place "s/${name_project_original}/${name_project}/g" IDE_Eclipse_JDT/.*project
+sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/Eclipse JDT IDE/.*project"
 
-sed --in-place "s/${name_project_original}/${name_project}/g" "IDE_Code__Blocks/${name_project_original}.cbp"
-mv "IDE_Code__Blocks/${name_project_original}.cbp" "IDE_Code__Blocks/${name_project}.cbp"
-mv "IDE_Code__Blocks/${name_project_original}.layout" "IDE_Code__Blocks/${name_project}.layout"
-mv "IDE_Code__Blocks/${name_project_original}.depend" "IDE_Code__Blocks/${name_project}.depend"
+sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/Code__Blocks IDE/${name_project_original}.cbp"
+sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/Code__Blocks IDE/README.md"
+mv "Build solutions/Code__Blocks IDE/${name_project_original}.cbp" "Build solutions/Code__Blocks IDE/${name_project}.cbp"
+mv "Build solutions/Code__Blocks IDE/${name_project_original}.layout" "Build solutions/Code__Blocks IDE/${name_project}.layout"
+mv "Build solutions/Code__Blocks IDE/${name_project_original}.depend" "Build solutions/Code__Blocks IDE/${name_project}.depend"
 
-sed --in-place "s/${name_project_original}/${name_project}/g" "IDE_CodeLite/${name_project_original}.project"
-mv "IDE_CodeLite/${name_project_original}.project" "IDE_CodeLite/${name_project}.project"
+sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/CodeLite IDE/${name_project_original}.project"
+mv "Build solutions/CodeLite IDE/${name_project_original}.project" "Build solutions/CodeLite IDE/${name_project}.project"
 exit 0
