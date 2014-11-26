@@ -36,7 +36,7 @@ readonly project_root_path="${PROGRAM_DIRECTORY}/.."
 ######## File scope variable definitions ended ########
 
 ######## Included files ########
-source ${project_root_path}/Tools/checkIllegalUsage.bash.source.sh
+source "${project_root_path}/Tools/checkIllegalUsage.bash.source.sh"
 
 ######## Included files ended ########
 
