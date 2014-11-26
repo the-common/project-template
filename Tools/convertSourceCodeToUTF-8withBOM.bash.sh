@@ -50,7 +50,7 @@ prepare3rdPartySoftware() {
 		cd addUTF-8bomb
 		git pull --force
 	fi
-	cd ${project_root_path}
+	cd "${project_root_path}"
 	return
 }
 
