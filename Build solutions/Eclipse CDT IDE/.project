@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Generic Software Project Template</name>
+	<name>通用軟體專案範本(Generic Software Project Template)</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -9,66 +9,6 @@
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
 			<triggers>clean,full,incremental,</triggers>
 			<arguments>
-				<dictionary>
-					<key>?children?</key>
-					<value>?name?=outputEntries\|?children?=?name?=entry\\\\\\\|\\\|?name?=entry\\\\\\\|\\\|\||</value>
-				</dictionary>
-				<dictionary>
-					<key>?name?</key>
-					<value></value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.append_environment</key>
-					<value>true</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>
-					<value>all</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.buildArguments</key>
-					<value></value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.buildCommand</key>
-					<value>make</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.buildLocation</key>
-					<value>${workspace_loc:/Generic Software Project Template/Debug}</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.cleanBuildTarget</key>
-					<value>clean</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.contents</key>
-					<value>org.eclipse.cdt.make.core.activeConfigSettings</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.enableAutoBuild</key>
-					<value>false</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.enableCleanBuild</key>
-					<value>true</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.enableFullBuild</key>
-					<value>true</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.fullBuildTarget</key>
-					<value>all</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.stopOnError</key>
-					<value>true</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
-					<value>true</value>
-				</dictionary>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
@@ -88,22 +28,22 @@
 		<link>
 			<name>Libraries</name>
 			<type>2</type>
-			<locationURI>$%7Bglobal_project_location%7D/Libraries</locationURI>
+			<locationURI>real_project_root_directory/Libraries</locationURI>
 		</link>
 		<link>
-			<name>Library_headers</name>
+			<name>Library headers</name>
 			<type>2</type>
-			<locationURI>global_project_location/Library_headers</locationURI>
+			<locationURI>real_project_root_directory/Library_headers</locationURI>
 		</link>
 		<link>
-			<name>Source_code</name>
+			<name>Source code</name>
 			<type>2</type>
-			<locationURI>global_project_location/Source_code</locationURI>
+			<locationURI>real_project_root_directory/Source%20code</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
 		<variable>
-			<name>global_project_location</name>
+			<name>real_project_root_directory</name>
 			<value>$%7BPARENT-2-PROJECT_LOC%7D</value>
 		</variable>
 	</variableList>

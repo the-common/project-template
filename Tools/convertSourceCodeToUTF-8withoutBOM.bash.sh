@@ -61,7 +61,7 @@ main() {
 	checkIllegalUsage
 	prepare3rdPartySoftware
 	
-	find Source_code -path 'Source_code/CMakeFiles' -prune -o  -regextype posix-extended -regex '.*\.(c|cpp|cc|h|hpp|hh)$' -exec bash 3rd_party_software/addUTF-8bomb/Executables/removeUTF-8bomb {} \;
+	find "Source code" -path 'Source code/CMakeFiles' -prune -o  -regextype posix-extended -regex '.*\.(c|cpp|cc|h|hpp|hh)$' -exec bash 3rd_party_software/addUTF-8bomb/Executables/removeUTF-8bomb {} \;
 	## 正常結束 script 程式
 	exit 0
 	set +x

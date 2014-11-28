@@ -23,7 +23,7 @@ fi
 
 sed --in-place "s/${name_project_original}/${name_project}/g" CMakeLists.txt
 
-sed --in-place "s/global_software_information.software_name = \"${name_project_original}\";/global_software_information.software_name = \"${name_project}\";/g" Source_code/main.cpp
+sed --in-place "s/global_software_information.software_name = \"${name_project_original}\";/global_software_information.software_name = \"${name_project}\";/g" "Source code/main.cpp"
 
 sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/Eclipse CDT IDE/.*project"
 

@@ -43,7 +43,7 @@ Please browse our project's issue tracker.
 本專案支援多種軟體建構方式，請參考[軟體建構解決方案/](Build solutions/)目錄的說明文件。
 
 ## 本目錄下的檔案與目錄說明<br />Description of files and directories under this directory
-* Source_code/
+* Source code/
     * 軟體的來源程式碼  
       Software's source code
 * [軟體建構解決方案/<br />Build solutions/](Build solutions/)

@@ -8,5 +8,5 @@ else
 	read -p "請輸入 Astyle 設定檔路徑：" config_file_path
 fi
 
-find Source_code -regextype posix-extended -regex '.*\.(c|cpp|cc|h|hpp|hh)$' -print -exec astyle --suffix=none --options="${config_file_path}" {} + 
+find "Source code" -regextype posix-extended -regex '.*\.(c|cpp|cc|h|hpp|hh)$' -print -exec astyle --suffix=none --options="${config_file_path}" {} + 
 exit 0

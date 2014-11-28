@@ -24,3 +24,4 @@ local.properties
 
 # C_CPP_project_template ：排除 Build_artifacts/
 Build_artifacts/
+/Built software/

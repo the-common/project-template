@@ -47,4 +47,4 @@ include_directories(${CMAKE_SOURCE_DIR}/Library_headers)
 ### If "make install" is invoked or INSTALL is built, this directory is prepended onto all install directories. This variable defaults to /usr/local on UNIX and c:/Program Files on Windows.
 ### set(CMAKE_INSTALL_PREFIX $ENV{HOME}/Software/${CMAKE_PROJECT_NAME})
 
-add_subdirectory(Source_code/ "Built artifacts")
+add_subdirectory("Source code" "Built artifacts")
