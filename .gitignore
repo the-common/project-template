@@ -51,10 +51,6 @@ Object_code/
 ![Bb]in/
 ![Ee]xecutable/
 	
-#排除整合式開發環境各個profile建構出來的產物
-[Dd]ebug*/
-[Rr]elease*/
-
 #排除建構產物目錄
 [Bb]uild/
 	

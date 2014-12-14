@@ -25,13 +25,20 @@ sed --in-place "s/${name_project_original}/${name_project}/g" CMakeLists.txt
 
 sed --in-place "s/global_software_information.software_name = \"${name_project_original}\";/global_software_information.software_name = \"${name_project}\";/g" Source_code/main.cpp
 
-sed --in-place "s/${name_project_original}/${name_project}/g" IDE_Eclipse_CDT/.*project
+sed --in-place "s/NAME_PROJECT = \"${name_project_original}\";NAME_PROJECT = \"${name_project}\"/g" "Build solutions/GNU Make/Makefile"
 
-sed --in-place "s/${name_project_original}/${name_project}/g" IDE_Eclipse_JDT/.*project
+sed --in-place "s/${name_project_original}/${name_project}/g" Source_code/Main_program.java
 
-sed --in-place "s/${name_project_original}/${name_project}/g" "IDE_Code__Blocks/${name_project_original}.cbp"
-mv "IDE_Code__Blocks/${name_project_original}.cbp" "IDE_Code__Blocks/${name_project}.cbp"
+sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/Eclipse CDT IDE/.*project"
 
-sed --in-place "s/${name_project_original}/${name_project}/g" "IDE_CodeLite/${name_project_original}.project"
-mv "IDE_CodeLite/${name_project_original}.project" "IDE_CodeLite/${name_project}.project"
+sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/Eclipse JDT IDE/.*project"
+
+sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/Code::Blocks IDE/${name_project_original}.cbp"
+mv "Build solutions/Code::Blocks IDE/${name_project_original}.cbp" "Build solutions/Code::Blocks IDE/${name_project}.cbp"
+
+sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/CodeLite IDE/${name_project_original}.project"
+mv "Build solutions/CodeLite IDE/${name_project_original}.project" "Build solutions/CodeLite IDE/${name_project}.project"
+
+sed --in-place "s/name=${name_project_original}/name=${name_project}/g" "Build solutions/Geany IDE/${name_project_original}.geany"
+mv "Build solutions/Geany IDE/${name_project_original}.geany" "Build solutions/Geany IDE/${name_project}.geany"
 exit 0

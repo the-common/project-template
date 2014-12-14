@@ -14,7 +14,7 @@ set (CMAKE_BUILD_TYPE Debug)
 
 # 設定專案路徑
 ## 設定可執行檔的輸出目錄
-set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Build/${CMAKE_LIBRARY_ARCHITECTURE}_${CMAKE_BUILD_TYPE}/)
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Built software/${CMAKE_LIBRARY_ARCHITECTURE}_${CMAKE_BUILD_TYPE}/")
 ## 設定靜態連結函式庫的輸出目錄
 ### set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Build/Libraries/${CMAKE_LIBRARY_ARCHITECTURE}_${CMAKE_BUILD_TYPE})
 ## 設定動態連結函式庫的輸出目錄
@@ -40,11 +40,11 @@ endif()
 
 # 設定額外的函式庫路徑
 link_directories(${CMAKE_SOURCE_DIR}/Libraries/)
-include_directories(${CMAKE_SOURCE_DIR}/Library_headers)
+include_directories("${CMAKE_SOURCE_DIR}/Library_headers")
 
 # 設定軟體安裝路徑前綴
 ## Install directory used by install.
 ### If "make install" is invoked or INSTALL is built, this directory is prepended onto all install directories. This variable defaults to /usr/local on UNIX and c:/Program Files on Windows.
 ### set(CMAKE_INSTALL_PREFIX $ENV{HOME}/Software/${CMAKE_PROJECT_NAME})
 
-add_subdirectory(Source_code/ Built_artifacts)
+add_subdirectory(Source_code/ "Build artifacts")

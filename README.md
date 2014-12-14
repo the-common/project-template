@@ -51,6 +51,7 @@ Please browse our project's issue tracker.
 4. 建構出來的檔案會在當前工作目錄中的 Build/ 目錄底下
 
 ## 檔案與目錄說明<br />File and directory description
+* [軟體建構解決方案/<br />Build solutions/](Build solutions/)
 * 3rd_party_software/
 	* This directory stores 3rd party software used by this project
 * Executables/
