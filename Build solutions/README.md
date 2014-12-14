@@ -13,7 +13,8 @@
 本專案需要下列軟體以便建構：
 
 ### 適用於 C/C++ 語言專案
-* 標準Ｃ函式庫
+* 標準 C/C++ 函式庫
+* 一個夠近期的，符合 C89 規範的 C/C++ 工具鍊(toolchain)
 * [Ｖ字龍的C、C++程式語言函式庫收集<br />Vdragons C CPP Libraries Collection](https://github.com/Vdragon/Vdragons_C_CPP_Libraries_Collection)
 	* VCCL_showSoftwareInfo
 	* VCCL_printSomething
