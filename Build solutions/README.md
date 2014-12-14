@@ -3,7 +3,7 @@
 ### [傳統批次命令/<br />Traditional batch commands/](Traditional batch commands/)（尚未實作完成）
 ### [CMake 建構系統/<br />CMake buildsystem](CMake buildsystem/)
 ### [GNU Make 軟體建構系統/<br />GNU Make buildsystem/](GNU Make buildsystem/)（尚未實作完成）
-### [Code__Blocks 整合式開發環境/<br />Code__Blocks IDE/](Code__Blocks IDE/)
+### [Code::Blocks 整合式開發環境/<br />Code::Blocks IDE/](Code__Blocks IDE/)
 ### [Eclipse CDT 整合式開發環境/<br />Eclipse CDT IDE/](Eclipse CDT IDE/)
 ### [Geany 整合式開發環境/<br />Geany IDE/](Geany IDE/)（尚未實作完成）
 ### [CodeLite 整合式開發環境/<br />CodeLite IDE/](CodeLite IDE/)（尚未實作完成）
