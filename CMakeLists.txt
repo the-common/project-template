@@ -40,7 +40,7 @@ endif()
 
 # 設定額外的函式庫路徑
 link_directories(${CMAKE_SOURCE_DIR}/Libraries/)
-include_directories("${CMAKE_SOURCE_DIR}/Library_headers")
+include_directories("${CMAKE_SOURCE_DIR}/Library headers")
 
 # 設定軟體安裝路徑前綴
 ## Install directory used by install.

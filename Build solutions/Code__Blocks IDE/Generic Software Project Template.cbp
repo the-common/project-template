@@ -32,7 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-ansi" />
 			<Add option="-fexceptions" />
-			<Add directory="../../Library_headers" />
+			<Add directory="../../Library headers" />
 		</Compiler>
 		<Linker>
 			<Add library="VCCL_pauseProgram" />

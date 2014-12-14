@@ -91,14 +91,14 @@
 			<locationURI>$%7Bglobal_project_location%7D/Libraries</locationURI>
 		</link>
 		<link>
-			<name>Library_headers</name>
+			<name>Library headers</name>
 			<type>2</type>
-			<locationURI>global_project_location/Library_headers</locationURI>
+			<locationURI>global_project_location/Library%20headers</locationURI>
 		</link>
 		<link>
-			<name>Source_code</name>
+			<name>Source code</name>
 			<type>2</type>
-			<locationURI>global_project_location/Source_code</locationURI>
+			<locationURI>global_project_location/Source%20code</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
