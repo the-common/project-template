@@ -5,6 +5,8 @@
 		#不排除CDT專案檔案
 !.cproject
 		#排除CDT於建構專案時產生的檔案
+!.classpath
+ 
 *.d
 *.mk
 	# External tool builders
@@ -18,5 +20,4 @@
 .metadata	
 *~.nib
 local.properties
-.classpath
 .loadpath

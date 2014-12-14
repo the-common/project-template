@@ -19,3 +19,4 @@ Git 版本控制系統版本追蹤忽略規則
 1. 開啟終端機模擬軟體，切換當前工作目錄(current working directory)到本目錄。
 2. 執行 `cmake ../..` 命令產生要使用的軟體建構系統檔案（於 GNU/Linux 作業系統中預設是 GNU Make）。
 3. 依照軟體建構系統指定的方式建構軟體（於 GNU Make 軟體建構系統中為執行 `make` 命令）
+4. 建構出來的檔案會在當前工作目錄中的 `Built software/` 目錄底下

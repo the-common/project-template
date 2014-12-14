@@ -39,61 +39,32 @@ Please browse our project's issue tracker.
 		* VCCL_pauseProgram 
 	* 請將函式庫、函式庫標頭檔(library headers)安裝到系統預設搜索目錄，或是放在 Libraries/ 、Library_headers/ 子目錄中再進行軟體建構。
 
-## 如何建構專案？（僅適用於需要建構的軟體專案）<br />How to build the project?  (Only applicable to project needed to be built)
-### 使用整合式開發環境建構專案
-1. 到各整合式開發環境目錄(IDE_*)底下，開啟／匯入專案
-2. 透過整合式開發環境提供的介面來建構專案。
+## 如何建構專案？<br />How to build the project?
+本專案支援多種軟體建構方式，請參考[軟體建構解決方案/](Build solutions/)目錄的說明文件。
 
-### 使用 CMake 軟體建構系統建構專案
-1. 在終端機軟體中將當前工作目錄切換到 CMake 軟體建構系統的目錄(Buildsystem_CMake)中
-2. 執行 cmake ..
-3. 執行 make
-4. 建構出來的檔案會在當前工作目錄中的 Build/ 目錄底下
-
-## 檔案與目錄說明<br />File and directory description
+## 本目錄下的檔案與目錄說明<br />Description of files and directories under this directory
+* Source code/
+    * 軟體的來源程式碼  
+      Software's source code
 * [軟體建構解決方案/<br />Build solutions/](Build solutions/)
 * 3rd_party_software/
 	* This directory stores 3rd party software used by this project
-* Executables/
-	* This directory stores executable programs, not needed to be in binary form.
 * Tools/
 	* 專案相關的一些工具
-* Source_code/
-    * 軟體的來源程式碼  
-      Software's source code
-* Object_code/
-    * 軟體的目標程式碼
-    * 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
 * Library_headers/
 	* 專案使用的第三方函式庫之標頭(header)檔搜尋目錄
 * Libraries/
 	* 專案使用的第三方函式庫搜尋目錄
 	* ${Target or configuration name}/
-* Translations/
-    * 軟體介面翻譯的資料
-* Build_artifacts/
-	* 軟體的建構中間產物
-	* 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
-* Build/
-    * 建構好的軟體  
-      Built software
-    * ${Target or configuration name}/
-    * 目前因為建構產物皆可 out of source 建構在各自專屬的目錄中已不建議使用
-* IDE_*/
-    * 跟 * 整合式開發環境(IDE)相關的檔案與建構產物
-* Toolchain_*/
-	* 跟 * 工具鍊(toolchain)相關的檔案與建構產物
 * Resources/
 	* 軟體會使用到但是非程式的資源
 * Documentation/
 	* 專案的其他說明文件
 * Coding_style_configuration/
 	* 程式碼撰寫風格設定檔
-* Templates/
-	* 可能會用到的檔案範本
 * Git_hooks/
 	* 專案使用的 Git 版本控制系統掛勾程式(hook)
-* README.md
+* [專案說明文件.md<br />README.md](README.md)
 	* 本說明文件  
 	  This documentation
 

@@ -16,11 +16,11 @@ set (CMAKE_BUILD_TYPE Debug)
 ## 設定可執行檔的輸出目錄
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Built software/${CMAKE_LIBRARY_ARCHITECTURE}_${CMAKE_BUILD_TYPE}/")
 ## 設定靜態連結函式庫的輸出目錄
-### set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Build/Libraries/${CMAKE_LIBRARY_ARCHITECTURE}_${CMAKE_BUILD_TYPE})
+### set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Built software/Libraries/${CMAKE_LIBRARY_ARCHITECTURE}_${CMAKE_BUILD_TYPE}")
 ## 設定動態連結函式庫的輸出目錄
-### set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Build/Libraries/${CMAKE_LIBRARY_ARCHITECTURE}_${CMAKE_BUILD_TYPE})
+### set (CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Built software/Libraries/${CMAKE_LIBRARY_ARCHITECTURE}_${CMAKE_BUILD_TYPE}")
 ## PDB?
-### set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Build/PDBs)
+### set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Built software/PDBs")
 
 if(CMAKE_HOST_WIN32)
 	if(CMAKE_GENERATOR MATCHES ".*Makefiles")
@@ -47,4 +47,4 @@ include_directories("${CMAKE_SOURCE_DIR}/Library_headers")
 ### If "make install" is invoked or INSTALL is built, this directory is prepended onto all install directories. This variable defaults to /usr/local on UNIX and c:/Program Files on Windows.
 ### set(CMAKE_INSTALL_PREFIX $ENV{HOME}/Software/${CMAKE_PROJECT_NAME})
 
-add_subdirectory(Source_code/ "Build artifacts")
+add_subdirectory("Source code" "Built artifacts")

@@ -46,15 +46,14 @@ main() {
 	
 	checkIllegalUsage
 	
-	mkdir --parent 3rd_party_software
-	cd 3rd_party_software
+	mkdir --parent "3rd party software"
+	cd "3rd party software"
 
 	# 取得 VCCL 函式庫來源程式碼
-	if [ ! -d Vdragon_s_C_CPP_Libraries_Collection ]; then
-		git clone https://github.com/Vdragon/Vdragon_s_C_CPP_Libraries_Collection.git
-	fi
+	git submodule init
+	git submodule update
 
-	cd Vdragon_s_C_CPP_Libraries_Collection/Buildsystem_CMake
+	cd Vdragon_s_C_CPP_Libraries/Buildsystem_CMake
 	git pull --force
 	# 清掉先前可能有的建構產物，讓 CMake 可以在全空狀態下建構
 	git clean -d -X --force
@@ -64,7 +63,7 @@ main() {
 	cp --force --recursive Build/Libraries/* "${project_root_path}/Libraries"
 	cp --force --recursive Build/Library_headers/* "${project_root_path}/Library_headers"
 	cd "${project_root_path}/Libraries"
-	ln --symbolic */*.a .
+	ln --symbolic --force */*.a .
 
 	## 正常結束 script 程式
 	exit 0

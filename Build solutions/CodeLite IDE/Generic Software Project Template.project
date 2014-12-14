@@ -92,22 +92,22 @@
       </Completion>
     </Configuration>
   </Settings>
-  <VirtualDirectory Name="Source_code">
-    <File Name="../../Source_code/main.hpp"/>
-    <File Name="../../Source_code/main.cpp"/>
+  <VirtualDirectory Name="Source code">
+    <File Name="../../Source code/main.hpp"/>
+    <File Name="../../Source code/main.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="Project_specific_configurations">
-    <File Name="../../Source_code/Project_specific_configurations/Max_value.h"/>
-    <File Name="../../Source_code/Project_specific_configurations/Debug.h"/>
-    <File Name="../../Source_code/Project_specific_configurations/Software_info.h"/>
-    <File Name="../../Source_code/Project_specific_configurations/Math.h"/>
+    <File Name="../../Source code/Project_specific_configurations/Max_value.h"/>
+    <File Name="../../Source code/Project_specific_configurations/Debug.h"/>
+    <File Name="../../Source code/Project_specific_configurations/Software_info.h"/>
+    <File Name="../../Source code/Project_specific_configurations/Math.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="pauseProgram">
-    <File Name="../../Source_code/pauseProgram/pauseProgram.c"/>
-    <File Name="../../Source_code/pauseProgram/pauseProgram.h"/>
+    <File Name="../../Source code/pauseProgram/pauseProgram.c"/>
+    <File Name="../../Source code/pauseProgram/pauseProgram.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="showSoftwareInfo">
-    <File Name="../../Source_code/showSoftwareInfo/showSoftwareInfo.h"/>
-    <File Name="../../Source_code/showSoftwareInfo/showSoftwareInfo.c"/>
+    <File Name="../../Source code/showSoftwareInfo/showSoftwareInfo.h"/>
+    <File Name="../../Source code/showSoftwareInfo/showSoftwareInfo.c"/>
   </VirtualDirectory>
 </CodeLite_Project>
