@@ -20,3 +20,6 @@
 	* VCCL_Error_C
 	* VCCL_pauseProgram 
 	* 請將函式庫、函式庫標頭檔(library headers)安裝到系統預設搜索目錄，或是放在 [../Libraries/](../Libraries/) 、[../Library headers/](../Library headers/) 目錄中再進行軟體建構。
+
+### 適用於 Java 程式語言專案
+* 一個夠近期的 Java Development Kit(JDK)
