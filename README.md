@@ -60,9 +60,9 @@ Please browse our project's issue tracker.
 	* 軟體會使用到但是非程式的資源
 * Documentation/
 	* 專案的其他說明文件
-* Coding_style_configuration/
+* Coding style configuration/
 	* 程式碼撰寫風格設定檔
-* Git_hooks/
+* Git hooks/
 	* 專案使用的 Git 版本控制系統掛勾程式(hook)
 * [專案說明文件.md<br />README.md](README.md)
 	* 本說明文件  
