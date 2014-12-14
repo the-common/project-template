@@ -1,4 +1,4 @@
-# Resources/
+# 軟體資源/<br>Resources/
 
 ## 這是什麼？<br />What is this?
 置放跟軟體相關，但非程式的資源

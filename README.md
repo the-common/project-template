@@ -31,30 +31,39 @@ Please browse our project's issue tracker.
 本專案支援多種軟體建構方式，請參考[軟體建構解決方案/](Build solutions/)目錄的說明文件。
 
 ## 本目錄下的檔案與目錄說明<br />Description of files and directories under this directory
-* Source code/
-    * 軟體的來源程式碼  
-      Software's source code
-* [軟體建構解決方案/<br />Build solutions/](Build solutions/)
-* 3rd party software/
-	* This directory stores 3rd party software used by this project
-* Tools/
-	* 專案相關的一些工具
-* [Library headers/](Library headers/)
-	* 專案使用的第三方函式庫之標頭(header)檔搜尋目錄
-* Libraries/
-	* 專案使用的第三方函式庫搜尋目錄
-	* ${Target or configuration name}/
-* Resources/
-	* 軟體會使用到但是非程式的資源
-* Documentation/
-	* 專案的其他說明文件
-* Coding style configuration/
-	* 程式碼撰寫風格設定檔
-* Git hooks/
-	* 專案使用的 Git 版本控制系統掛勾程式(hook)
-* [專案說明文件.md<br />README.md](README.md)
-	* 本說明文件  
-	  This documentation
+### [來源程式碼/<br>Source code/](Source code/)
+軟體的來源程式碼  
+Software's source code
+
+### [軟體建構解決方案/<br />Build solutions/](Build solutions/)
+
+### [第三方軟體/<br>3rd party software/](3rd party software/)
+This directory stores 3rd party software used by this project
+
+### [專案會用到的工具/<br>Tools/](Tools/)
+專案相關的一些工具
+	
+### [Library headers/](Library headers/)
+專案使用的第三方函式庫之標頭(header)檔搜尋目錄
+
+### [函式庫/<br>Libraries/](Libraries/)
+專案使用的第三方函式庫搜尋目錄
+
+### [軟體資源/<br>Resources/](Resources/)
+軟體會使用到但是非程式的資源
+
+### [說明文件/<br>Documentation/](Documentation/)
+專案的其他說明文件
+
+### [程式碼風格設定檔/<br>Coding style configuration/](Coding style configuration/)
+程式碼撰寫風格設定檔
+
+### [Git 版本控制系統的掛勾程式(hook)<br>Git hooks/](Git hooks/)
+專案使用的 Git 版本控制系統掛勾程式(hook)
+
+### [專案說明文件.md<br />README.md](README.md)
+本說明文件  
+This documentation
 
 ## 常見問題與解答<br />Frequently Asked Questions and answers
 
