@@ -19,4 +19,6 @@ checkIllegalUsage
 rm -rf .git/
 ./Tools/renameProject.bash.sh
 git init
+git add .
+git commit -m "Import template files from \"Generic Software Project Template\" project."
 exit 0
