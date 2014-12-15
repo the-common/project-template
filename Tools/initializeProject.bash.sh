@@ -28,4 +28,5 @@ rm -rf "3rd party software/Vdragon_s_C_CPP_Libraries"
 git submodule add "$(git config -f .gitmodules --get "submodule.3rd party software/Vdragon_s_C_CPP_Libraries.url")" "$(git config -f .gitmodules --get "submodule.3rd party software/Vdragon_s_C_CPP_Libraries.path")"
 git add .
 git commit -m "Import template files from \"Generic Software Project Template\" project."
+
 exit 0
