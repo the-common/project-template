@@ -15,10 +15,17 @@ source "${project_root_path}/Tools/checkIllegalUsage.bash.source.sh"
 
 checkIllegalUsage
 
-# 移除 Generic Software Project Template 原本的 Git 程式碼倉庫
+# 清空無追蹤版本的檔案
+git clean -d --force
+git clean -X --force
+
+# 重新建立新的版本倉庫
 rm -rf .git/
 ./Tools/renameProject.bash.sh
 git init
+## Git 子模組在移除舊版本倉庫後不會保留（即使 .gitmodules 設定檔仍存在），重新註冊它
+rm -rf "3rd party software/Vdragon_s_C_CPP_Libraries"
+git submodule add "$(git config -f .gitmodules --get "submodule.3rd party software/Vdragon_s_C_CPP_Libraries.url")" "$(git config -f .gitmodules --get "submodule.3rd party software/Vdragon_s_C_CPP_Libraries.path")"
 git add .
 git commit -m "Import template files from \"Generic Software Project Template\" project."
 exit 0
