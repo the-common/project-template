@@ -40,7 +40,7 @@ Please browse our project's issue tracker.
 
 ### Ｖ字龍的C、C++程式語言函式庫收集的 VCCL_showSoftwareInfo、VCCL_printSomething、VCCL_Error_C 跟 VCCL_pauseProgram 函式庫（只適用於 C/C++ 語言專案）
 <https://github.com/Vdragon/Vdragons_C_CPP_Libraries_Collection>  
-請將函式庫、函式庫標頭檔(library headers)安裝到系統預設搜索目錄，或是放在 [Libraries/](Libraries/) 、[Library headers/](Library headers) 子目錄中再進行軟體建構。
+請將函式庫、函式庫標頭檔(library headers)安裝到系統預設搜索目錄，或是放在 [Libraries/](Libraries/) 、[Library headers/](Library headers/) 子目錄中再進行軟體建構。
 
 ### 標準 Java 工具鍊（只適用於 Java 程式語言專案）
 
