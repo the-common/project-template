@@ -49,7 +49,7 @@ Please browse our project's issue tracker.
 * [軟體建構解決方案/<br />Build solutions/](Build solutions/)
 * 3rd_party_software/
 	* This directory stores 3rd party software used by this project
-* Tools/
+* [工具/<br>Tools/](Tools/)
 	* 專案相關的一些工具
 * Library_headers/
 	* 專案使用的第三方函式庫之標頭(header)檔搜尋目錄
