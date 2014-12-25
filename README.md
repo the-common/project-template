@@ -27,6 +27,25 @@ Please browse our project's issue tracker.
 
 ## 本專案的智慧財產授權條款<br />Intellectual property license of this project
 
+## 軟體依賴關係<br />Software dependency
+使用本專案需要安裝下列軟體：
+
+### Bash 殼程式（選用）<br>Bash shell(optional)
+主要用於[專案會用到的工具/](Tools/) 目錄內的腳本程式
+
+### CoreUtils
+主要用於[專案會用到的工具/](Tools/) 目錄內的腳本程式
+
+### 標準Ｃ工具鍊(toolchain)（只適用於 C/C++ 語言專案）
+
+### Ｖ字龍的C、C++程式語言函式庫收集的 VCCL_showSoftwareInfo、VCCL_printSomething、VCCL_Error_C 跟 VCCL_pauseProgram 函式庫（只適用於 C/C++ 語言專案）
+<https://github.com/Vdragon/Vdragons_C_CPP_Libraries_Collection>
+請將函式庫、函式庫標頭檔(library headers)安裝到系統預設搜索目錄，或是放在 Libraries/ 、Library_headers/ 子目錄中再進行軟體建構。
+
+### 標準 Java 工具鍊（只適用於 Java 程式語言專案）
+
+其他需要的軟體請見各軟體建構解決方案的說明文件。
+
 ## 如何建構專案？<br />How to build the project?
 本專案支援多種軟體建構方式，請參考[軟體建構解決方案/](Build solutions/)目錄的說明文件。
 
