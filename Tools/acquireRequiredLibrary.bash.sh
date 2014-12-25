@@ -61,7 +61,7 @@ main() {
 	cmake ..
 	make
 	cp --force --recursive Build/Libraries/* "${project_root_path}/Libraries"
-	cp --force --recursive Build/Library_headers/* "${project_root_path}/Library_headers"
+	cp --force --recursive Build/Library_headers/* "${project_root_path}/Library headers"
 	cd "${project_root_path}/Libraries"
 	ln --symbolic --force */*.a .
 

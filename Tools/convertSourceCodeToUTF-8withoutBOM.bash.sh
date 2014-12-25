@@ -36,7 +36,7 @@ readonly project_root_path="${PROGRAM_DIRECTORY}/.."
 ######## File scope variable definitions ended ########
 
 ######## Included files ########
-source ${project_root_path}/Tools/checkIllegalUsage.bash.source.sh
+source "${project_root_path}/Tools/checkIllegalUsage.bash.source.sh"
 
 ######## Included files ended ########
 
@@ -50,7 +50,7 @@ prepare3rdPartySoftware() {
 		cd addUTF-8bomb
 		git pull --force
 	fi
-	cd ${project_root_path}
+	cd "${project_root_path}"
 	return
 }
 
@@ -61,7 +61,7 @@ main() {
 	checkIllegalUsage
 	prepare3rdPartySoftware
 	
-	find Source_code -path 'Source_code/CMakeFiles' -prune -o  -regextype posix-extended -regex '.*\.(c|cpp|cc|h|hpp|hh)$' -exec bash 3rd_party_software/addUTF-8bomb/Executables/removeUTF-8bomb {} \;
+	find "Source code" -path 'Source code/CMakeFiles' -prune -o  -regextype posix-extended -regex '.*\.(c|cpp|cc|h|hpp|hh)$' -exec bash 3rd_party_software/addUTF-8bomb/Executables/removeUTF-8bomb {} \;
 	## 正常結束 script 程式
 	exit 0
 	set +x

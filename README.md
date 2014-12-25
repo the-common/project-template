@@ -7,7 +7,7 @@ If you see this paragraph means that this file is NOT customized to the project 
 2. 將 Generic_Software_Project_Template 目錄改名為您的專案名稱
 3. 以專案根目錄作為當前工作目錄(current working directory)在終端機中執行 bash Tools/initializeProject.bash.sh 初始化專案
 4. 依照您要開發的軟體類型將需要的檔案放到他們該在的目錄中
-	* 比方說，將本軟體所需要的函式庫與函式庫標頭檔放到 Libraries/ 與 Library_headers/ 目錄中
+	* 比方說，將本軟體所需要的函式庫與函式庫標頭檔放到 Libraries/ 與 Library headers/ 目錄中
 	* 您可以移除您不會用到的目錄
 5. 開始設計軟體 :)
 
@@ -27,46 +27,44 @@ Please browse our project's issue tracker.
 
 ## 本專案的智慧財產授權條款<br />Intellectual property license of this project
 
-## 軟體建構依賴關係<br />Software build dependency
-本專案需要下列函式庫以便建構：
-
-* 只適用於 C/C++ 語言專案
-	* 標準Ｃ函式庫
-	* [Ｖ字龍的C、C++程式語言函式庫收集<br />Vdragons C CPP Libraries Collection](https://github.com/Vdragon/Vdragons_C_CPP_Libraries_Collection)
-		* VCCL_showSoftwareInfo
-		* VCCL_printSomething
-		* VCCL_Error_C
-		* VCCL_pauseProgram 
-	* 請將函式庫、函式庫標頭檔(library headers)安裝到系統預設搜索目錄，或是放在 Libraries/ 、Library_headers/ 子目錄中再進行軟體建構。
-
 ## 如何建構專案？<br />How to build the project?
 本專案支援多種軟體建構方式，請參考[軟體建構解決方案/](Build solutions/)目錄的說明文件。
 
 ## 本目錄下的檔案與目錄說明<br />Description of files and directories under this directory
-* Source_code/
-    * 軟體的來源程式碼  
-      Software's source code
-* [軟體建構解決方案/<br />Build solutions/](Build solutions/)
-* 3rd_party_software/
-	* This directory stores 3rd party software used by this project
-* [工具/<br>Tools/](Tools/)
-	* 專案相關的一些工具
-* Library_headers/
-	* 專案使用的第三方函式庫之標頭(header)檔搜尋目錄
-* Libraries/
-	* 專案使用的第三方函式庫搜尋目錄
-	* ${Target or configuration name}/
-* Resources/
-	* 軟體會使用到但是非程式的資源
-* Documentation/
-	* 專案的其他說明文件
-* Coding_style_configuration/
-	* 程式碼撰寫風格設定檔
-* Git_hooks/
-	* 專案使用的 Git 版本控制系統掛勾程式(hook)
-* [專案說明文件.md<br />README.md](README.md)
-	* 本說明文件  
-	  This documentation
+
+### [來源程式碼/<br>Source code/](Source code/)
+軟體的來源程式碼  
+Software's source code
+
+### [軟體建構解決方案/<br />Build solutions/](Build solutions/)
+
+### [第三方軟體/<br>3rd party software/](3rd party software/)
+This directory stores 3rd party software used by this project
+
+### [專案會用到的工具/<br>Tools/](Tools/)
+專案相關的一些工具
+	
+### [Library headers/](Library headers/)
+專案使用的第三方函式庫之標頭(header)檔搜尋目錄
+
+### [函式庫/<br>Libraries/](Libraries/)
+專案使用的第三方函式庫搜尋目錄
+
+### [軟體資源/<br>Resources/](Resources/)
+軟體會使用到但是非程式的資源
+
+### [說明文件/<br>Documentation/](Documentation/)
+專案的其他說明文件
+
+### [程式碼風格設定檔/<br>Coding style configuration/](Coding style configuration/)
+程式碼撰寫風格設定檔
+
+### [Git 版本控制系統的掛勾程式(hook)<br>Git hooks/](Git hooks/)
+專案使用的 Git 版本控制系統掛勾程式(hook)
+
+### [專案說明文件.md<br />README.md](README.md)
+本說明文件  
+This documentation
 
 ## 常見問題與解答<br />Frequently Asked Questions and answers
 

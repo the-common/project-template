@@ -2,7 +2,7 @@
 # https://github.com/Vdragon/GNU_Make_Makefile_templates
 # 變數
 # Variables
-NAME_PROJECT = Generic_Software_Project_Template
+NAME_PROJECT = "Generic Software Project Template"
 NAME_TARGET = Unix_x86_32bit_debug
 POSTFIX_TYPE_SOURCE_CODE_C = c
 POSTFIX_TYPE_SOURCE_CODE_CPP = cpp
