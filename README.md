@@ -33,7 +33,7 @@ Please browse our project's issue tracker.
 ### Bash 殼程式（選用）<br>Bash shell(optional)
 主要用於[專案會用到的工具/](Tools/) 目錄內的腳本程式
 
-### CoreUtils
+### GNU CoreUtils
 主要用於[專案會用到的工具/](Tools/) 目錄內的腳本程式
 
 ### 標準Ｃ工具鍊(toolchain)（只適用於 C/C++ 語言專案）
