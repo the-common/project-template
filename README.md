@@ -97,4 +97,5 @@ This documentation
 ### 宣傳本專案給別人
 
 ### 翻譯本專案內容
-如果您熟悉其他語言，歡迎將本專案之內容翻譯為不同的語言
+如果您熟悉其他語言，歡迎將本專案之內容翻譯為不同的語言  
+If you are familiar to other languages, it is welcomed to translate this project's content to other languages.
