@@ -58,7 +58,7 @@ main() {
 	# 清掉先前可能有的建構產物，讓 CMake 可以在全空狀態下建構
 	git clean -d -X --force
 	
-	cmake ..
+	cmake -G "Unix Makefiles" ..
 	make
 	cp --force --recursive Build/Libraries/* "${project_root_path}/Libraries"
 	cp --force --recursive Build/Library_headers/* "${project_root_path}/Library headers"
