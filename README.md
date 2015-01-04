@@ -75,7 +75,7 @@ This directory stores 3rd party software used by this project
 ### [說明文件/<br>Documentation/](Documentation/)
 專案的其他說明文件
 
-### [程式碼風格設定檔/<br>Coding style configuration/](Coding style configuration/)
+### [程式碼風格設定檔/<br>Coding style configurations/](Coding style configurations/)
 程式碼撰寫風格設定檔
 
 ### [Git 版本控制系統的掛勾程式(hook)<br>Git hooks/](Git hooks/)
