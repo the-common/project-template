@@ -20,7 +20,7 @@ public class Main_program{
 	/** @brief Java 程式的進入點(entry point)子程式
 	    @param args 命令列參數的字串陣列 */
 	public static void main(String[] args){
-		/* 呼叫標準輸出(standard output)(System.out)物件的負責輸出字串的 println 方法(method) 以輸出「Java 程式設計世界哈囉！」字串 */
+		/* 印出程式名稱 */
 		System.out.println("Generic Software Project Template 主程式");
 		
 	}
