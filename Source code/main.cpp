@@ -1,14 +1,22 @@
-/*
-  請見本檔案的標頭(header)檔案以得到更多關於本檔案的說明
-
-  本程式的框架基於「C/C++ 程式範本」專案
-  This program's frame is based on "C/C++ program templates" project
-    https://github.com/Vdragon/C_CPP_program_templates
-  建議編輯器設定
-  Recommended editor settings
-    Indentation by tab character
-    Tab character width = 2 space characters
+/** 
+	@file main.cpp
+	@brief 主程式
+	
+	請見本檔案的標頭(header)檔案（如果有的話）以得到更多關於本程式的說明
+	
+	本來源程式碼的架構基於「通用程式來源程式碼範本」專案
+	This source code's structure is based on "Generic Program Source Code Templates" project
+		https://github.com/Vdragon/Generic_Program_Source_Code_Templates
+		
+	建議的文字編輯器設定
+	Recommended text editor settings
+		Indentation by tab character
+		Tab character width = 2 space characters
+	
+	@author 〈作者稱謂〉
+	@copyright 〈授權條款段落〉
 */
+
 /* 程式所引入(include)之函式庫的標頭(header)檔案
  * Included library headers */
 /* 自己的 header 檔案 */
@@ -134,7 +142,13 @@ void initializeSoftwareInfo(void);
 
 /* 函式的實作
  * Function implementations */
-/* main 函式 - C/C++ 程式的進入點(entry point) */
+/** @brief main 函式 - C/C++ 程式的進入點(entry point)
+    @arg argc 呼叫程式的命令列參數數量
+    @arg argv 呼叫程式的命令列參數字串陣列
+		@returns 此程式要傳回作業系統的結束狀態碼
+		@retval EXIT_SUCCESS 代表程式執行成功（此常數的定義位於 stdlib.h）
+		@retval EXIT_FAILURE 代表程式執行失敗（此常數的定義位於 stdlib.h）
+		@retval 其他數值 由開發者自行定義 */
 int main(int argc, char * argv[]) {
 	/* 初始化 GNU gettext 函式庫 */
 	/* Use system default locale instead of "C" locale */
