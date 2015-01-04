@@ -45,4 +45,6 @@ mv "Build solutions/CodeLite IDE/${name_project_original}.project" "Build soluti
 sed --in-place "s/name=${name_project_original}/name=${name_project}/g" "Build solutions/Geany IDE/${name_project_original}.geany"
 mv "Build solutions/Geany IDE/${name_project_original}.geany" "Build solutions/Geany IDE/${name_project}.geany"
 
+sed --in-place "s/${name_project_original}/${name_project}/g" "Documentation/Application Programming Interface(API) documentation/Doxygen/Doxyfile"
+
 exit 0
