@@ -8,6 +8,9 @@
 ### [README.md](README.md)
 本說明檔案
 
+### [.gitignore](.gitignore)
+Git 版本控制系統版本追蹤忽略規則
+
 ### [initializeProject.bash.sh](initializeProject.bash.sh)
 初始化專案用的 GNU Bash shell script 程式，此程式會刪除先前的 Git 版本倉庫
 
