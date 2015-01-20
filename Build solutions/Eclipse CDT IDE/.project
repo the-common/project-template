@@ -113,7 +113,7 @@
 	</linkedResources>
 	<filteredResources>
 		<filter>
-			<id>1421750492568</id>
+			<id>1421751180238</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -122,12 +122,30 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1421750492570</id>
+			<id>1421751180242</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
 				<arguments>1.0-name-matches-false-false-README.md</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1421751180245</id>
+			<name></name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-執行設定檔</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1421751180246</id>
+			<name></name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-.外部工具建構器</arguments>
 			</matcher>
 		</filter>
 		<filter>

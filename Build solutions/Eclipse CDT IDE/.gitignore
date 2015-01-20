@@ -5,15 +5,11 @@
 		#不排除CDT專案檔案
 !.cproject
 		#排除CDT於建構專案時產生的檔案
+!.*
 *.d
 *.mk
-	# External tool builders
-.externalToolBuilders/
-	# Locally stored "Eclipse launch configurations"
-*.launch
 	# PDT-specific
 .buildpath
-.settings/
 *.pydevproject
 .metadata	
 *~.nib
