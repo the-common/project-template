@@ -8,6 +8,8 @@
 Locally stored "Eclipse launch configurations"
 ### [.外部工具建構器/<br />.externalToolBuilders/](.externalToolBuilders/)
 保存專案的外部工具建構器的目錄
+### [.settings/](.settings/)
+保存某些 Eclipse 專案設定的目錄
 ### [說明文件.md<br />README.md](README.md)
 本說明檔案
 ### [.gitignore](.gitignore)
