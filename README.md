@@ -81,6 +81,9 @@ This directory stores 3rd party software used by this project
 ### [Git 版本控制系統的掛勾程式(hook)<br>Git hooks/](Git hooks/)
 專案使用的 Git 版本控制系統掛勾程式(hook)
 
+### [範本/<br />Templates/](Templates/)
+專案使用的範本
+
 ### [專案說明文件.md<br />README.md](README.md)
 本說明文件  
 This documentation
