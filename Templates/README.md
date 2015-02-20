@@ -5,8 +5,8 @@
 ### [Build_artifacts/](Build_artifacts/)
 建構產物目錄範本（放在各個軟體建構解決方案目錄底下）
 
-### [README/](README/)
+### [新目錄範本/<br />New directory template/](New directory template/)
 說明檔範本
-	
+
 ### [README.md](README.md)
 本說明檔案

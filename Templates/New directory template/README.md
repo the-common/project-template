@@ -5,5 +5,5 @@ If you see this paragraph means that this file is NOT customized to the project 
 # 〈相對目錄路徑〉(&lt;Relative directory path&gt;)
 
 ## 本目錄下的項目說明<br />Description of the items under this directory
-### [說明文件.md<br />README.md](README.md)
-本說明文件
+### [目錄說明文件.md<br />README.md](README.md)
+本目錄的說明文件
