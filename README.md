@@ -23,8 +23,6 @@ Please browse our project's issue tracker.
 -------------------------------------
 # 〈專案名稱〉<br />&lt;Project_name&gt;
 
-## 這是什麼？<br />What is this?
-
 ## 本專案的智慧財產授權條款<br />Intellectual property license of this project
 
 ## 執行本軟體需要的軟體<br />Dependencies of running this software
