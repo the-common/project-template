@@ -22,11 +22,17 @@ Please browse our project's issue tracker.
 
 -------------------------------------
 # 〈專案名稱〉<br />&lt;Project_name&gt;
+（專案的「一言以蔽之」描述句）  
+(project's "in a nutshell" describing sentence)
+〈專案的官方網站地址(project's official site URL)〉
 
 ## 本專案的智慧財產授權條款<br />Intellectual property license of this project
+尚未指定財產授權條款，保留所有權利  
+Haven't select a intellectual property license, ALL RIGHT RESERVED
 
 ## 執行本軟體需要的軟體<br />Dependencies of running this software
 要執行本軟體前需要安裝下列軟體：
+（待補）
 
 ## 進行本軟體的開發需要的軟體<br />Dependencies for development of this software
 ### Bash 殼程式（選用）<br>Bash shell(optional)
