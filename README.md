@@ -30,6 +30,7 @@ Please browse our project's issue tracker.
 ## 執行本軟體需要的軟體<br />Dependencies of running this software
 要執行本軟體前需要安裝下列軟體：
 
+## 進行本軟體的開發需要的軟體<br />Dependencies for development of this software
 ### Bash 殼程式（選用）<br>Bash shell(optional)
 主要用於[專案會用到的工具/](Tools/) 目錄內的腳本程式
 
