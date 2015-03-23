@@ -46,7 +46,7 @@ Please browse our project's issue tracker.
 
 其他需要的軟體請見各軟體建構解決方案的說明文件。
 
-## 如何建構專案？<br />How to build the project?
+## 如何建構軟體？<br />How to build the software?
 本專案支援多種軟體建構方式，請參考[軟體建構解決方案/](Build solutions/)目錄的說明文件。
 
 ## 本目錄下的檔案與目錄說明<br />Description of files and directories under this directory
