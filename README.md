@@ -23,7 +23,7 @@ Please browse our project's issue tracker.
 -------------------------------------
 # 〈專案名稱〉<br />&lt;Project_name&gt;
 （專案的「一言以蔽之」描述句）  
-(project's "in a nutshell" describing sentence)
+(project's "in a nutshell" describing sentence)  
 〈專案的官方網站地址(project's official site URL)〉
 
 ## 本專案的智慧財產授權條款<br />Intellectual property license of this project
