@@ -27,8 +27,8 @@ Please browse our project's issue tracker.
 
 ## 本專案的智慧財產授權條款<br />Intellectual property license of this project
 
-## 軟體依賴關係<br />Software dependency
-使用本專案需要安裝下列軟體：
+## 執行本軟體需要的軟體<br />Dependencies of running this software
+要執行本軟體前需要安裝下列軟體：
 
 ### Bash 殼程式（選用）<br>Bash shell(optional)
 主要用於[專案會用到的工具/](Tools/) 目錄內的腳本程式
