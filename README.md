@@ -28,7 +28,7 @@ Please browse our project's issue tracker.
 
 ## 本專案的智慧財產授權條款<br />Intellectual property license of this project
 尚未指定財產授權條款，保留所有權利  
-Haven't select a intellectual property license, ALL RIGHT RESERVED
+Haven't select a intellectual property license, ALL RIGHTS RESERVED
 
 ## 執行本軟體需要的軟體<br />Dependencies of running this software
 要執行本軟體前需要安裝下列軟體：
