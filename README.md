@@ -26,15 +26,15 @@ Please browse our project's issue tracker.
 (project's "in a nutshell" describing sentence)  
 〈專案的官方網站地址(project's official site URL)〉
 
-## 本專案的智慧財產授權條款<br />Intellectual property license of this project
+## 本專案的智慧財產授權條款<br />Intellectual Property License of This Project
 尚未指定財產授權條款，保留所有權利  
 Haven't select a intellectual property license, ALL RIGHTS RESERVED
 
-## 執行本軟體需要的軟體<br />Dependencies of running this software
+## 執行本軟體需要的軟體<br />Dependencies of Running This Software
 要執行本軟體前需要安裝下列軟體：
 （待補）
 
-## 進行本軟體的開發需要的軟體<br />Dependencies for development of this software
+## 進行本軟體的開發需要的軟體<br />Dependencies for Development of This Software
 ### Bash 殼程式（選用）<br>Bash shell(optional)
 主要用於[專案會用到的工具/](Tools/) 目錄內的腳本程式
 
@@ -93,10 +93,10 @@ This directory stores 3rd party software used by this project
 本說明文件  
 This documentation
 
-## 常見問題與解答<br />Frequently Asked Questions and answers
+## 常見問題與解答<br />Frequently Asked Questions and Answers
 
-## 如何對本專案做出貢獻<br />How to contribute to this project
-### 回報問題與改善建議<br />Report issues and improvement suggestions
+## 如何對本專案做出貢獻<br />How to Contribute to This project
+### 回報問題與改善建議<br />Report Issues and Improvement Suggestions
 發現問題或是有改善本專案的建議的話請到[本專案的問題追蹤系統(issue tracker)](../../issues)建檔回報
 
 ### 貢獻本專案內容
