@@ -16,7 +16,7 @@ This project template is licensed as CC0.
 To the extent possible under law, Vdragon(Vdragon.Taiwan@gmail.com) has waived all copyright and related or neighboring rights to 通用軟體專案範本(Generic Software Project Template). This work is published from: 台灣(Taiwan). 
 
 ### 已知問題<br />Known issues
-請瀏覽本專案的問題追蹤系統。  
+請瀏覽本專案的議題追蹤系統。  
 Please browse our project's issue tracker.  
 [https://github.com/Vdragon/Generic_Software_Project_Template/issues](https://github.com/Vdragon/Generic_Software_Project_Template/issues)
 
@@ -97,7 +97,7 @@ This documentation
 
 ## 如何對本專案做出貢獻<br />How to Contribute to This project
 ### 回報問題與改善建議<br />Report Issues and Improvement Suggestions
-發現問題或是有改善本專案的建議的話請到[本專案的問題追蹤系統(issue tracker)](../../issues)建檔回報
+發現問題或是有改善本專案的建議的話請到[本專案的議題追蹤系統(issue tracker)](../../issues)建檔回報
 
 ### 貢獻本專案內容
 要貢獻內容的話歡迎[建立分支版本倉庫](../../fork)，建立並切換至一個新的 Git 分支(branch)完成編輯後提交(commit)為一個新版本，推送(push)到您的 GitHub 遠端版本倉庫再跟我們[建檔拉取請求(pull request)](../../pull/new)
