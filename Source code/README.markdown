@@ -2,7 +2,7 @@
 
 ## 本目錄下的項目說明<br />Description of the items under this directory
 ### [Project_specific_configurations/](Project_specific_configurations/)
-### [說明文件.md<br />README.md](README.md)
+### [說明文件.markdown<br />README.markdown](README.markdown)
 本說明文件
 ### [CMakeLists.txt](CMakeLists.txt)
 ### [main.cpp](main.cpp)

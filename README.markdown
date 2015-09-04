@@ -89,7 +89,7 @@ This directory stores 3rd party software used by this project
 ### [範本/<br />Templates/](Templates/)
 專案使用的範本
 
-### [專案說明文件.md<br />README.md](README.md)
+### [專案說明文件.markdown<br />README.markdown](README.markdown)
 本說明文件  
 This documentation
 

@@ -3,7 +3,7 @@
 放置專案使用的 Git 版本控制系統卦勾程式(hook)的目錄
 
 ## 本目錄下的項目說明<br />Description of the items under this directory
-* README.md
+* README.markdown
 	* 本說明檔案
 * Astyle_before_commit.precommit.sh
 	* 在提交一個版本前自動對來源程式碼進行格式化的 Git hook 程式（目前並沒有達到設計目的）

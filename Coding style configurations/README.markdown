@@ -6,7 +6,7 @@
 	* 放置各種**傳統**的程式碼撰寫風格設定檔
 * Project_specified_coding_style*
 	* 本專案指定的 coding style 設定檔之名稱皆以 Project_specified_coding_style 作為開頭（版本控制系統只會追蹤此名稱設定檔）
-* README.md
+* README.markdown
 	* 本說明文件
 
 ## 本目錄底下內容適用之授權條款<br />License of the content under this directory
