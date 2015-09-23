@@ -67,5 +67,5 @@ temp/
 #Git版本控制系統排除規則，放在最後面以免被後面的規則覆蓋掉
 	#排除所有目錄下的.gitignore排除規則檔案
 !*.gitignore
-# 排除 Git submodule 設定檔
-!*.gitmodules
+  # 排除 Git 設定檔(submodule/attributes/...)
+!.git*
