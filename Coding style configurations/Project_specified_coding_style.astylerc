@@ -10,6 +10,5 @@
 --add-brackets
 --convert-tabs
 --indent=tab=2
---brackets=attach
 --align-pointer=middle
 --lineend=linux
