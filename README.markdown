@@ -49,6 +49,9 @@ Haven't select a intellectual property license, ALL RIGHTS RESERVED
 
 ### 標準 Java 工具鍊（只適用於 Java 程式語言專案）
 
+### Astyle 2.04 or later versions
+For applying project coding styles.
+
 其他需要的軟體請見各軟體建構解決方案的說明文件。
 
 ## 如何建構軟體？<br />How to build the software?

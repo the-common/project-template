@@ -1,0 +1,6 @@
+*.c filter=apply_coding_style
+*.h filter=apply_coding_style
+*.cpp filter=apply_coding_style
+*.c++ filter=apply_coding_style
+*.hpp filter=apply_coding_style
+*.java filter=apply_coding_style
