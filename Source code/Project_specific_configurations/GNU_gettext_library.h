@@ -72,3 +72,4 @@ extern "C" {
 }
 #endif /* __cplusplus */
 #endif/* GNU_GETTEXT_LIB_H_INCLUDED */
+
