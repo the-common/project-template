@@ -1,3 +1,12 @@
 [submodule "3rd party software/Vdragon_s_C_CPP_Libraries"]
 	path = 3rd party software/Vdragon_s_C_CPP_Libraries
 	url = https://github.com/Vdragon/Vdragon_s_C_CPP_Libraries.git
+[submodule "3rd party software/Generic_How_To_Contribute_Template"]
+	path = 3rd party software/Generic_How_To_Contribute_Template
+	url = git@github.com:Vdragon/Generic_How_To_Contribute_Template.git
+[submodule "3rd party software/Generic_Program_Source_Code_Templates"]
+	path = 3rd party software/Generic_Program_Source_Code_Templates
+	url = git@github.com:Vdragon/Generic_Program_Source_Code_Templates.git
+[submodule "3rd party software/Vdragon's License Templates"]
+	path = 3rd party software/Vdragon's License Templates
+	url = git@github.com:Vdragon/Vdragon_s_License_Templates.git
