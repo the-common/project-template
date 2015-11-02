@@ -7,6 +7,7 @@
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<triggers>clean,full,incremental,</triggers>
 			<arguments>
 				<dictionary>
 					<key>?children?</key>
@@ -132,7 +133,7 @@
 		<link>
 			<name>專案說明文件(Project README).md</name>
 			<type>1</type>
-			<locationURI>global_project_location/README.md</locationURI>
+			<locationURI>global_project_location/README.markdown</locationURI>
 		</link>
 		<link>
 			<name>軟體建構解決方案說明文件(Build solution README).md</name>
@@ -142,7 +143,7 @@
 	</linkedResources>
 	<filteredResources>
 		<filter>
-			<id>1421754873220</id>
+			<id>1446463573157</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -151,7 +152,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1421754873222</id>
+			<id>1446463573158</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -160,7 +161,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1421754873224</id>
+			<id>1446463573160</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -169,7 +170,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1421754873225</id>
+			<id>1446463573161</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
