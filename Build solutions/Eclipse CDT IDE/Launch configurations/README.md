@@ -6,5 +6,9 @@
 ### [說明文件.md<br>README.md](README.md)
 本說明檔案
 
+### 以 launch 為副檔名的檔案
+啟動設定檔
+
 ### [.gitignore](.gitignore)
 Git 版本控制系統版本追蹤忽略文件
+
