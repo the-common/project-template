@@ -52,8 +52,8 @@ sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/E
 sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/Code__Blocks IDE/${name_project_original}.cbp"
 sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/Code__Blocks IDE/README.md"
 mv "Build solutions/Code__Blocks IDE/${name_project_original}.cbp" "Build solutions/Code__Blocks IDE/${name_project}.cbp"
-mv "Build solutions/Code__Blocks IDE/${name_project_original}.layout" "Build solutions/Code__Blocks IDE/${name_project}.layout"
-mv "Build solutions/Code__Blocks IDE/${name_project_original}.depend" "Build solutions/Code__Blocks IDE/${name_project}.depend"
+mv "Build solutions/Code__Blocks IDE/${name_project_original}.layout" "Build solutions/Code__Blocks IDE/${name_project}.layout" 2>/dev/null
+mv "Build solutions/Code__Blocks IDE/${name_project_original}.depend" "Build solutions/Code__Blocks IDE/${name_project}.depend" 2>/dev/null
 
 sed --in-place "s/${name_project_original}/${name_project}/g" "Build solutions/CodeLite IDE/${name_project_original}.project"
 mv "Build solutions/CodeLite IDE/${name_project_original}.project" "Build solutions/CodeLite IDE/${name_project}.project"
