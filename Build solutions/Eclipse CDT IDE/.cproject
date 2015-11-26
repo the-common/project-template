@@ -76,7 +76,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="${workspace_loc:/Generic Software Project Template/Source_code}|Source_code/CMakeFiles" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="CMakeFiles/" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Source code"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
