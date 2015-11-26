@@ -16,3 +16,7 @@
 local.properties
 .classpath
 .loadpath
+
+# 目前看起來無用的設定值...
+.settings/
+
