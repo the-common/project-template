@@ -138,7 +138,7 @@
 		<link>
 			<name>軟體建構解決方案說明文件(Build solution README).md</name>
 			<type>1</type>
-			<locationURI>PROJECT_LOC/README.md</locationURI>
+			<locationURI>PROJECT_LOC/README.markdown</locationURI>
 		</link>
 	</linkedResources>
 	<filteredResources>
