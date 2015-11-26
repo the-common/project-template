@@ -103,7 +103,7 @@
 		<link>
 			<name>Libraries</name>
 			<type>2</type>
-			<locationURI>$%7Bglobal_project_location%7D/Libraries</locationURI>
+			<locationURI>global_project_location/Libraries</locationURI>
 		</link>
 		<link>
 			<name>Library headers</name>
