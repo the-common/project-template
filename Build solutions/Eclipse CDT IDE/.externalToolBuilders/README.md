@@ -6,8 +6,5 @@
 ### [說明文件.md<br>README.md](README.md)
 本說明檔案
 
-### *.class （建構完成才會存在）
-編譯好的 Java Bytecode 程式
-
 ### [.gitignore](.gitignore)
 Git 版本控制系統版本追蹤忽略文件
