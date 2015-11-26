@@ -15,6 +15,6 @@ source "${project_root_path}/Tools/checkIllegalUsage.bash.source.sh"
 
 checkIllegalUsage
 git config filter.apply_coding_style.clean "astyle --options=\"Coding style configurations/Project_specified_coding_style.astylerc\""
-git config filter.apply_coding_style.smudge cat
-
+git config filter.apply_coding_style.smudge "cat | head --lines=-1"
+printf "Git clean 與 smudge 過濾器安裝完成。\n"
 exit 0
