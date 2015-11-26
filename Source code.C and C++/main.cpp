@@ -26,92 +26,10 @@
  * Standard C libraries
  *   C library - C++ Reference
  *   http://www.cplusplus.com/reference/clibrary/ */
-/* C library to perform Input/Output operations
-  #include <stdio.h>
-  #include <cstdio> */
-/* C Standard General Utilities Library
-  #include <stdlib.h> */
 #include <cstdlib>
-/* C error number
-  #include <errno.h>
-  #include <cerrno> */
-/* C Diagnostics Library
-  #include <assert.h>
-  #include <cassert> */
-/* C Character handling functions
-  #include <ctype.h>
-  #include <cctype> */
-/* Characteristics of floating-point types
-  #include <float.h>
-  #include <cfloat> */
-/* ISO 646 Alternative operator spellings
-  #include <iso646.h>
-  #include <ciso646> */
-/* Sizes of integral types
-  #include <limits.h>
-  #include <climits> */
-/* C localization library
-  #include <locale.h> */
 #include <clocale>
-/* C numerics library
-  #include <math.h>
-  #include <cmath> */
-/* Non local jumps
-  #include <setjmp.h>
-  #include <csetjmp> */
-/* C library to handle signals
-  #include <signal.h>
-  #include <csignal> */
-/* Variable arguments handling
-  #include <stdarg.h>
-  #include <cstdarg> */
-/* Boolean type(C99 or later)
-  #include <stdbool.h>
-  #include <cstdbool> */
-/* C Standard definitions
-  #include <stddef.h>
-  #include <cstddef> */
-/* Integer types(C++11 later)
-  #include <stdint.h>
-  #include <cstdint> */
-/* C Strings
-  #include <string.h>
-  #include <cstring> */
-/* C Time Library
-  #include <time.h>
-  #include <ctime> */
-/* Unicode characters handling library(C++11 later)
-  #include <uchar.h>
-  #include <cuchar> */
-/* Wide characters handling library
-  #include <wchar.h>
-  #include <cwchar> */
-/* Wide character type
-  #include <wctype.h>
-  #include <cwctype> */
-/* Type-generic math(non C89)
-  #include <tgmath.h>
-  #include <ctgmath> */
-/*
-  #include <.h>
-  #include <c> */
 
 /* 標準 C++ 函式庫 */
-/* Input/Output related */
-/* Standard Input / Output Streams Library
-  #include <iostream> */
-/* Input/output file stream class
-  #include <fstream> */
-/* Container */
-/* list
-  #include <list> */
-/* Unclassified */
-/* Strings
-  #include <string> */
-/* Standard Template Library: Algorithms
-  #include <algorithm> */
-/*
-  #include <> */
 
 /* GNU gettext library */
 #include <libintl.h>
