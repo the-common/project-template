@@ -24,7 +24,3 @@ public class Main_program {
 			System.out.println("Generic Software Project Template 主程式");
 		}
 }
-
-
-
-
