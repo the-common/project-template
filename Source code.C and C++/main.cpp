@@ -102,7 +102,3 @@ void initializeSoftwareInfo(void) {
 	return;
 }
 
-
-
-
-
