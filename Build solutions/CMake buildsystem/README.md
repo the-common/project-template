@@ -15,6 +15,10 @@
 Git 版本控制系統版本追蹤忽略規則
 
 ## 如何使用本軟體建構解決方案建構軟體
+### 已知問題
+#### 不相容「Unix Makefiles」產生器
+請參考「[CMake - Unix Makefiles 產生器產生的 Makefile 無法正常運作（因為建構結果包含空白字元）](https://github.com/Vdragon/Generic_Software_Project_Template/issues/30)」議題
+
 ### 使用 cmake 命令列介面工具
 1. 開啟終端機模擬軟體，切換當前工作目錄(current working directory)到本目錄。
 2. 執行 `cmake ../..` 命令產生要使用的軟體建構系統檔案（於 GNU/Linux 作業系統中預設是 GNU Make）。

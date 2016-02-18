@@ -38,6 +38,10 @@ if(CMAKE_HOST_WIN32)
 	endif()
 endif()
 
+# Workarounds
+## 允許不安全的建構產物名稱
+set(CMAKE_POLICY_DEFAULT_CMP0037 OLD)
+
 # 設定額外的函式庫路徑
 link_directories(${CMAKE_SOURCE_DIR}/Libraries/)
 include_directories("${CMAKE_SOURCE_DIR}/Library headers")
