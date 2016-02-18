@@ -14,6 +14,8 @@
 # Return Value Definition
 # 	0
 # 		正常結束
+# 	1
+# 		異常結束
 # 已知問題
 # Known Issues
 # 	Known issues is now tracked on GitHub
@@ -39,12 +41,29 @@ source "${project_root_path}/Tools/checkIllegalUsage.bash.source.sh"
 ######## Included files ended ########
 
 ######## Program ########
+checkRuntimeDependencies() {
+	which cmake >/dev/null
+	if $(test $? -ne 0); then
+		printf "錯誤：於可執行檔搜尋路徑中找不到 cmake 命令！\n"
+		printf "請確定 CMake 軟體已被安裝且 cmake 可執行檔所在路徑有在可執行檔搜尋路徑（PATH 環境變數）中！\n"
+		exit 1
+	fi
+
+	which git >/dev/null
+	if $(test $? -ne 0); then
+		printf "錯誤：於可執行檔搜尋路徑中找不到 git 命令！\n"
+		printf "請確定 Git 軟體已被安裝且 git 可執行檔所在路徑有在可執行檔搜尋路徑（PATH 環境變數）中！\n"
+		exit 1
+	fi
+}
+
 # main function, program entry point
 # idea from http://www.kfirlavi.com/blog/2012/11/14/defensive-bash-programming/
 main() {
 	set -x
 	
 	checkIllegalUsage
+	checkRuntimeDependencies
 	
 	mkdir --parent "3rd party software"
 	cd "3rd party software"
