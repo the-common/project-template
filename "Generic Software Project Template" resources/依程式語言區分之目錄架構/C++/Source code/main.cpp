@@ -101,4 +101,3 @@ void initializeSoftwareInfo(void) {
 	global_software_information.software_license_other_name = NULL;
 	return;
 }
-
