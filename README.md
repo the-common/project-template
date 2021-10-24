@@ -16,6 +16,7 @@ A common project template to start of, batteries included.
     Also remove the unused `To be addressed` sections
 
 1. Replace the `Upstream-Name`, `Upstream-Contact`, and `Source` field of the [.reuse/dep5 REUSE DEP5 machine-readable copyright declaration document](.reuse/dep5) with appropriate content(project name, project's issue tracker's title and URL, and project's site URL)
+1. Replace [.markdownlint.yml](.markdownlint.yml) with [real.markdownlint.yml](real.markdownlint.yml)
 1. Replace [README.md](README.md)(this document) with [real.README.md](real.README.md)
 1. Commit all changes as a new revision(commit summary for reference: `docs: Write project README prototype`)
 1. (If you've cloned the repository back to local) push local changes to the remote repository
