@@ -31,6 +31,9 @@
 # https://docs.drone.io/
 !.drone.yml
 
+# Do track yamllint configuration files
+!.yamllint
+
 # Do track REUSE configuration files
 # https://reuse.software/
 !.reuse/
