@@ -21,22 +21,23 @@ jobs:
       - name: Checking out content from repository
         uses: actions/checkout@v2
 
-      - name: Running static analysis program
-        run: |
-          sudo ./continuous-integration/do-static-analysis.install-system-deps.ssh
-          ./continuous-integration/do-static-analysis.sh
-
-      - name: Cache PyPI data to speed up continuous integration
+      - name: Configure PyPI data cache to speed up continuous integration
         uses: actions/cache@v2
         with:
           path: ${{ env.PIP_CACHE_DIR }}
           key: ${{ runner.os }}-pip
 
-      - name: Cache pre-commit data to speed up continuous integration
+      - name: >-
+          Configure pre-commit data cache to speed up continuous integration
         uses: actions/cache@v2
         with:
           path: ${{ env.PRE_COMMIT_HOME }}
           key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
+
+      - name: Running static analysis program
+        run: |
+          sudo ./continuous-integration/do-static-analysis.install-system-deps.ssh
+          ./continuous-integration/do-static-analysis.sh
 
       - name: Send CI result notification to the Telegram channel
         uses: yanzay/notify-telegram@v0.1.0
