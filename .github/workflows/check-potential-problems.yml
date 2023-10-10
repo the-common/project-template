@@ -24,12 +24,16 @@ jobs:
       - name: Running static analysis program
         run: ./continuous-integration/do-static-analysis.sh
 
-      - name: Cache downloaded content to speed up continuous integration
+      - name: Cache PyPI data to speed up continuous integration
         uses: actions/cache@v2
         with:
-          path:
-            - ${{ env.PIP_CACHE_DIR }}
-            - ${{ env.PRE_COMMIT_HOME }}
+          path: ${{ env.PIP_CACHE_DIR }}
+          key: ${{ runner.os }}-pip
+
+      - name: Cache pre-commit data to speed up continuous integration
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.PRE_COMMIT_HOME }}
           key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
 
       - name: Send CI result notification to the Telegram channel
