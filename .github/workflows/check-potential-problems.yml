@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Running static analysis program
-        run: ./continuous-integration/do-static-analysis.sh
+        run: sudo ./continuous-integration/do-static-analysis.sh
 
       - name: Cache PyPI data to speed up continuous integration
         uses: actions/cache@v2
