@@ -1,0 +1,24 @@
+# GitLab CI configuration file
+#
+# References:
+#
+# * `.gitlab-ci.yml` keyword reference | GitLab
+#   https://docs.gitlab.com/ee/ci/yaml/
+#
+# Copyright 2023 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
+# SPDX-License-Identifier: CC-BY-SA-4.0
+static-analysis:
+  stage: test
+  image: ubuntu:22.04
+  variables:
+    PIP_CACHE_DIR: ${CI_PROJECT_DIR}/.cache/pip
+    PRE_COMMIT_HOME: ${CI_PROJECT_DIR}/.cache/pre-commit
+  cache:
+    # Enable per-job and per-branch caching
+    key: $CI_JOB_NAME-$CI_COMMIT_REF_SLUG
+    paths:
+      - ${PIP_CACHE_DIR}
+      - ${PRE_COMMIT_HOME}
+
+  script:
+    - ./continuous-integration/do-static-analysis.sh

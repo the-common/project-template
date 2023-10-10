@@ -38,6 +38,9 @@
 # https://reuse.software/
 !.reuse/
 
+# Do track GitLab CI configuration file
+!/.gitlab-ci.yml
+
 # Don't track common backup filename extensions
 *~
 *.bak*
@@ -82,3 +85,6 @@
 
 # Don't track GNU gettext machine-readable message catalogs
 *.mo
+
+# Don't track continuous intregration virtual environments
+/continuous-integration/venv/
