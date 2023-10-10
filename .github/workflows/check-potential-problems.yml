@@ -13,16 +13,24 @@ on:
 jobs:
   check-using-precommit:
     name: Check potential problems using pre-commit
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
+    env:
+      PIP_CACHE_DIR: ${{ github.workspace }}/.cache/pip
+      PRE_COMMIT_HOME: ${{ github.workspace }}/.cache/pre-commit
     steps:
       - name: Checking out content from repository
         uses: actions/checkout@v2
 
-      - name: Install pre-commit
-        run: pip3 install pre-commit
+      - name: Running static analysis program
+        run: ./continuous-integration/do-static-analysis.sh
 
-      - name: Check all files in project using pre-commit
-        run: pre-commit run --all-files --color always
+      - name: Cache downloaded content to speed up continuous integration
+        uses: actions/cache@v2
+        with:
+          path:
+            - ${{ env.PIP_CACHE_DIR }}
+            - ${{ env.PRE_COMMIT_HOME }}
+          key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
 
       - name: Send CI result notification to the Telegram channel
         uses: yanzay/notify-telegram@v0.1.0
