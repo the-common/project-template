@@ -6,8 +6,30 @@ A common project template to start of, batteries included.
 
 ## How to use
 
-1. Click the ["Use this template" green button](https://github.com/the-common/project-template/generate) on the GitHub project page
+### If you're on GitLab
+
+1. Create a new project via [the on-site interface](https://gitlab.com/projects/new)
+1. At localhost, launch a text terminal application, and run the following commands to clone the new project's repository to local:
+
+    ```bash
+    git clone \
+        _repository_url_ \
+        _project_dirctory_
+    ```
+
+1. Downloading a copy of [The Common Project Template](https://gitlab.com/the-common/project-template/-/releases) release archive
+1. Extract The Common Project Template release archive to a temporary directory
+1. Copy all the files to the new project local repository's working tree
+1. Continue the operation in [Common instructions](#common-instructions)
+
+### If you're on GitHub
+
+1. Click the ["Use this template" green button](https://github.com/the-common/project-template/generate) on [the mirrored GitHub project page](https://github.com/the-common/project-template)
 1. Follow the instructions on the webpage to create a new project
+1. Continue the operation in [Common instructions](#common-instructions)
+
+### Common instructions
+
 1. Edit the [real.README.md project README template](real.README.md), replace the following `_placeholders_ to the appropriate content:
     + `_project_name_`
     + `_project_summary_`
