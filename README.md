@@ -2,6 +2,8 @@
 
 A common project template to start of, batteries included.
 
+<https://gitlab.com/the-common/project-template>
+
 ## How to use
 
 1. Click the ["Use this template" green button](https://github.com/the-common/project-template/generate) on the GitHub project page
