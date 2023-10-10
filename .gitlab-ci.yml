@@ -21,4 +21,5 @@ static-analysis:
       - ${PRE_COMMIT_HOME}
 
   script:
+    - ./continuous-integration/do-static-analysis.install-system-deps.ssh
     - ./continuous-integration/do-static-analysis.sh
