@@ -4,6 +4,8 @@ A common project template to start of, batteries included.
 
 <https://gitlab.com/the-common/project-template>
 
+[![The "Check potential problems in the project" GitHub Actions workflow status badge](https://github.com/the-common/project-template/actions/workflows/check-potential-problems.yml/badge.svg "Click here to check out the comprehensive status of the \"Check potential problems in the project\" GitHub Actions workflow")](https://github.com/the-common/project-template/actions/workflows/check-potential-problems.yml)
+
 ## How to use
 
 ### If you're on GitLab
