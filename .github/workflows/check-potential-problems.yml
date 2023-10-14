@@ -19,7 +19,7 @@ jobs:
       PRE_COMMIT_HOME: ${{ github.workspace }}/.cache/pre-commit
     steps:
       - name: Checking out content from repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Configure PyPI data cache to speed up continuous integration
         uses: actions/cache@v2
