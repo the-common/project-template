@@ -54,21 +54,6 @@ if ! pip show pre-commit &>/dev/null; then
 fi
 
 printf \
-    'Info: Configuring local test environment workaround...\n'
-git_config_opts=(
-    --global
-    --add safe.directory "${PWD}"
-)
-if ! \
-    git config \
-        "${git_config_opts[@]}"; then
-    printf \
-        'Error: Unable to configure the local test environment workaround.\n' \
-        1>&2
-    exit 2
-fi
-
-printf \
     'Info: Running pre-commit...\n'
 if ! \
     pre-commit run \
