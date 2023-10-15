@@ -29,3 +29,5 @@ generate-build-artifacts:
   artifacts:
     paths:
       - '*'
+  script:
+    - "printf 'Info: Generating build artifacts...'"
