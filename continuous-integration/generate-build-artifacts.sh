@@ -7,6 +7,20 @@ set \
     -o errexit \
     -o nounset
 
+script="${BASH_SOURCE[0]}"
+if ! script="$(
+    realpath \
+        --strip \
+        "${script}"
+    )"; then
+    printf \
+        'Error: Unable to determine the absolute path of the program.\n' \
+        1>&2
+    exit 1
+fi
+
+script_dir="${script%/*}"
+
 if ! test -e "${script_dir}/venv"; then
     printf \
         'Info: Initializing the Python virtual environment...\n'
