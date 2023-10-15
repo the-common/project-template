@@ -73,7 +73,7 @@ fi
 
 printf \
     'Info: Generating the project archive...\n'
-project_id="${CI_ENVIRONMENT_NAME}-${project_version}"
+project_id="${CI_PROJECT_NAME}-${project_version}"
 git_archive_all_opts=(
     # Add an additional layer of folder for containing the archive
     # contents
