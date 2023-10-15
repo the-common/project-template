@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Configure PyPI data cache to speed up continuous integration
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           key: ${{ runner.os }}-pip
           path: ${{ env.PIP_CACHE_DIR }}
