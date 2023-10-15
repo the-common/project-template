@@ -24,15 +24,15 @@ jobs:
       - name: Configure PyPI data cache to speed up continuous integration
         uses: actions/cache@v2
         with:
-          path: ${{ env.PIP_CACHE_DIR }}
           key: ${{ runner.os }}-pip
+          path: ${{ env.PIP_CACHE_DIR }}
 
       - name: >-
           Configure pre-commit data cache to speed up continuous integration
         uses: actions/cache@v2
         with:
-          path: ${{ env.PRE_COMMIT_HOME }}
           key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
+          path: ${{ env.PRE_COMMIT_HOME }}
 
       - name: Running static analysis program
         run: |
