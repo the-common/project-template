@@ -23,3 +23,9 @@ static-analysis:
   script:
     - ./continuous-integration/do-static-analysis.install-system-deps.sh
     - ./continuous-integration/do-static-analysis.sh
+
+generate-build-artifacts:
+  stage: deploy
+  artifacts:
+    paths:
+      - '*'
