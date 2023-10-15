@@ -9,6 +9,7 @@
 # SPDX-License-Identifier: CC-BY-SA-4.0
 generate-build-artifacts:
   stage: build
+  needs: []
   image: ubuntu:22.04
   artifacts:
     paths:
@@ -19,6 +20,7 @@ generate-build-artifacts:
 
 static-analysis:
   stage: test
+  needs: []
   image: ubuntu:22.04
   variables:
     PIP_CACHE_DIR: ${CI_PROJECT_DIR}/.cache/pip
