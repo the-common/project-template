@@ -26,8 +26,10 @@ static-analysis:
 
 generate-build-artifacts:
   stage: deploy
+  image: ubuntu:22.04
   artifacts:
     paths:
-      - '*'
+      - ${CI_PROJECT_NAME}-*.tar*
   script:
-    - "printf 'Info: Generating build artifacts...'"
+    - ./continuous-integration/generate-build-artifacts.install-system-deps.sh
+    - ./continuous-integration/generate-build-artifacts.sh
