@@ -48,5 +48,5 @@ create-release:
     - echo 'Creating release...'
   release:
     tag_name: $CI_COMMIT_TAG
-    description: ''
+    description: 'T.B.A.'
     name: $CI_PROJECT_TITLE $CI_COMMIT_TAG
