@@ -61,7 +61,7 @@ git_describe_opts=(
     --dirty
     --tags
 )
-if ! project_version="$(
+if ! version_describe="$(
     git describe \
         "${git_describe_opts[@]}"
     )"; then
@@ -70,6 +70,7 @@ if ! project_version="$(
         1>&2
     exit 2
 fi
+project_version="${version_describe#v}"
 
 printf \
     'Info: Generating the project archive...\n'
