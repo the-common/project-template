@@ -45,6 +45,7 @@ create-release:
     - if: $CI_COMMIT_TAG
   before_script:
     - export RELEASE_VERSION="${CI_COMMIT_TAG#v}"
+    - echo RELEASE_VERSION is "${RELEASE_VERSION}"
   # Workaround for gitlab-org/gitlab#223856
   script:
     - echo 'Creating release...'
