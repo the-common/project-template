@@ -7,17 +7,6 @@
 #
 # Copyright 2023 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
 # SPDX-License-Identifier: CC-BY-SA-4.0
-generate-build-artifacts:
-  stage: build
-  needs: []
-  image: ubuntu:22.04
-  artifacts:
-    paths:
-      - ${CI_PROJECT_NAME}-*.tar*
-  script:
-    - ./continuous-integration/generate-build-artifacts.install-system-deps.sh
-    - ./continuous-integration/generate-build-artifacts.sh
-
 do-static-analysis:
   stage: test
   needs: []
@@ -35,6 +24,17 @@ do-static-analysis:
   script:
     - ./continuous-integration/do-static-analysis.install-system-deps.sh
     - ./continuous-integration/do-static-analysis.sh
+
+generate-build-artifacts:
+  stage: build
+  needs: []
+  image: ubuntu:22.04
+  artifacts:
+    paths:
+      - ${CI_PROJECT_NAME}-*.tar*
+  script:
+    - ./continuous-integration/generate-build-artifacts.install-system-deps.sh
+    - ./continuous-integration/generate-build-artifacts.sh
 
 upload-release-assets:
   stage: deploy
