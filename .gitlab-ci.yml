@@ -37,7 +37,7 @@ static-analysis:
     - ./continuous-integration/do-static-analysis.sh
 
 create-release:
-  stage: release
+  stage: deploy
   needs:
     - generate-build-artifacts
   image: registry.gitlab.com/gitlab-org/release-cli:latest
