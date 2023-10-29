@@ -18,7 +18,7 @@ generate-build-artifacts:
     - ./continuous-integration/generate-build-artifacts.install-system-deps.sh
     - ./continuous-integration/generate-build-artifacts.sh
 
-static-analysis:
+do-static-analysis:
   stage: test
   needs: []
   image: ubuntu:22.04
