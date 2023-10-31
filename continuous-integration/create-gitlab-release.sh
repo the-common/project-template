@@ -16,45 +16,6 @@ if ! test CI_PROJECT_ID; then
 fi
 
 printf \
-    'Info: Determining release description...\n'
-git_tag_list="$(git tag --list)"
-git_tag_count="$(wc -l <<<"${git_tag_list}")"
-
-release_description="## Detailed changes"$'\n\n'
-git_log_opts=(
-    --format='format:* %s (%h) - %an'
-)
-
-if test "${git_tag_count}" -eq 1; then
-    release_description+="$(
-        git log \
-            "${git_log_opts[@]}" \
-            "${CI_COMMIT_TAG}"
-    )"
-else
-    sorted_git_tag_list="$(
-        sort \
-            -V \
-            <<<"${git_tag_list}"
-    )"
-    latest_two_git_tags="$(
-        tail \
-            -n 2 \
-            <<<"${sorted_git_tag_list}"
-    )"
-    previous_git_tag="$(
-        head \
-            -n 1 \
-            <<<"${latest_two_git_tags}"
-    )"
-    release_description+="$(
-        git log \
-            "${git_log_opts[@]}" \
-            "${previous_git_tag}..${CI_COMMIT_TAG}"
-    )"
-fi
-
-printf \
     'Info: Determining release version...\n'
 release_version="${CI_COMMIT_TAG#v}"
 
@@ -65,10 +26,21 @@ project_dir="${script_dir%/*}"
 
 printf \
     'Info: Determining release details...\n'
+detailed_changes_file="${project_dir}/.detailed_changes"
+if test -e "${detailed_changes_file}"; then
+    printf \
+        'Error: The detailed changes file "%s" does not exist.\n' \
+        "${detailed_changes_file}" \
+        1>&2
+    exit 2
+fi
+
 release_cli_create_opts=(
     --name "${CI_PROJECT_TITLE} ${release_version}"
     --tag-name "${CI_COMMIT_TAG}"
-    --description "${release_description}"
+
+    # WORKAROUND: Absolute path is not accepted as file input
+    --description "${detailed_changes_file##*/}"
 )
 
 shopt -s nullglob
