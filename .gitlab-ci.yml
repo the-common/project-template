@@ -58,4 +58,5 @@ create-release:
   image: registry.gitlab.com/gitlab-org/release-cli:latest
   script:
     - apk add bash git
+    - ./continuous-integration/generate-release-description.sh
     - ./continuous-integration/create-gitlab-release.sh
