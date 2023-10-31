@@ -31,11 +31,15 @@ git_log_opts=(
     --format='format:* %s (%h) - %an'
 )
 
+if test -v CI_COMMIT_TAG; then
+    release_tag="${CI_COMMIT_TAG}"
+fi
+
 if test "${git_tag_count}" -eq 1; then
     if ! detailed_changes_markup+="$(
         git log \
             "${git_log_opts[@]}" \
-            "${CI_COMMIT_TAG}"
+            "${release_tag}"
         )"; then
         printf \
             'Error: Unable to generate the commit list from Git.\n' \
@@ -76,12 +80,12 @@ else
     if ! detailed_changes_markup+="$(
         git log \
             "${git_log_opts[@]}" \
-            "${previous_git_tag}..${CI_COMMIT_TAG}"
+            "${previous_git_tag}..${release_tag}"
         )"; then
         printf \
             'Error: Unable to generate the Git commit list between the "%s" tag and the "%s" tag.\n' \
             "${previous_git_tag}" \
-            "${CI_COMMIT_TAG}" \
+            "${release_tag}" \
             1>&2
         exit 2
     fi

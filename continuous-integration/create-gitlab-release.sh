@@ -27,7 +27,7 @@ project_dir="${script_dir%/*}"
 printf \
     'Info: Determining release details...\n'
 detailed_changes_file="${project_dir}/.detailed_changes"
-if test -e "${detailed_changes_file}"; then
+if ! test -e "${detailed_changes_file}"; then
     printf \
         'Error: The detailed changes file "%s" does not exist.\n' \
         "${detailed_changes_file}" \
