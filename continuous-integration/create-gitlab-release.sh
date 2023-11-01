@@ -8,7 +8,7 @@ set \
     -o errexit \
     -o nounset
 
-if ! test CI_PROJECT_ID; then
+if ! test -v CI_PROJECT_ID; then
     printf \
         'Error: This program should be run under a GitLab CI environment.\n' \
         1>&2
