@@ -10,7 +10,7 @@ A common project template to start of, batteries included.
 
 ### If you're on GitLab
 
-1. Create a new project via [the on-site interface](https://gitlab.com/projects/new)
+1. Create a new project via [the on-site interface](https://gitlab.com/projects/new), it is required to check the "Initialize repository with a README" checkbox.
 1. At localhost, launch a text terminal application, and run the following commands to clone the new project's repository to local:
 
     ```bash
