@@ -86,5 +86,5 @@
 # Don't track GNU gettext machine-readable message catalogs
 *.mo
 
-# Don't track continuous intregration virtual environments
+# Don't track continuous integration virtual environments
 /continuous-integration/venv/
