@@ -58,24 +58,24 @@ fi
 # Silence warnings regarding unavailable debconf frontends
 export DEBIAN_FRONTEND=noninteractive
 
-if ! test -v CI; then
-    base_runtime_dependency_pkgs=(
-        wget
-    )
-    if ! dpkg -s "${base_runtime_dependency_pkgs[@]}" &>/dev/null; then
+base_runtime_dependency_pkgs=(
+    wget
+)
+if ! dpkg -s "${base_runtime_dependency_pkgs[@]}" &>/dev/null; then
+    printf \
+        'Info: Installing base runtime dependency packages...\n'
+    if ! \
+        apt-get install \
+            -y \
+            "${base_runtime_dependency_pkgs[@]}"; then
         printf \
-            'Info: Installing base runtime dependency packages...\n'
-        if ! \
-            apt-get install \
-                -y \
-                "${base_runtime_dependency_pkgs[@]}"; then
-            printf \
-                'Error: Unable to install the base runtime dependency packages.\n' \
-                1>&2
-            exit 2
-        fi
+            'Error: Unable to install the base runtime dependency packages.\n' \
+            1>&2
+        exit 2
     fi
+fi
 
+if ! test -v CI; then
     printf \
         'Info: Detecting local region code...\n'
     wget_opts=(
