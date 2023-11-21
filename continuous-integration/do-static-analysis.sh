@@ -54,6 +54,10 @@ if ! pip show pre-commit &>/dev/null; then
 fi
 
 printf \
+    'Info: Setting up the command search PATHs so that the installed shellcheck command can be located...\n'
+PATH="/opt/shellcheck-stable:${PATH}"
+
+printf \
     'Info: Running pre-commit...\n'
 if ! \
     pre-commit run \
