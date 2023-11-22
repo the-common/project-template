@@ -16,7 +16,7 @@ do-static-analysis:
   variables:
     PIP_CACHE_DIR: ${CI_PROJECT_DIR}/.cache/pip
     PRE_COMMIT_HOME: ${CI_PROJECT_DIR}/.cache/pre-commit
-    SHELLCHECK_DIR: /opt/shellcheck-stable
+    SHELLCHECK_DIR: ${CI_PROJECT_DIR}/.cache/shellcheck-stable
   cache:
     # Enable per-job and per-branch caching
     key: $CI_JOB_NAME-$CI_COMMIT_REF_SLUG

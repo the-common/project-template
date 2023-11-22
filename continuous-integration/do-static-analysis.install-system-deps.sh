@@ -21,6 +21,12 @@ if test -v BASH_SOURCE; then
         script_name="${script_filename%%.*}"
     }
 fi
+project_dir="$(dirname "${script_dir}")"
+cache_dir="${project_dir}/.cache"
+
+if ! test -e "${cache_dir}"; then
+    mkdir --parents "${cache_dir}"
+fi
 
 trap_exit(){
     if test -v temp_dir \
@@ -186,7 +192,7 @@ fi
 
 printf \
     'Info: Setting up the command search PATHs so that the locally installed shellcheck command can be located...\n'
-PATH="/opt/shellcheck-stable:${PATH}"
+PATH="${cache_dir}/shellcheck-stable:${PATH}"
 
 if ! command -v shellcheck >/dev/null; then
     printf \
@@ -258,7 +264,7 @@ if ! command -v shellcheck >/dev/null; then
     tar_opts=(
         --extract
         --verbose
-        --directory=/opt
+        --directory="${cache_dir}"
         --file="${downloaded_prebuilt_shellcheck_archive}"
     )
     if ! tar "${tar_opts[@]}"; then
