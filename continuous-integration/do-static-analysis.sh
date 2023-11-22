@@ -19,6 +19,8 @@ if ! script="$(
 fi
 
 script_dir="${script%/*}"
+project_dir="$(dirname "${script_dir}")"
+cache_dir="${project_dir}/.cache"
 
 if ! test -e "${script_dir}/venv"; then
     printf \
@@ -55,7 +57,7 @@ fi
 
 printf \
     'Info: Setting up the command search PATHs so that the installed shellcheck command can be located...\n'
-PATH="/opt/shellcheck-stable:${PATH}"
+PATH="${cache_dir}/shellcheck-stable:${PATH}"
 
 printf \
     'Info: Running pre-commit...\n'
