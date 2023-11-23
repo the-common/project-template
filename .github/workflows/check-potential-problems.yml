@@ -17,6 +17,7 @@ jobs:
     env:
       PIP_CACHE_DIR: ${{ github.workspace }}/.cache/pip
       PRE_COMMIT_HOME: ${{ github.workspace }}/.cache/pre-commit
+      SHELLCHECK_DIR: ${{ github.workspace }}/.cache/shellcheck-stable
     steps:
       - name: Checking out content from repository
         uses: actions/checkout@v4
@@ -33,6 +34,13 @@ jobs:
         with:
           key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
           path: ${{ env.PRE_COMMIT_HOME }}
+
+      - name: >-
+          Configure pre-built ShellCheck cache to speed up continuous integration
+        uses: actions/cache@v3
+        with:
+          key: ${{ runner.os }}-${{ runner.arch }}-shellcheck
+          path: ${{ env.SHELLCHECK_DIR }}
 
       - name: Running static analysis program
         run: |
