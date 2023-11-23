@@ -46,11 +46,10 @@ jobs:
         run: |
           sudo bash -x ./continuous-integration/do-static-analysis.install-system-deps.sh
           bash -x ./continuous-integration/do-static-analysis.sh
-          ls -al .cache
 
       - name: Debug static analysis program
         run: |
-          ls -alR .cache/shellcheck-stable/
+          ls -alR .
 
       - name: Send CI result notification to the Telegram channel
         uses: yanzay/notify-telegram@v0.1.0
