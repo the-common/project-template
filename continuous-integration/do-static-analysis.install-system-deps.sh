@@ -45,6 +45,8 @@ if ! test -e "${cache_dir}"; then
         --directory
     )
     if test -v SUDO_USER; then
+        # Configure same user as the running environment to avoid access
+        # problems afterwards
         install_opts+=(
             --owner "${SUDO_USER}"
             --group "${SUDO_GID}"
