@@ -25,7 +25,21 @@ project_dir="$(dirname "${script_dir}")"
 cache_dir="${project_dir}/.cache"
 
 if ! test -e "${cache_dir}"; then
-    mkdir --parents "${cache_dir}"
+    install_opts=(
+        --directory
+    )
+    if test -v SUDO_USER; then
+        install_opts+=(
+            --owner "${SUDO_USER}"
+            --group "${SUDO_GID}"
+        )
+    fi
+    if ! install "${install_opts[@]}" "${cache_dir}"; then
+        printf \
+            'Error: Unable to create the cache directory.\n' \
+            1>&2
+        exit 2
+    fi
 fi
 
 trap_exit(){
