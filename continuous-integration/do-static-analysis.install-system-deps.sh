@@ -21,6 +21,22 @@ if test -v BASH_SOURCE; then
         script_name="${script_filename%%.*}"
     }
 fi
+
+trap_exit(){
+    if test -v temp_dir \
+        && test -e "${temp_dir}"; then
+        rm -rf "${temp_dir}"
+    fi
+}
+trap trap_exit EXIT
+
+if test "${EUID}" -ne 0; then
+    printf \
+        'Error: This program should be run as the superuser(root) user.\n' \
+        1>&2
+    exit 1
+fi
+
 project_dir="$(dirname "${script_dir}")"
 cache_dir="${project_dir}/.cache"
 
@@ -40,21 +56,6 @@ if ! test -e "${cache_dir}"; then
             1>&2
         exit 2
     fi
-fi
-
-trap_exit(){
-    if test -v temp_dir \
-        && test -e "${temp_dir}"; then
-        rm -rf "${temp_dir}"
-    fi
-}
-trap trap_exit EXIT
-
-if test "${EUID}" -ne 0; then
-    printf \
-        'Error: This program should be run as the superuser(root) user.\n' \
-        1>&2
-    exit 1
 fi
 
 apt_archive_cache_mtime_epoch="$(
