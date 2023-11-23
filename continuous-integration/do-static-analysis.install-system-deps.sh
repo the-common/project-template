@@ -207,11 +207,9 @@ if ! dpkg -s "${runtime_dependency_pkgs[@]}" &>/dev/null; then
     fi
 fi
 
-printf \
-    'Info: Setting up the command search PATHs so that the locally installed shellcheck command can be located...\n'
-PATH="${cache_dir}/shellcheck-stable:${PATH}"
+shellcheck_dir="${cache_dir}/shellcheck-stable"
 
-if ! command -v shellcheck >/dev/null; then
+if ! test -e "${shellcheck_dir}/shellcheck" >/dev/null; then
     printf \
         "Info: Determining the host machine's hardware architecture...\\n"
     if ! arch="$(arch)"; then
@@ -299,6 +297,10 @@ if ! command -v shellcheck >/dev/null; then
         exit 2
     fi
 fi
+
+printf \
+    'Info: Setting up the command search PATHs so that the locally installed shellcheck command can be located...\n'
+PATH="${shellcheck_dir}:${PATH}"
 
 printf \
     'Info: Querying the ShellCheck version...\n'
