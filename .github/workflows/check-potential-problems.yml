@@ -45,7 +45,6 @@ jobs:
       - name: Running static analysis program
         run: |
           sudo ./continuous-integration/do-static-analysis.install-system-deps.sh
-          which shellcheck
           ./continuous-integration/do-static-analysis.sh
 
       - name: Send CI result notification to the Telegram channel
