@@ -282,6 +282,14 @@ if ! command -v shellcheck >/dev/null; then
         --directory="${cache_dir}"
         --file="${downloaded_prebuilt_shellcheck_archive}"
     )
+    if test -v SUDO_USER; then
+        # Configure same user as the running environment to avoid access
+        # problems afterwards
+        tar_opts+=(
+            --owner="${SUDO_USER}"
+            --group="${SUDO_GID}"
+        )
+    fi
     if ! tar "${tar_opts[@]}"; then
         printf \
             'Error: Unable to extract the prebuilt ShellCheck software archive.\n' \
