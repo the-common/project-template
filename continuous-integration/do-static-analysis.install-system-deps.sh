@@ -209,7 +209,7 @@ fi
 
 shellcheck_dir="${cache_dir}/shellcheck-stable"
 
-if ! test -e "${shellcheck_dir}/shellcheck" >/dev/null; then
+if ! test -e "${shellcheck_dir}/shellcheck"; then
     printf \
         "Info: Determining the host machine's hardware architecture...\\n"
     if ! arch="$(arch)"; then
