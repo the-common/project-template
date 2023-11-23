@@ -44,8 +44,12 @@ jobs:
 
       - name: Running static analysis program
         run: |
-          sudo ./continuous-integration/do-static-analysis.install-system-deps.sh
-          ./continuous-integration/do-static-analysis.sh
+          sudo bash -x ./continuous-integration/do-static-analysis.install-system-deps.sh
+          bash -x ./continuous-integration/do-static-analysis.sh
+
+      - name: Debug static analysis program
+        run: |
+          ls -alR .
 
       - name: Send CI result notification to the Telegram channel
         uses: yanzay/notify-telegram@v0.1.0
