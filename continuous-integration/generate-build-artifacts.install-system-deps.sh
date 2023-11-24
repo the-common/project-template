@@ -14,12 +14,12 @@ required_commands=(
     realpath
 )
 flag_dependency_check_failed=false
-for required_command in "${required_commands[@]}"; do
-    if ! command -v "${required_command}" >/dev/null; then
+for command in "${required_commands[@]}"; do
+    if ! command -v "${command}" >/dev/null; then
         flag_dependency_check_failed=true
         printf \
             'Error: Unable to locate the "%s" command in the command search PATHs.\n' \
-            "${required_command}" \
+            "${command}" \
             1>&2
     fi
 done
