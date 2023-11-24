@@ -9,7 +9,9 @@
 # SPDX-License-Identifier: CC-BY-SA-4.0
 name: Check potential problems in the project
 on:
-  - push
+  push:
+    branches:
+      - '**'
 jobs:
   check-using-precommit:
     name: Check potential problems using pre-commit
