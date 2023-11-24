@@ -18,7 +18,7 @@ jobs:
     name: Release product and their build aritfacts
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout content from the Git repository
+      - name: Check out content from the Git repository
         uses: actions/checkout@v4
 
       - name: Determine the project identifier

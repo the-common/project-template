@@ -19,7 +19,7 @@ jobs:
       PRE_COMMIT_HOME: ${{ github.workspace }}/.cache/pre-commit
       SHELLCHECK_DIR: ${{ github.workspace }}/.cache/shellcheck-stable
     steps:
-      - name: Checking out content from repository
+      - name: Check out content from the Git repository
         uses: actions/checkout@v4
 
       - name: Configure PyPI data cache to speed up continuous integration
@@ -42,7 +42,7 @@ jobs:
           key: ${{ runner.os }}-${{ runner.arch }}-shellcheck
           path: ${{ env.SHELLCHECK_DIR }}
 
-      - name: Running static analysis program
+      - name: Run the static analysis programs
         run: |
           sudo ./continuous-integration/do-static-analysis.install-system-deps.sh
           ./continuous-integration/do-static-analysis.sh
