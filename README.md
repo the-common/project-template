@@ -18,7 +18,7 @@ A common project template to start of, batteries included.
         _project_directory_
     ```
 
-1. Downloading a copy of [The Common Project Template](https://gitlab.com/the-common/project-template/-/releases) release archive
+1. Downloading a copy of [The Common Project Template release archive](https://gitlab.com/the-common/project-template/-/releases)
 1. Extract The Common Project Template release archive to a temporary directory
 1. Copy all the files to the new project local repository's working tree
 1. Continue the operation in [Common instructions](#common-instructions)
