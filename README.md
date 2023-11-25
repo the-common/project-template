@@ -15,7 +15,7 @@ A common project template to start of, batteries included.
     ```bash
     git clone \
         _repository_url_ \
-        _project_dirctory_
+        _project_directory_
     ```
 
 1. Downloading a copy of [The Common Project Template](https://gitlab.com/the-common/project-template/-/releases) release archive
