@@ -35,6 +35,8 @@ jobs:
         run: |-
           git fetch \
             --prune \
+            --prune-tags \
+            --force \
             --depth=1 \
             --no-recurse-submodules
 
