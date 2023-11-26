@@ -20,6 +20,13 @@ jobs:
     steps:
       - name: Check out content from the Git repository
         uses: actions/checkout@v4
+        with:
+          # Increase fetch depth if you may have more than this amount
+          # of revisions between releases
+          fetch-depth: 100
+
+          # Fetch tags as well to generate detailed changes between two releases
+          fetch-tags: true
 
       - name: Determine the project identifier
         run: printf "project_id=${GITHUB_REPOSITORY##*/}\\n" >> $GITHUB_ENV
