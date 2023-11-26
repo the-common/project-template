@@ -21,18 +21,18 @@ fi
 script_dir="$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)"
 project_dir="${script_dir%/*}"
 
-printf 'Info: Querying the Git tag list...\n'
-if ! git_tag_list="$(git tag --list)"; then
+printf 'Info: Querying the list of the release tag(s)...\n'
+if ! git_tag_list="$(git tag --list 'v*')"; then
     printf \
-        'Error: Unable to query the Git tag list.\n' \
+        'Error: Unable to query the list of the release tag(s).\n' \
         1>&2
     exit 2
 fi
 
-printf 'Info: Counting the Git tags...\n'
+printf 'Info: Counting the release tags...\n'
 if ! git_tag_count="$(wc -l <<<"${git_tag_list}")"; then
     printf \
-        'Error: Unable to count the Git tags.\n' \
+        'Error: Unable to count the release tags.\n' \
         1>&2
     exit 2
 fi
@@ -48,7 +48,7 @@ fi
 
 if test "${git_tag_count}" -eq 1; then
     printf \
-        'Info: Only one Git tag detected, generating the release description text from the very beginning to the "%s" release tag...\n' \
+        'Info: Only one release tag detected, generating the release description text from the very beginning to the "%s" release tag...\n' \
         "${release_tag}"
     if ! detailed_changes_markup+="$(
         git log \
@@ -64,40 +64,40 @@ else
     printf \
         'Info: Multiple release tags detected, determining the previous release tag...\n'
     printf \
-        'Info: Version-sorting the Git tag list...\n'
+        'Info: Version-sorting the release tag list...\n'
     if ! sorted_git_tag_list="$(
         sort \
             -V \
             <<<"${git_tag_list}"
         )"; then
         printf \
-            'Error: Unable to version-sort the Git tag list.\n' \
+            'Error: Unable to version-sort the release tag list.\n' \
             1>&2
         exit 2
     fi
 
     printf \
-        'Info: Filtering out the two latest tags from the Git tag list...\n'
+        'Info: Filtering out the two latest release tags from the release tag list...\n'
     if ! latest_two_git_tags="$(
         tail \
             -n 2 \
             <<<"${sorted_git_tag_list}"
         )"; then
         printf \
-            'Error: Unable to filter out the two latest tags from the Git tag list.\n' \
+            'Error: Unable to filter out the two latest release tags from the release tag list.\n' \
             1>&2
         exit 2
     fi
 
     printf \
-        'Info: Filtering out the previous release tag from the two latest Git tags...\n'
+        'Info: Filtering out the previous release tag from the two latest release tags...\n'
     if ! previous_git_tag="$(
         head \
             -n 1 \
             <<<"${latest_two_git_tags}"
         )"; then
         printf \
-            'Error: Unable to filter out the previous release tag from the two latest Git tags.\n' \
+            'Error: Unable to filter out the previous release tag from the two latest release tags.\n' \
             1>&2
         exit 2
     fi
