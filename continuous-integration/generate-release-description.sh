@@ -48,7 +48,7 @@ fi
 
 if test "${git_tag_count}" -eq 1; then
     printf \
-        'Info: Only one release tag detected, generating the release description text from the very beginning to the "%s" release tag...\n' \
+        'Info: Only one release tag was detected, generating the release description text from the very beginning to the "%s" release tag...\n' \
         "${release_tag}"
     if ! detailed_changes_markup+="$(
         git log \
@@ -62,7 +62,7 @@ if test "${git_tag_count}" -eq 1; then
     fi
 else
     printf \
-        'Info: Multiple release tags detected, determining the previous release tag...\n'
+        'Info: Multiple release tags were detected, determining the previous release tag...\n'
     printf \
         'Info: Version-sorting the release tag list...\n'
     if ! sorted_git_tag_list="$(
