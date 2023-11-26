@@ -127,9 +127,9 @@ printf \
     "${detailed_changes_file}"
 if ! \
     printf \
-        '%s' \
+        '%s\n' \
         "${detailed_changes_markup}" \
-        >"${detailed_changes_file}"; then
+        | tee "${detailed_changes_file}"; then
     printf \
         'Error: Unable to write the detailed changes markup to the "%s" file.\n' \
         "${detailed_changes_file}" \
