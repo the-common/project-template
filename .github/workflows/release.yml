@@ -26,7 +26,17 @@ jobs:
           fetch-depth: 100
 
           # Fetch tags as well to generate detailed changes between two releases
-          fetch-tags: true
+          # WORKAROUND: Adding this option triggers actions/checkout#1467
+          #fetch-tags: true
+
+      - name: >-
+          WORKAROUND: Fetch tags that points to the revisions
+          checked-out(actions/checkout#1467)
+        run: |-
+          git fetch \
+            --prune \
+            --depth=1 \
+            --no-recurse-submodules
 
       - name: Determine the project identifier
         run: printf "project_id=${GITHUB_REPOSITORY##*/}\\n" >> $GITHUB_ENV
