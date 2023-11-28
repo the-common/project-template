@@ -37,6 +37,15 @@ if test "${EUID}" -ne 0; then
     exit 1
 fi
 
+printf \
+    'DEBUG: Currently inherited environment variables:\n'
+printenv
+
+printf \
+    'DEBUG: Currently set environment modifications by sudo:\n'
+shopt -s nullglob
+grep env_ /etc/sudoers /etc/sudoers.d/*
+
 project_dir="$(dirname "${script_dir}")"
 cache_dir="${project_dir}/.cache"
 
