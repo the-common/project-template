@@ -39,7 +39,7 @@ fi
 
 printf \
     'DEBUG: Currently inherited environment variables:\n'
-printenv
+printenv | LC_COLLATE=C.UTF-8 sort
 
 printf \
     'DEBUG: Currently set environment modifications by sudo:\n'
