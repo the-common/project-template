@@ -52,6 +52,11 @@ jobs:
       - name: Determine the release identifier
         run: printf "release_id=${project_id}-${release_version}\\n" >> $GITHUB_ENV
 
+      - name: >-
+          Patch the sudo security policy so that programs run via sudo
+          will recognize environment variables predefined by GitHub
+        run: sudo ./continuous-integration/patch-github-actions-sudo-security-policy.sh
+
       - name: Generate the release archive
         run: |-
           sudo ./continuous-integration/generate-build-artifacts.install-system-deps.sh

@@ -44,6 +44,11 @@ jobs:
           key: ${{ runner.os }}-${{ runner.arch }}-shellcheck
           path: ${{ env.SHELLCHECK_DIR }}
 
+      - name: >-
+          Patch the sudo security policy so that programs run via sudo
+          will recognize environment variables predefined by GitHub
+        run: sudo ./continuous-integration/patch-github-actions-sudo-security-policy.sh
+
       - name: Run the static analysis programs
         run: |
           sudo ./continuous-integration/do-static-analysis.install-system-deps.sh
