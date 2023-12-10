@@ -61,3 +61,11 @@ repos:
     rev: v1.30.0
     hooks:
       - id: yamllint
+
+  # Check EditorConfig style compliance
+  # https://github.com/editorconfig-checker/editorconfig-checker.python
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 2.7.3
+    hooks:
+      - id: editorconfig-checker
+        alias: ec
