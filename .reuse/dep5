@@ -4,7 +4,7 @@ Upstream-Contact: Issues · The Common / The Common Project Template · GitLab <
 Source: https://gitlab.com/the-common/project-template
 
 Files:
- *README.md
- */README.md
+    *README.md
+    */README.md
 Copyright: 2021 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
 License: CC-BY-SA-4.0+
