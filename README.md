@@ -41,7 +41,6 @@ A common project template to start of, batteries included.
 
     Also remove the unused `To be addressed` sections
 
-1. Replace the `Upstream-Name`, `Upstream-Contact`, and `Source` field of the [.reuse/dep5 REUSE DEP5 machine-readable copyright declaration document](.reuse/dep5) with appropriate content(project name, project's issue tracker's title and URL, and project's site URL)
 1. Replace [.markdownlint.yml](.markdownlint.yml) with [real.markdownlint.yml](real.markdownlint.yml)
 1. Replace [README.md](README.md)(this document) with [real.README.md](real.README.md)
 1. Customize/remove Telegram notification details in [.github/workflows/check-potential-problems.yml](.github/workflows/check-potential-problems.yml)
@@ -50,7 +49,7 @@ A common project template to start of, batteries included.
 
 ## Licensing
 
-Unless otherwise noted(individual file's header/[REUSE DEP5](.reuse/dep5)), this product is licensed under [the 4.0 International version of the Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/), or any of its more recent versions of your preference.
+Unless otherwise noted(individual file's header/[REUSE.toml](REUSE.toml)), this product is licensed under [the 4.0 International version of the Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/), or any of its more recent versions of your preference.
 
 As an exception of the previous clause, this product can be licensed otherwise under [the 2.0 version of the Apache license](https://www.apache.org/licenses/LICENSE-2.0) _if_ it is used to instantiate/refactor a project based on it rather than using it in the making of another template project.  This allows relicensing the project assets to your liking in your non-template projects with only a conformance requirement of attributing this product somewhere in your project/product credits/acknowledgment/copyright notice documentation/user interface.
 

@@ -11,6 +11,6 @@ To be addressed.
 
 ## Licensing
 
-Unless otherwise noted(individual file's header/[REUSE DEP5](.reuse/dep5)), this product is licensed under [the _license_version_ version of the _license_name_ license](_license_url_), or any of its recent versions you would prefer.
+Unless otherwise noted(individual file's header/[REUSE.toml](REUSE.toml)), this product is licensed under [the _license_version_ version of the _license_name_ license](_license_url_), or any of its recent versions you would prefer.
 
 This work complies to [the REUSE Specification](https://reuse.software/spec/), refer the [REUSE - Make licensing easy for everyone](https://reuse.software/) website for info regarding the licensing of this product.
