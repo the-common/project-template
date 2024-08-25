@@ -44,6 +44,22 @@ A common project template to start of, batteries included.
 1. Replace [.markdownlint.yml](.markdownlint.yml) with [real.markdownlint.yml](real.markdownlint.yml)
 1. Replace [README.md](README.md)(this document) with [real.README.md](real.README.md)
 1. Customize/remove Telegram notification details in [.github/workflows/check-potential-problems.yml](.github/workflows/check-potential-problems.yml)
+1. Run the following commands(or its equivalent operation) to remove the template-only custom license:
+
+    ```bash
+    find_opts=(
+        -type f
+        -exec
+            sed
+                --in-place
+                --regexp-extended
+                --expression='s@ OR LicenseRef-Apache-2.0-If-Not-Used-In-Template-Projects@@g'
+                {}
+                ';'
+    )
+    find . "${find_opts[@]}"
+    ```
+
 1. Commit all changes as a new revision(commit summary for reference: `docs: Write project README prototype`)
 1. (If you've cloned the repository back to local) push local changes to the remote repository
 
