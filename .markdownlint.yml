@@ -40,7 +40,7 @@ blanks-around-lists: False
 # Allow using raw HTML markups as workarounds of deficiencies of Markdown
 no-inline-html: False
 
-# 佔位字是要被替換掉的，為此規則之特例
+# Placeholder texts are to be replaced during the initialization of the project
 no-emphasis-as-heading: false
 
 # Allow using YAML front matter, while not require the definition of the
