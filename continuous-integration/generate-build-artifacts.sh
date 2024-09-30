@@ -55,6 +55,15 @@ if ! pip show git-archive-all &>/dev/null; then
 fi
 
 printf \
+    'Info: Determining the build datestamp...\n'
+if ! datestamp="$(date +%Y%m%d-%H%M%S)"; then
+    printf \
+        'Error: Unable to determine the build datestamp.\n' \
+        1>&2
+    exit 2
+fi
+
+printf \
     'Info: Determining the project version...\n'
 git_describe_opts=(
     --always
@@ -65,10 +74,11 @@ if ! version_describe="$(
     git describe \
         "${git_describe_opts[@]}"
     )"; then
+    version_describe="unknown-${datestamp}"
     printf \
-        'Error: Unable to determine the project version.\n' \
+        'Warning: Unable to determine the project version, will use "%s" as a fallback.\n' \
+        "${version_describe}" \
         1>&2
-    exit 2
 fi
 project_version="${version_describe#v}"
 
