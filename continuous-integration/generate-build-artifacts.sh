@@ -20,6 +20,8 @@ if ! script="$(
 fi
 
 script_dir="${script%/*}"
+project_dir="${script_dir%/*}"
+project_dirname="${project_dir##*/}"
 
 if ! test -e "${script_dir}/venv"; then
     printf \
@@ -84,7 +86,7 @@ project_version="${version_describe#v}"
 
 printf \
     'Info: Generating the project archive...\n'
-project_id="${CI_PROJECT_NAME:-"${project_id}"}"
+project_id="${CI_PROJECT_NAME:-"${PROJECT_ID:-"${project_dirname}"}"}"
 release_id="${project_id}-${project_version}"
 git_archive_all_opts=(
     # Add an additional layer of folder for containing the archive
