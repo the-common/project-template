@@ -43,6 +43,9 @@ if test -v CI_COMMIT_TAG; then
     release_tag="${CI_COMMIT_TAG}"
 fi
 
+git_log_opts=(
+    --format='format:* %s (%h) - %an'
+)
 if test "${git_tag_count}" -eq 1; then
     printf \
         'Info: Only one release tag was detected, generating the release description text from the very beginning to the "%s" release tag...\n' \
@@ -104,9 +107,6 @@ else
             "${previous_git_tag}" \
             "${release_tag}" \
             1>&2
-    git_log_opts=(
-        --format='format:* %s (%h) - %an'
-    )
     if ! detailed_changes_markup+="$(
         git log \
             "${git_log_opts[@]}" \
