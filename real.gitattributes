@@ -13,6 +13,7 @@
 # Avoid exporting development files to release archive
 /.* export-ignore
 /continuous-integration export-ignore
+/docker-compose.yaml export-ignore
 
 # Keep editorconfig for ease of editing of product files
 /.editorconfig -export-ignore
