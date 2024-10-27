@@ -10,6 +10,9 @@
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
+  # Limit fetch depth to reduce submodule checkout time
+  GIT_SUBMODULE_DEPTH: 1
+
 do-static-analysis:
   stage: test
   rules:
