@@ -59,6 +59,17 @@ printf \
     'Info: Setting up the command search PATHs so that the installed shellcheck command can be located...\n'
 PATH="${cache_dir}/shellcheck-stable:${PATH}"
 
+if ! git config --global --get safe.directory &>/dev/null; then
+    printf \
+        "Warning: Working around Git's \"detected dubious ownership...\" error...\\n"
+    if ! git config --global --add safe.directory /project; then
+        printf \
+            "Error: Unable to workaround Git's \"detected dubious ownership...\" error.\\n" \
+            1>&2
+        exit 2
+    fi
+fi
+
 printf \
     'Info: Running pre-commit...\n'
 if ! \
