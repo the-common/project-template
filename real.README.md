@@ -7,6 +7,6 @@ _project_summary_
 
 ## Licensing
 
-Unless otherwise noted(individual file's header/[REUSE.toml](REUSE.toml)), this product is licensed under [the _license_version_ version of the _license_name_ license](_license_url_), or any of its recent versions you would prefer.
+Unless otherwise noted([comment headers](https://reuse.software/spec-3.3/#comment-headers)/[REUSE.toml](https://reuse.software/spec-3.3/#reusetoml)), this product is licensed under [the _license_version_ version of the _license_name_ license](_license_url_), or any of its recent versions you would prefer.
 
 This work complies to [the REUSE Specification](https://reuse.software/spec/), refer to the [REUSE - Make licensing easy for everyone](https://reuse.software/) website for info regarding the licensing of this product.
