@@ -32,7 +32,10 @@ A common project template to start of, batteries included.
 
 ### Common instructions
 
-1. Edit the [real.README.md project README template](real.README.md), replace the following `_placeholders_ to the appropriate content:
+1. Rename the following files:
+    + [real.README.md](real.README.md)→README.md
+    + [real.markdownlint.yml](real.markdownlint.yml)→.markdownlint.yml
+1. Edit the [README.md project README template](real.README.md), replace the following `_placeholders_ to the appropriate content:
     + `_project_name_`  
       The (display) name of the project.
     + `_project_summary_`  
@@ -43,8 +46,6 @@ A common project template to start of, batteries included.
       The name of the main license of the project.
     + `_license_url_`  
       the URL of the main license of the project.
-1. Replace [.markdownlint.yml](.markdownlint.yml) with [real.markdownlint.yml](real.markdownlint.yml)
-1. Replace [README.md](README.md)(this document) with [real.README.md](real.README.md)
 1. Customize/remove Telegram notification details in [.github/workflows/check-potential-problems.yml](.github/workflows/check-potential-problems.yml)
 1. Run the following commands(or its equivalent operation) to remove the template-only custom license:
 
