@@ -61,6 +61,7 @@ A common project template to start of, batteries included.
                 ';'
     )
     find . "${find_opts[@]}"
+    rm -f LICENSES/LicenseRef-Apache-2.0-If-Not-Used-In-Template-Projects.txt
     ```
 
 1. Commit all changes as a new revision(commit summary for reference: `docs: Write project README prototype`)
