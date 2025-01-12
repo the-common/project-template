@@ -5,7 +5,7 @@
 # This file is based on The Common Pre-commit Framework Configuration Template
 # https://github.com/Lin-Buo-Ren/common-precommit-config-template
 #
-# Copyright 2021 林博仁(Buo-ren, Lin) <buo.ren.lin@gmail.com>
+# Copyright 2025 林博仁(Buo-ren Lin) <buo.ren.lin@gmail.com>
 # SPDX-License-Identifier: CC-BY-SA-4.0 OR LicenseRef-Apache-2.0-If-Not-Used-In-Template-Projects
 
 repos:
@@ -29,6 +29,11 @@ repos:
       - id: fix-byte-order-marker
       - id: mixed-line-ending
       - id: trailing-whitespace
+        exclude: |
+          (?ix)^(
+            LICENSES/.*
+          )$
+
         args:
           - --markdown-linebreak-ext=md
 
