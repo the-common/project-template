@@ -43,9 +43,6 @@ A common project template to start of, batteries included.
       The name of the main license of the project.
     + `_license_url_`  
       the URL of the main license of the project.
-
-    Also remove the unused `To be addressed` sections
-
 1. Replace [.markdownlint.yml](.markdownlint.yml) with [real.markdownlint.yml](real.markdownlint.yml)
 1. Replace [README.md](README.md)(this document) with [real.README.md](real.README.md)
 1. Customize/remove Telegram notification details in [.github/workflows/check-potential-problems.yml](.github/workflows/check-potential-problems.yml)
