@@ -33,12 +33,16 @@ A common project template to start of, batteries included.
 ### Common instructions
 
 1. Edit the [real.README.md project README template](real.README.md), replace the following `_placeholders_ to the appropriate content:
-    + `_project_name_`
-    + `_project_summary_`
+    + `_project_name_`  
+      The (display) name of the project.
+    + `_project_summary_`  
+      A one-line summary of the project.
     + `_namespace_/_project_`  
       Part of the project URLs, you use another project hosting service you need to manually replace the entire URLs instead
-    + `_license_name_`
-    + `_license_url_`
+    + `_license_name_`  
+      The name of the main license of the project.
+    + `_license_url_`  
+      the URL of the main license of the project.
 
     Also remove the unused `To be addressed` sections
 
