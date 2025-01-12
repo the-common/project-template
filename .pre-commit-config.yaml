@@ -33,7 +33,6 @@ repos:
           (?ix)^(
             LICENSES/.*
           )$
-
         args:
           - --markdown-linebreak-ext=md
 
