@@ -38,7 +38,7 @@ A common project template to start of, batteries included.
     + `_project_summary_`  
       A one-line summary of the project.
     + `_namespace_/_project_`  
-      Part of the project URLs, you use another project hosting service you need to manually replace the entire URLs instead
+      The variable part of the project URL, you use another project hosting service you need to manually replace the entire URL instead.
     + `_license_name_`  
       The name of the main license of the project.
     + `_license_url_`  
