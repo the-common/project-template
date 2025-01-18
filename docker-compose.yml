@@ -31,7 +31,7 @@ services:
       #- TZ=CST-8
 
       # Avoid debconf interactive prompts on Debian-like systems
-      - DEBCONF_FRONTEND=noninteractive
+      - DEBIAN_FRONTEND=noninteractive
     init: true
     command: sleep infinity
     profiles:
@@ -59,7 +59,7 @@ services:
       #- TZ=CST-8
 
       # Avoid debconf interactive prompts on Debian-like systems
-      - DEBCONF_FRONTEND=noninteractive
+      - DEBIAN_FRONTEND=noninteractive
     init: true
     command: sleep infinity
     profiles:
