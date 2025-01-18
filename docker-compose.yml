@@ -30,3 +30,5 @@ services:
       # Set this environment variable to your local timezone settings for proper operation timestamp
       #- TZ=CST-8
     command: sleep infinity
+    profiles:
+      - test
