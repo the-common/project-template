@@ -27,7 +27,6 @@ services:
       - no_proxy
       - NO_PROXY
 
-      # Set this environment variable to your local timezone settings
-      # for proper operation timestamp
+      # Set this environment variable to your local timezone settings for proper operation timestamp
       #- TZ=CST-8
     command: sleep infinity
