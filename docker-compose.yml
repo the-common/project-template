@@ -9,6 +9,34 @@
 # SPDX-License-Identifier: CC-BY-SA-4.0
 name: project-name
 services:
+  # Environment for developing the project
+  dev-environment:
+    container_name: project-name-dev
+    hostname: project-name-dev
+    image: ubuntu:24.04
+    volumes:
+      - type: bind
+        source: ./
+        target: /project
+    environment:
+      # Pass host proxy settings to the container
+      - http_proxy
+      - HTTP_PROXY
+      - https_proxy
+      - HTTPS_PROXY
+      - no_proxy
+      - NO_PROXY
+
+      # Set this environment variable to your local timezone settings for proper operation timestamp
+      #- TZ=CST-8
+
+      # Avoid debconf interactive prompts on Debian-like systems
+      - DEBCONF_FRONTEND=noninteractive
+    init: true
+    command: sleep infinity
+    profiles:
+      - dev
+
   # Environment for testing the project
   test-environment:
     container_name: project-name-test
