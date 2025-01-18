@@ -24,6 +24,8 @@ services:
       - HTTP_PROXY
       - https_proxy
       - HTTPS_PROXY
+      - no_proxy
+      - NO_PROXY
 
       # Set this environment variable to your local timezone settings
       # for proper operation timestamp
