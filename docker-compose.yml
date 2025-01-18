@@ -21,8 +21,8 @@ services:
     environment:
       # Pass host proxy settings to the container
       - http_proxy
-      - https_proxy
       - HTTP_PROXY
+      - https_proxy
       - HTTPS_PROXY
 
       # Set this environment variable to your local timezone settings
