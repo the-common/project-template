@@ -29,6 +29,9 @@ services:
 
       # Set this environment variable to your local timezone settings for proper operation timestamp
       #- TZ=CST-8
+
+      # Avoid debconf interactive prompts on Debian-like systems
+      - DEBCONF_FRONTEND=noninteractive
     init: true
     command: sleep infinity
     profiles:
