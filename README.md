@@ -68,6 +68,31 @@ A common project template to start of, batteries included.
 1. Commit all changes as a new revision(commit summary for reference: `docs: Write project README prototype`)
 1. (If you've cloned the repository back to local) push local changes to the remote repository
 
+### (OPTIONAL) Setting up Telegram notifications on GitLab
+
+Refer to the following instructions to set up Telegram notifications on changes of the project on GitLab:
+
+1. From the project page, select the Settings > Integrations option in the menu.
+1. Click the Add button at the right of the Telegram option in the Add an integration panel.
+1. Toggle the Active checkbox in the Enable integration field.
+1. Fill in your Telegram bot token(can be obtained from the @BotFather Telegram channel).
+1. Selecting events that you want to trigger the Telegram notifications
+1. In the Notification settings section:
+    1. Set the channel identifier where you want the Telgram bot to send notification to in the Channel identifier field.
+    1. (OPTIONAL) Untoggle the Notify only broken pipelines checkbox in the Notify only broken pipelines field so that you'll also be notified of successful pipelines.
+    1. (OPTIONAL) In the Branches for which notifications are to be sent dropdown menu, select All branches so that notifications from all branches will be sent to the specified Telegram channel.
+1. Click the Test settings button at the end of the form to verify whether the Telegram notification can be sent.
+1. Click the Save changes button at the end of the form to apply the changes.
+
+### (OPTIONAL) Setting up Telegram notifications on GitHub
+
+Refer to the following instructions to set up Telegram notifications on changes of the project on GitHub:
+
+1. From the project settings page, select Security > Secrets and variables > Actions in the menu to open the corresponding page.
+1. In the Repository secrets panel of the Secrets tab, click the New repository secret button at the top-right.
+1. Enter `telegram_bot_api_token_ci` in the Name field, then paste in your Telegram bot token to the Secret field.
+1. Click the Add secret button at the bottom of the form to apply the changes.
+
 ## Licensing
 
 Unless otherwise noted([comment headers](https://reuse.software/spec-3.3/#comment-headers)/[REUSE.toml](https://reuse.software/spec-3.3/#reusetoml)), this product is licensed under [the 4.0 International version of the Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/), or any of its more recent versions of your preference.
