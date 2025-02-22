@@ -69,6 +69,12 @@ A common project template to start of, batteries included.
     rm -f LICENSES/LicenseRef-Apache-2.0-If-Not-Used-In-Template-Projects.txt
     ```
 
+1. (OPTIONAL) Running the following command to setup the pre-commit hook for [the pre-commit framework](https://pre-commit.com):
+
+    ```bash
+    pre-commit install
+    ```
+
 1. Commit all changes as a new revision(commit summary for reference: `docs: Write project README prototype`)
 1. (If you've cloned the repository back to local) push local changes to the remote repository
 
