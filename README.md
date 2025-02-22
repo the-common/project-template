@@ -34,6 +34,7 @@ A common project template to start of, batteries included.
 
 1. Rename the following files:
     + [real.README.md](real.README.md)→README.md
+    + [real.gitattributes](real.gitattributes)→.gitattributes
     + [real.markdownlint.yml](real.markdownlint.yml)→.markdownlint.yml
 1. Edit the [README.md project README template](real.README.md), replace the following `_placeholders_ to the appropriate content:
     + `_project_name_`  
