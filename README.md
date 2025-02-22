@@ -32,10 +32,13 @@ A common project template to start of, batteries included.
 
 ### Common instructions
 
-1. Rename the following files:
-    + [real.README.md](real.README.md)→README.md
-    + [real.gitattributes](real.gitattributes)→.gitattributes
-    + [real.markdownlint.yml](real.markdownlint.yml)→.markdownlint.yml
+1. Rename the following files to have the real project files in their intended place:
+    + [real.README.md](real.README.md)→README.md  
+      This is the real project README document, which is renamed to make place for the project template README.
+    + [real.gitattributes](real.gitattributes)→.gitattributes  
+      This is the real Git path attributres configuration file, which is renamed to ensure all template files are included in the template release archive.
+    + [real.markdownlint.yml](real.markdownlint.yml)→.markdownlint.yml  
+      This is the real Markdownlint configuration file, which is renamed as it's no-emphasis-as-heading linting rule will not work for the real version of the project README document.
 1. Edit the [README.md project README template](real.README.md), replace the following `_placeholders_ to the appropriate content:
     + `_project_name_`  
       The (display) name of the project.
