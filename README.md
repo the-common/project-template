@@ -97,6 +97,52 @@ Refer to the following instructions to set up Telegram notifications on changes 
 1. Enter `telegram_bot_api_token_ci` in the Name field, then paste in your Telegram bot token to the Secret field.
 1. Click the Add secret button at the bottom of the form to apply the changes.
 
+### (OPTIONAL) Setting up GitLab to GitHub mirroring
+
+Refer to the following instructions to set up automatic mirroring of the GitLab repository to GitHub:
+
+1. (OPTIONAL) In the Settings > Developer settings > Personal access tokens > Fine-grained tokens page on GitHub, press the Generate new token button at the top-right corner to generate a new fine-grained personal access token.
+1. (OPTIONAL) Fill-in the following fields in the New fine-grained personal access token page:
+    + Token name: A sensible name to identify the newly created personal access token, e.g. `For GitLab to GitHub project mirroring`.
+    + Resource owner: The namespace where you want to mirror the project from.
+    + Expiration: Should be set as long as allowed by GitHub, which is currently 366 days.
+    + Description: A sensible descriptive text of the newly created personal access token, you may leave this field empty if the Token name is sensible enough.
+    + Repository access: `All repositories`.
+    + Permissions:
+        - Change Repository permissions > Contents to `Read and write`.
+        - Change Repository permissions > Workflows to `Read and write`.
+1. (OPTIONAL) Click the Generate token button at the bottom of the page to complete the personal access token generation.
+1. (OPTIONAL) Copy the generated personal access token in the Fine-grained personal access tokens page(it will only be shown once) and save it somewhere secure and persistent(like in your preferred password manager application).
+1. Create the GitHub mirror project.
+1. Copy the clone URL of the GitHub Git repository.
+1. In the Mirroring repositories section of the Settings > Repository page of the GitLab project, click the Add new button at the top right of the Mirrored repositories table.
+1. Fill in the following fields of the Add new mirror repository form:
+    + Git repository URL: Fill in the clone URL of the GitHub Git repository copied earlier.
+    + Mirror direction: `Push`.
+    + Authentication method: `Username and Password`.
+    + Username: Fill in your GitHub username(the content shouldn't really matter as long as it's not a null string).
+    + Password: Fill in the fine-grained personal access token you've generated previously.
+1. Click the Mirror repository button at the bottom of the Mirroring repositories section to complete creating the Mirroring repository configuration.
+1. Click the Update now at the right side of the mirroring repository configuration to trigger a manual push.
+1. Verify whether the value of the Last successful update has changed to `Just now`.
+
+   **NOTE:** If the value is still `Never`, try refreshing the page to fetch the latest status.
+
+   If an `Error` label appears at the right side, check your settings and recreate a new repository mirroring configuration.
+1. (OPTIONAL) Refresh the repository on GitHub to verify that the content does indeed synced from GitLab.
+1. In the Features section of the Settings > General page of the GitHub mirror project, disable the following unneeded features:
+    + Wikis
+    + Issues
+    + Projects
+1. In the repository main page on GitHub, click the gear icon a the top right of the About panel to open the Edit repository details dialog, and set the following fields:
+    + (OPTIONAL) Description: The project description text(should be the same as in the Settings > General page of the GitLab project).
+    + Website: The project URL on GitLab.
+    + (OPTIONAL) Topics: Sensible topic tags applied for the project(should be the same as in the Settings > General page of the GitLab project).
+    + Include in the home page: Untoggle the following options unless you plan on using them:
+        - Packages
+        - Deployments
+1. Click the Save changes at the down-left to apply the changes.
+
 ## Licensing
 
 Unless otherwise noted([comment headers](https://reuse.software/spec-3.3/#comment-headers)/[REUSE.toml](https://reuse.software/spec-3.3/#reusetoml)), this product is licensed under [the 4.0 International version of the Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/), or any of its more recent versions of your preference.
