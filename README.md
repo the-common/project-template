@@ -27,7 +27,6 @@ A common project template to start of, batteries included.
 
 1. Click the ["Use this template" green button](https://github.com/the-common/project-template/generate) on [the mirrored GitHub project page](https://github.com/the-common/project-template)
 1. Follow the instructions on the webpage to create a new project
-1. In the Settings > Actions > Workflow permissions panel, ensure that "Read and write permissions" option is selected to allow [the "Release product and their build aritfacts" GitHub Actions workflow] to be able to write built artifacts to the releases page.
 1. Continue the operation in [Common instructions](#common-instructions)
 
 ### Common instructions
