@@ -120,7 +120,7 @@ Refer to the following instructions to set up automatic mirroring of the GitLab 
 1. (IF NOT ALREADY DONE) Copy the generated personal access token in the Fine-grained personal access tokens page(it will only be shown once) and save it somewhere secure and persistent(like in your preferred password manager application).
 1. Create the GitHub mirror project.
 1. Copy the clone URL of the GitHub Git repository.
-1. In the Mirroring repositories section of the Settings > Repository page of the GitLab project, click the Add new button at the top right of the Mirrored repositories table.
+1. In the Mirroring repositories section of the Settings > Repository page of the GitLab project, click the "Add new" button at the top right of the Mirrored repositories table.
 1. Fill in the following fields of the Add new mirror repository form:
     + Git repository URL: Fill in the clone URL of the GitHub Git repository copied earlier.
     + Mirror direction: `Push`.
