@@ -14,6 +14,8 @@
 /.* export-ignore
 /continuous-integration export-ignore
 /compose.yml export-ignore
+/dev-assets export-ignore
+/Vagrantfile export-ignore
 
 # Keep editorconfig for ease of editing of product files
 /.editorconfig -export-ignore
