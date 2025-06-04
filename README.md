@@ -148,6 +148,13 @@ Refer to the following instructions to set up automatic mirroring of the GitLab 
         - Deployments
 1. Click the Save changes at the down-left to apply the changes.
 
+## References
+
+The following materials are referenced during the development of this project:
+
+* [Inline Scripts | Shell Scripts - Provisioning | Vagrant | HashiCorp Developer](https://developer.hashicorp.com/vagrant/docs/provisioning/shell#inline)  
+  Explains how to run an inline script in a Vagrantfile.
+
 ## Licensing
 
 Unless otherwise noted([comment headers](https://reuse.software/spec-3.3/#comment-headers)/[REUSE.toml](https://reuse.software/spec-3.3/#reusetoml)), this product is licensed under [the 4.0 International version of the Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/), or any of its more recent versions of your preference.
