@@ -49,7 +49,7 @@ A common project template to start of, batteries included.
       The name of the main license of the project.
     + `_license_url_`  
       the URL of the main license of the project.
-1. Replace the `project-name` placeholder text in [the docker-compose.yml Docker Compose configuration file](docker-compose.yml) to your project's hostname-friendly name.
+1. Replace the `project-name` placeholder text in [the compose.yml Compose configuration file](compose.yml) to your project's hostname-friendly name.
 1. Customize/remove Telegram notification details in [.github/workflows/check-potential-problems.yml](.github/workflows/check-potential-problems.yml)
 1. Run the following commands(or its equivalent operation) to remove the template-only custom license:
 
