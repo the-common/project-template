@@ -41,6 +41,9 @@
 # Do track GitLab CI configuration file
 !/.gitlab-ci.yml
 
+# Do track ShellCheck configuration file
+!/.shellcheckrc
+
 # Don't track common backup filename extensions
 *~
 *.bak*
