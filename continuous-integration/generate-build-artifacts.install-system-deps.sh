@@ -27,6 +27,7 @@ if test "${flag_dependency_check_failed}" == true; then
     printf \
         'Error: Dependency check failed, please check your installation.\n' \
         1>&2
+    exit 1
 fi
 
 if test -v BASH_SOURCE; then
