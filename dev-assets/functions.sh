@@ -283,7 +283,7 @@ check_distro_packages_installed(){
             fi
         ;;
         '')
-            case "${ID}" in
+            case "${distro_id}" in
                 arch)
                     if ! check_archlinux_packages_installed "${packages[@]}"; then
                         return 1
@@ -833,7 +833,7 @@ install_distro_packages(){
             fi
         ;;
         '')
-            case "${ID}" in
+            case "${distro_id}" in
                 arch)
                     if ! install_archlinux_packages "${packages[@]}"; then
                         return 1
