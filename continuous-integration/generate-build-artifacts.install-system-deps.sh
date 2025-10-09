@@ -67,6 +67,7 @@ if test "$((current_time_epoch - apt_archive_cache_mtime_epoch))" -ge 86400; the
         printf \
             'Error: Unable to refresh the APT local package cache.\n' \
             1>&2
+        exit 2
     fi
 fi
 
