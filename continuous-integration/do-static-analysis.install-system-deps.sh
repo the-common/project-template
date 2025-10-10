@@ -325,6 +325,7 @@ if ! shellcheck_version="$(
     printf \
         'Error: Unable to parse out the ShellCheck version string.\n' \
         1>&2
+    exit 2
 fi
 
 printf \
