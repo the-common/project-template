@@ -108,9 +108,8 @@ check_distro_specific_required_commands(){
             )
         ;;
         *rhel*)
-            if ! check_command_existence dnf; then
-                flag_required_command_check_failed=true
-            elif ! check_command_existence yum; then
+            if ! check_command_existence dnf \
+                && ! check_command_existence yum; then
                 flag_required_command_check_failed=true
             fi
 
