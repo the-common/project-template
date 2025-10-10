@@ -139,12 +139,14 @@ if test "${distro_id}" == 'ubuntu'; then
 fi
 
 required_packages=()
-if ! check_distro_packages_installed "${required_packages[@]}"; then
-    if ! install_distro_packages "${required_packages[@]}"; then
-        printf \
-            'Error: Unable to install the required packages for the current distribution.\n' \
-            1>&2
-        exit 2
+if test "${#required_packages[@]}" -gt 0; then
+    if ! check_distro_packages_installed "${required_packages[@]}"; then
+        if ! install_distro_packages "${required_packages[@]}"; then
+            printf \
+                'Error: Unable to install the required packages for the current distribution.\n' \
+                1>&2
+            exit 2
+        fi
     fi
 fi
 
