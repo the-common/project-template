@@ -17,6 +17,13 @@ set \
     -o errexit \
     -o nounset
 
+if ! shopt -s nullglob; then
+    printf \
+        'Error: Unable to enable the nullglob shell option.\n' \
+        1>&2
+    exit 1
+fi
+
 required_commands=(
     install
     realpath
