@@ -40,7 +40,16 @@ fi
 detailed_changes_markup="## Detailed changes"$'\n\n'
 
 if test -v CI_COMMIT_TAG; then
+    # GitLab CI
     release_tag="${CI_COMMIT_TAG}"
+else
+    # GitHub Actions
+    if ! test -v release_tag; then
+        printf \
+            'Error: The "release_tag" environment variable is not set.\n' \
+            1>&2
+        exit 1
+    fi
 fi
 
 git_log_opts=(
