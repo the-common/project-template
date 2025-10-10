@@ -6,6 +6,21 @@ set \
     -o errexit \
     -o nounset
 
+required_commands=(
+    realpath
+    python3
+    pip
+)
+for command in "${required_commands[@]}"; do
+    if ! command -v "${command}" >/dev/null; then
+        printf \
+            'Error: This program requires the "%s" command to be available in your command search PATHs.\n' \
+            "${command}" \
+            1>&2
+        exit 1
+    fi
+done
+
 script="${BASH_SOURCE[0]}"
 if ! script="$(
     realpath \
@@ -58,17 +73,6 @@ fi
 printf \
     'Info: Setting up the command search PATHs so that the installed shellcheck command can be located...\n'
 PATH="${cache_dir}/shellcheck-stable:${PATH}"
-
-if ! git config --global --get safe.directory &>/dev/null; then
-    printf \
-        "Warning: Working around Git's \"detected dubious ownership...\" error...\\n"
-    if ! git config --global --add safe.directory /project; then
-        printf \
-            "Error: Unable to workaround Git's \"detected dubious ownership...\" error.\\n" \
-            1>&2
-        exit 2
-    fi
-fi
 
 printf \
     'Info: Running pre-commit...\n'
