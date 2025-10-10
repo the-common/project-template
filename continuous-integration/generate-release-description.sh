@@ -29,6 +29,13 @@ if ! git_tag_list="$(git tag --list 'v*')"; then
     exit 2
 fi
 
+if test -z "${git_tag_list}"; then
+    printf \
+        'Error: No release tag was detected.\n' \
+        1>&2
+    exit 2
+fi
+
 printf 'Info: Counting the release tags...\n'
 if ! git_tag_count="$(wc -l <<<"${git_tag_list}")"; then
     printf \
