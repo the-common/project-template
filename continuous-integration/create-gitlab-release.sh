@@ -16,7 +16,7 @@ gitlab_ci_variables=(
     CI_API_V4_URL
 )
 for variable in "${gitlab_ci_variables[@]}"; do
-    if ! test -v variable; then
+    if ! test -v "${variable}"; then
         printf \
             'Error: This program should be run under a GitLab CI environment (environment variable %s not set).\n' \
             "${variable}" \
