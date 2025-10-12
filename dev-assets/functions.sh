@@ -551,6 +551,7 @@ switch_ubuntu_local_mirror(){
             --silent
             --show-error
         )
+        local ip_reverse_lookup_service_response region_code
         if ! ip_reverse_lookup_service_response="$(
                 curl \
                     "${curl_opts[@]}" \
