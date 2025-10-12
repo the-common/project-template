@@ -72,7 +72,10 @@ fi
 
 printf \
     'Info: Setting up the command search PATHs so that the installed shellcheck command can be located...\n'
-PATH="${cache_dir}/shellcheck-stable:${PATH}"
+cached_shellcheck_dir="${cache_dir}/shellcheck-stable"
+if test -e "${cached_shellcheck_dir}"; then
+    PATH="${cached_shellcheck_dir}:${PATH}"
+fi
 
 printf \
     'Info: Running pre-commit...\n'
