@@ -92,7 +92,7 @@ fi
 printf \
     'Info: Loading common function definitions...\n'
 functions_file="${script_dir}/functions.sh"
-# shellcheck source=functions.sh
+# shellcheck source=dev-assets/functions.sh
 if ! source "${functions_file}"; then
     printf \
         'Error: Unable to load the common function definitions file.\n' \
