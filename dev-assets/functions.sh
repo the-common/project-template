@@ -797,15 +797,11 @@ install_distro_packages(){
         *debian*)
             if ! install_debian_packages "${packages[@]}"; then
                 return 1
-            else
-                return 0
             fi
         ;;
         *rhel*)
             if ! install_redhat_packages "${packages[@]}"; then
                 return 1
-            else
-                return 0
             fi
         ;;
         '')
@@ -813,8 +809,6 @@ install_distro_packages(){
                 arch)
                     if ! install_archlinux_packages "${packages[@]}"; then
                         return 1
-                    else
-                        return 0
                     fi
                 ;;
                 *)
