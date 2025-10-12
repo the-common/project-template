@@ -225,7 +225,7 @@ if ! test -e "${shellcheck_dir}/shellcheck"; then
     fi
 
     printf \
-        'Info: Checking ShellCheck architecure availability...\n'
+        'Info: Checking ShellCheck architecture availability...\n'
     # Accurate as of 2025/10/12
     # https://github.com/koalaman/shellcheck/releases/
     case "${arch}" in
