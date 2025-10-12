@@ -129,7 +129,25 @@ if ! check_running_user; then
     exit 1
 fi
 
+if ! refresh_package_manager_local_cache \
+    "${distro_id}" \
+    "${distro_categories}"; then
+    printf \
+        'Error: Unable to refresh the local package manager cache for the current distribution.\n' \
+        1>&2
+    exit 1
+fi
+
 if test "${distro_id}" == 'ubuntu'; then
+    if ! check_distro_packages_installed curl; then
+        if ! install_distro_packages curl; then
+            printf \
+                'Error: Unable to install the required packages for the switch_ubuntu_local_mirror function.\n' \
+                1>&2
+            exit 2
+        fi
+    fi
+
     if ! switch_ubuntu_local_mirror; then
         printf \
             'Error: Unable to switch Ubuntu software sources to local mirror.\n' \
