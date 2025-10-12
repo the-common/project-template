@@ -175,8 +175,6 @@ check_archlinux_packages_installed(){
 
     if ! pacman -Q "${packages[@]}" &>/dev/null; then
         return 1
-    else
-        return 0
     fi
 }
 
@@ -200,8 +198,6 @@ check_debian_packages_installed(){
 
     if ! dpkg --status "${packages[@]}" &>/dev/null; then
         return 1
-    else
-        return 0
     fi
 }
 
@@ -225,8 +221,6 @@ check_redhat_packages_installed(){
 
     if ! rpm --query "${packages[@]}" &>/dev/null; then
         return 1
-    else
-        return 0
     fi
 }
 
