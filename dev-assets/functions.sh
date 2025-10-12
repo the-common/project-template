@@ -268,27 +268,15 @@ check_distro_packages_installed(){
 
     case "${distro_categories}" in
         *debian*)
-            if ! check_debian_packages_installed "${packages[@]}"; then
-                return 1
-            else
-                return 0
-            fi
+            check_debian_packages_installed "${packages[@]}"
         ;;
         *rhel*)
-            if ! check_redhat_packages_installed "${packages[@]}"; then
-                return 1
-            else
-                return 0
-            fi
+            check_redhat_packages_installed "${packages[@]}"
         ;;
         '')
             case "${distro_id}" in
                 arch)
-                    if ! check_archlinux_packages_installed "${packages[@]}"; then
-                        return 1
-                    else
-                        return 0
-                    fi
+                    check_archlinux_packages_installed "${packages[@]}"
                 ;;
                 *)
                     printf \
