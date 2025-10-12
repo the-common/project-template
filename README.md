@@ -97,8 +97,8 @@ Refer to the following instructions to set up Telegram notifications on changes 
 
 Refer to the following instructions to set up Telegram notifications on changes of the project on GitHub:
 
-1. From the project settings page, select Security > Secrets and variables > Actions in the menu to open the corresponding page.
-1. In the Repository secrets panel of the Secrets tab, click the New repository secret button at the top-right.
+1. From the project/organization settings page, select Security > Secrets and variables > Actions in the menu to open the corresponding page.
+1. In the Repository/Organization secrets panel of the Secrets tab, click the New repository/organization secret button at the top-right.
 1. Enter `telegram_bot_api_token_ci` in the Name field, then paste in your Telegram bot token to the Secret field.
 1. Click the Add secret button at the bottom of the form to apply the changes.
 
