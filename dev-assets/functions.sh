@@ -507,7 +507,7 @@ refresh_package_manager_local_cache(){
                 "${FUNCNAME[0]}" \
                 "${distro_id}" \
                 1>&2
-            exit 99
+            return 1
         ;;
     esac
 }
