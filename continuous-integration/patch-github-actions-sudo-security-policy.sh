@@ -71,6 +71,12 @@ fi
 ci_dir="${script_dir}"
 sudoers_dropin_dir="${ci_dir}/sudoers.d"
 
+if ! test -e "${sudoers_dropin_dir}"; then
+    printf \
+        'Error: No sudoers drop-in configuration directory found.\n'
+    exit 1
+fi
+
 sudoers_dropin_dir_system=/etc/sudoers.d
 if ! test -e "${sudoers_dropin_dir_system}"; then
     printf \
