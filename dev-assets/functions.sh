@@ -713,8 +713,6 @@ install_debian_packages(){
 
     if ! apt-get install -y "${packages[@]}"; then
         return 2
-    else
-        return 0
     fi
 }
 
@@ -730,14 +728,10 @@ install_redhat_packages(){
     if command -v dnf >/dev/null; then
         if ! dnf install -y "${packages[@]}"; then
             return 2
-        else
-            return 0
         fi
     elif command -v yum >/dev/null; then
         if ! yum install -y "${packages[@]}"; then
             return 2
-        else
-            return 0
         fi
     else
         printf \
