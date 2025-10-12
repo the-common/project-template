@@ -47,7 +47,7 @@ jobs:
       - name: >-
           Patch the sudo security policy so that programs run via sudo
           will recognize environment variables predefined by GitHub
-        # False positive: The workflow will fail when the script is not found.
+        # False positive: This step(and thus the entire workflow) will fail when the command returns a non-zero exit status
         # amazon-q-ignore-next-line
         run: sudo ./continuous-integration/patch-github-actions-sudo-security-policy.sh
 
