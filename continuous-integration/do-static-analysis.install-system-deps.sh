@@ -61,14 +61,24 @@ if ! test -e "${cache_dir}"; then
     fi
 fi
 
-apt_archive_cache_mtime_epoch="$(
+if ! apt_archive_cache_mtime_epoch="$(
     stat \
         --format=%Y \
         /var/cache/apt/archives
-)"
-current_time_epoch="$(
-    date +%s
-)"
+    )"; then
+    printf \
+        'Error: Unable to query the APT archive cache directory modification time.\n' \
+        1>&2
+    exit 1
+fi
+
+if ! current_time_epoch="$(date +%s)"; then
+    printf \
+        'Error: Unable to query the current time.\n' \
+        1>&2
+    exit 1
+fi
+
 if test "$((current_time_epoch - apt_archive_cache_mtime_epoch))" -ge 86400; then
     printf \
         'Info: Refreshing the APT local package cache...\n'
