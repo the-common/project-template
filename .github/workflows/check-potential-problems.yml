@@ -34,7 +34,7 @@ jobs:
           Configure pre-commit data cache to speed up continuous integration
         uses: actions/cache@v4
         with:
-          key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
+          key: pre-commit|${{ runner.os }}|${{ hashFiles('.pre-commit-config.yaml') }}
           path: ${{ env.PRE_COMMIT_HOME }}
 
       - name: >-
