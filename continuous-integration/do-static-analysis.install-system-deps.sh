@@ -226,11 +226,14 @@ if ! test -e "${shellcheck_dir}/shellcheck"; then
 
     printf \
         'Info: Checking ShellCheck architecure availability...\n'
+    # Accurate as of 2025/10/12
+    # https://github.com/koalaman/shellcheck/releases/
     case "${arch}" in
-        x86_64|armv6hf|aarch64)
-            # Assuming the ShellCheck architecture is the same, which
-            # is probably incorrect...
+        x86_64|aarch64|riscv64)
             shellcheck_arch="${arch}"
+        ;;
+        arm|armhf)
+            shellcheck_arch='armv6hf'
         ;;
         *)
             printf \
