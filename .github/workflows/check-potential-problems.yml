@@ -61,6 +61,6 @@ jobs:
         uses: yanzay/notify-telegram@v0.1.0
         if: always()
         with:
-          chat: '@the_common_ci_results'
+          chat: ${{ vars.telegram_chat_id_ci }}
           token: ${{ secrets.telegram_bot_api_token_ci }}
           status: ${{ job.status }}

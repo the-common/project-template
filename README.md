@@ -50,7 +50,6 @@ A common project template to start of, batteries included.
     + `_license_url_`  
       the URL of the main license of the project.
 1. Replace the `project-name` placeholder text in [the compose.yml Compose configuration file](compose.yml) to your project's hostname-friendly name.
-1. Customize/remove Telegram notification details in [.github/workflows/check-potential-problems.yml](.github/workflows/check-potential-problems.yml)
 1. Run the following commands(or its equivalent operation) to remove the template-only custom license:
 
     ```bash
@@ -101,6 +100,9 @@ Refer to the following instructions to set up Telegram notifications on changes 
 1. In the Repository/Organization secrets panel of the Secrets tab, click the New repository/organization secret button at the top-right.
 1. Enter `telegram_bot_api_token_ci` in the Name field, then paste in your Telegram bot token to the Secret field.
 1. Click the Add secret button at the bottom of the form to apply the changes.
+1. In the Repository/Organization variables panel of the Variables tab, click the Create new repository/organization variable button at the top-right.
+1. Enter `telegram_chat_id_ci` in the Name field, then paste in your Telegram chat ID to the Value field.
+1. Click the Add variable button at the bottom of the form to apply the changes.
 
 ### (OPTIONAL) Setting up GitLab to GitHub mirroring
 
