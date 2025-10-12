@@ -47,9 +47,13 @@ jobs:
       - name: >-
           Patch the sudo security policy so that programs run via sudo
           will recognize environment variables predefined by GitHub
+        # False positive: The workflow will fail when the script is not found.
+        # amazon-q-ignore-next-line
         run: sudo ./continuous-integration/patch-github-actions-sudo-security-policy.sh
 
       - name: Run the static analysis programs
+        # False positive: The workflow will fail when the script is not found.
+        # amazon-q-ignore-next-line
         run: |
           sudo ./continuous-integration/do-static-analysis.install-system-deps.sh
           ./continuous-integration/do-static-analysis.sh
