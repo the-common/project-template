@@ -44,6 +44,7 @@ for file in "${project_dir}/${CI_PROJECT_NAME}-"*; do
 
     if ! \
         curl \
+            --fail \
             --header "JOB-TOKEN: ${CI_JOB_TOKEN}" \
             --upload-file "${file}" \
             "${package_registry_url}"; then
