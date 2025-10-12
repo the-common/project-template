@@ -525,7 +525,7 @@ refresh_package_manager_local_cache(){
 }
 
 switch_ubuntu_local_mirror(){
-    print_progress 'Switching to use the local Ubuntu software archive mirror to minimize pacakge installation time...'
+    print_progress 'Switching to use the local Ubuntu software archive mirror to minimize package installation time...'
 
     if test -v CI; then
         printf \
@@ -700,12 +700,12 @@ check_running_user(){
         local running_user
         if ! running_user="$(whoami)"; then
             printf \
-                "Error: Unable to query the runnning user's username.\\n" \
+                "Error: Unable to query the running user's username.\\n" \
                 1>&2
             return 2
         fi
         printf \
-            'Info: The running user is acceptible(%s).\n' \
+            'Info: The running user is acceptable(%s).\n' \
             "${running_user}"
     fi
 }
