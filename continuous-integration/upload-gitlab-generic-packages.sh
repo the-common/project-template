@@ -12,7 +12,8 @@ if ! test -n "${CI_COMMIT_TAG+x}" \
     || ! test -n "${CI_PROJECT_ID+x}" \
     || ! test -n "${CI_PROJECT_NAME+x}" \
     || ! test -n "${CI_PROJECT_TITLE+x}" \
-    || ! test -n "${CI_API_V4_URL+x}"; then
+    || ! test -n "${CI_API_V4_URL+x}" \
+    || ! test -n "${CI_JOB_TOKEN+x}"; then
     printf \
         'Error: This program should be run under a GitLab CI environment.\n' \
         1>&2
