@@ -154,6 +154,8 @@ The following materials are referenced during the development of this project:
 
 * [Inline Scripts | Shell Scripts - Provisioning | Vagrant | HashiCorp Developer](https://developer.hashicorp.com/vagrant/docs/provisioning/shell#inline)  
   Explains how to run an inline script in a Vagrantfile.
+* [stat invocation (GNU Coreutils)](https://www.gnu.org/software/coreutils/manual/html_node/stat-invocation.html)  
+  Explains how to use the `stat` command to display file ownership settings.
 
 ## Licensing
 
