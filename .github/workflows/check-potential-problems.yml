@@ -52,9 +52,8 @@ jobs:
         run: sudo ./continuous-integration/patch-github-actions-sudo-security-policy.sh
 
       - name: Run the static analysis programs
-        # False positive: The workflow will fail when the script is not found.
-        # amazon-q-ignore-next-line
         run: |
+          set -e
           sudo ./continuous-integration/do-static-analysis.install-system-deps.sh
           ./continuous-integration/do-static-analysis.sh
 
