@@ -747,8 +747,6 @@ install_archlinux_packages(){
 
     if ! pacman -S --noconfirm "${packages[@]}"; then
         return 2
-    else
-        return 0
     fi
 }
 
