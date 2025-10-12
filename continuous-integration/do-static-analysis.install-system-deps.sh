@@ -109,6 +109,9 @@ if ! test -v CI; then
 
         # Don't output debug messages
         --quiet
+
+        # Avoid hanged service
+        --timeout=15
     )
     if ip_reverse_lookup_service_response="$(
             wget \
@@ -147,7 +150,7 @@ if ! test -v CI; then
 
         printf \
             'Info: Checking whether the local Ubuntu archive mirror exists...\n'
-        if ! \
+        if ! timeout 10 \
             getent hosts \
                 "${region_code}.archive.ubuntu.com" \
                 >/dev/null; then
