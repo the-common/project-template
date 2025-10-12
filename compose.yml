@@ -18,7 +18,7 @@ services:
       - type: bind
         source: ./
         target: /project
-    environment:
+    environment: &common-env
       # Pass host proxy settings to the container
       - http_proxy
       - HTTP_PROXY
@@ -46,20 +46,7 @@ services:
       - type: bind
         source: ./
         target: /project
-    environment:
-      # Pass host proxy settings to the container
-      - http_proxy
-      - HTTP_PROXY
-      - https_proxy
-      - HTTPS_PROXY
-      - no_proxy
-      - NO_PROXY
-
-      # Set this environment variable to your local timezone settings for proper operation timestamp
-      #- TZ=CST-8
-
-      # Avoid debconf interactive prompts on Debian-like systems
-      - DEBIAN_FRONTEND=noninteractive
+    environment: *common-env
     init: true
     command: sleep infinity
     profiles:
