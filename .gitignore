@@ -44,6 +44,9 @@
 # Do track ShellCheck configuration file
 !/.shellcheckrc
 
+# Do track Amazon Q configuration files
+!/.amazonq/
+
 # Don't track common backup filename extensions
 *~
 *.bak*

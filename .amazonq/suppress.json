@@ -1,0 +1,10 @@
+{
+    "suppressions": [
+        {
+            "filePath": "compose.yml",
+            "startLine": 9,
+            "endLine": 43,
+            "reason": "Placeholder service names are intentional in template project"
+        }
+    ]
+}
