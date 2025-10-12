@@ -75,6 +75,7 @@ jobs:
 
       - name: Generate the release archive
         run: |-
+          set -e
           sudo ./continuous-integration/generate-build-artifacts.install-system-deps.sh
           ./continuous-integration/generate-build-artifacts.sh
 
