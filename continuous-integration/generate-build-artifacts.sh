@@ -7,6 +7,21 @@ set \
     -o errexit \
     -o nounset
 
+required_commands=(
+    realpath
+    python3
+    git
+)
+for command in "${required_commands[@]}"; do
+    if ! command -v "${command}" >/dev/null; then
+        printf \
+            'Error: This program requires the "%s" command to be available in your command search PATHs.\n' \
+            "${command}" \
+            1>&2
+        exit 1
+    fi
+done
+
 script="${BASH_SOURCE[0]}"
 if ! script="$(
     realpath \
@@ -41,6 +56,13 @@ printf \
 if ! source "${script_dir}/venv/bin/activate"; then
     printf \
         'Error: Unable to activate the Python virtual environment.\n' \
+        1>&2
+    exit 2
+fi
+
+if ! pip --version &>/dev/null; then
+    printf \
+        'Error: pip command is not functioning properly.\n' \
         1>&2
     exit 2
 fi
