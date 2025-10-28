@@ -52,6 +52,18 @@ if test "${EUID}" -ne 0; then
     exit 1
 fi
 
+project_dir="$(dirname "${script_dir}")"
+
+# Load the common functions
+dev_assets_dir="${project_dir}/dev-assets"
+# shellcheck source=SCRIPTDIR/../dev-assets/functions.sh
+if ! source "${dev_assets_dir}/functions.sh"; then
+    printf \
+        'Error: Unable to load the common functions.\n' \
+        1>&2
+    exit 1
+fi
+
 apt_archive_cache_mtime_epoch="$(
     stat \
         --format=%Y \
@@ -94,80 +106,17 @@ if ! test -v CI; then
         fi
     fi
 
-    printf \
-        'Info: Detecting local region code...\n'
-    curl_opts=(
-        # Don't output debug messages
-        --silent
-        --show-error
-    )
-    if ip_reverse_lookup_service_response="$(
-            curl \
-                "${curl_opts[@]}" \
-                https://ipinfo.io/json
-        )"; then
-        grep_opts=(
-            --perl-regexp
-            --only-matching
-        )
-        if ! region_code="$(
-            grep \
-                "${grep_opts[@]}" \
-                '(?<="country": ")[[:alpha:]]+' \
-                <<<"${ip_reverse_lookup_service_response}"
-            )"; then
-            printf \
-                'Warning: Unable to query the local region code, falling back to default.\n' \
-                1>&2
-            region_code=
-        else
-            printf \
-                'Info: Local region code determined to be "%s"\n' \
-                "${region_code}"
-        fi
-    else
+    if ! distro_id="$(get_distro_identifier)"; then
         printf \
-            'Warning: Unable to detect the local region code(IP address reverse lookup service not available), falling back to default.\n' \
+            'Error: Unable to determine the distribution identifier.\n' \
             1>&2
-        region_code=
+        exit 2
     fi
 
-    if test -n "${region_code}"; then
-        # The returned region code is capitalized, fixing it.
-        region_code="${region_code,,*}"
-
-        printf \
-            'Info: Checking whether the local Ubuntu archive mirror exists...\n'
-        if ! \
-            getent hosts \
-                "${region_code}.archive.ubuntu.com" \
-                >/dev/null; then
+    if test "${distro_id}" == ubuntu; then
+        if ! switch_ubuntu_local_mirror; then
             printf \
-                "Warning: The local Ubuntu archive mirror doesn't seem to exist, falling back to default...\\n"
-            region_code=
-        fi
-    fi
-
-    if test -n "${region_code}" \
-        && ! grep -q "${region_code}.archive.u" /etc/apt/sources.list; then
-        printf \
-            'Info: Switching to use the local APT software repository mirror...\n'
-        if ! \
-            sed \
-                --in-place \
-                "s@//archive.u@//${region_code}.archive.u@g" \
-                /etc/apt/sources.list; then
-            printf \
-                'Error: Unable to switch to use the local APT software repository mirror.\n' \
-                1>&2
-            exit 2
-        fi
-
-        printf \
-            'Info: Refreshing the local APT software archive cache...\n'
-        if ! apt-get update; then
-            printf \
-                'Error: Unable to refresh the local APT software archive cache.\n' \
+                'Error: Unable to switch to a local Ubuntu package mirror.\n' \
                 1>&2
             exit 2
         fi
