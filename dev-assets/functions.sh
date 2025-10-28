@@ -865,6 +865,11 @@ install_distro_packages(){
                         return 1
                     fi
                 ;;
+                debian)
+                    if ! install_debian_packages "${packages[@]}"; then
+                        return 1
+                    fi
+                ;;
                 *)
                     printf \
                         '%s: Error: Unsupported OS distribution: %s.\n' \
