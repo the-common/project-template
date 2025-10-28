@@ -514,6 +514,9 @@ detect_local_region_code(){
         # Do not show progress meter but keep error messages
         --silent
         --show-error
+
+        # Avoid hanged service
+        --max-time 15
     )
     local ip_reverse_lookup_service_response
     if ! ip_reverse_lookup_service_response="$(
