@@ -613,7 +613,8 @@ switch_ubuntu_local_mirror(){
                     "http://${region_code}.archive.ubuntu.com" \
                     >/dev/null; then
                 printf \
-                    "Warning: The local Ubuntu archive mirror doesn't seem to exist, falling back to current settings...\\n"
+                    "Warning: The local Ubuntu archive mirror doesn't seem to exist, falling back to current settings...\\n" \
+                    1>&2
                 return 0
             else
                 printf \
