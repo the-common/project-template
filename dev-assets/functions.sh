@@ -885,3 +885,56 @@ install_distro_packages(){
         ;;
     esac
 }
+
+workaround_git_dubious_ownership_error(){
+    local -a required_packages=(
+        # Required for the workarounding Git's "detected dubious ownership..." error
+        git
+    )
+    if test "${#required_packages[@]}" -gt 0; then
+        if ! check_distro_packages_installed "${required_packages[@]}"; then
+            if ! install_distro_packages "${required_packages[@]}"; then
+                printf \
+                    'Error: Unable to install the required packages for the current distribution.\n' \
+                    1>&2
+                return 2
+            fi
+        fi
+    fi
+
+    local script="${BASH_SOURCE[0]}"
+    local script_dir="${script%/*}"
+    local project_dir="${script_dir%/*}"
+    local project_git_dir="${project_dir}/.git"
+    local project_git_dir_uid
+    if ! project_git_dir_uid="$(stat --format '%u' "${project_git_dir}")"; then
+        printf \
+            'Error: Unable to query the owner user ID of the project Git directory.\n' \
+            1>&2
+        return 1
+    fi
+
+    if test "${project_git_dir_uid}" != "${SUDO_UID:-"${UID}"}"; then
+        printf \
+            "Warning: Working around Git's \"detected dubious ownership...\" error...\\n" \
+            1>&2
+        if test -v SUDO_UID \
+            && ! sudo -u "${SUDO_UID}" git config --global --get safe.directory &>/dev/null; then
+            if ! sudo -u "${SUDO_UID}" git config --global --add safe.directory "${project_dir}"; then
+                printf \
+                    "Error: Unable to set Git's \"safe.directory\" config.\\n" \
+                    1>&2
+                return 2
+            fi
+        else
+            if ! git config --global --get safe.directory &>/dev/null; then
+                if ! git config --global --add safe.directory "${project_dir}"; then
+                    printf \
+                        "Error: Unable to set Git's \"safe.directory\" config.\\n" \
+                        1>&2
+                    return 2
+                fi
+            fi
+        fi
+    fi
+}
