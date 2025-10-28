@@ -587,9 +587,9 @@ switch_ubuntu_local_mirror(){
         local region_code
         if ! region_code="$(detect_local_region_code)"; then
             printf \
-                'Warning: Unable to detect the local region code, falling back to the default.\n' \
+                'Warning: Unable to detect the local region code, falling back to the current settings.\n' \
                 1>&2
-            region_code=
+            return 0
         else
             printf \
                 'Info: Local region code determined to be "%s".\n' \
@@ -613,8 +613,8 @@ switch_ubuntu_local_mirror(){
                     "http://${region_code}.archive.ubuntu.com" \
                     >/dev/null; then
                 printf \
-                    "Warning: The local Ubuntu archive mirror doesn't seem to exist, falling back to default...\\n"
-                region_code=
+                    "Warning: The local Ubuntu archive mirror doesn't seem to exist, falling back to current settings...\\n"
+                return 0
             else
                 printf \
                     'Info: The local Ubuntu archive mirror service seems to be available, using it.\n'
@@ -629,8 +629,7 @@ switch_ubuntu_local_mirror(){
         else
             sources_list_file="${sources_list_file_legacy}"
         fi
-        if test -n "${region_code}" \
-            && ! grep -q "${region_code}.archive.u" "${sources_list_file}"; then
+        if ! grep -q "${region_code}.archive.u" "${sources_list_file}"; then
             printf \
                 'Info: Switching to use the local APT software repository mirror...\n'
             if ! \
