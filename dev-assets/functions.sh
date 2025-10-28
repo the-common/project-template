@@ -429,7 +429,7 @@ refresh_debian_local_cache(){
     if ! apt_archive_cache_mtime_epoch="$(
         stat \
             --format=%Y \
-            /var/cache/apt/archives
+            /var/lib/apt/lists
         )"; then
         printf \
             'Error: Unable to query the modification time of the APT software sources cache directory.\n' \

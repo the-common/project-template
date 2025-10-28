@@ -55,7 +55,7 @@ fi
 apt_archive_cache_mtime_epoch="$(
     stat \
         --format=%Y \
-        /var/cache/apt/archives
+        /var/lib/apt/lists
 )"
 current_time_epoch="$(
     date +%s

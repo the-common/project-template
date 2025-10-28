@@ -64,7 +64,7 @@ fi
 if ! apt_archive_cache_mtime_epoch="$(
     stat \
         --format=%Y \
-        /var/cache/apt/archives
+        /var/lib/apt/lists
     )"; then
     printf \
         'Error: Unable to query the APT archive cache directory modification time.\n' \
