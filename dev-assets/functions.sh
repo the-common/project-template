@@ -506,6 +506,53 @@ refresh_package_manager_local_cache(){
     esac
 }
 
+detect_local_region_code(){
+    local -a curl_opts=(
+        # Return non-zero exit status when HTTP error occurs
+        --fail
+
+        # Do not show progress meter but keep error messages
+        --silent
+        --show-error
+    )
+    local ip_reverse_lookup_service_response
+    if ! ip_reverse_lookup_service_response="$(
+            curl \
+                "${curl_opts[@]}" \
+                https://ipinfo.io/json
+        )"; then
+        printf \
+            '%s: Warning: Unable to detect the local region code(IP address reverse lookup service not available).\n' \
+            "${FUNCNAME[0]}" \
+            1>&2
+        return 3
+    fi
+
+    local region_code
+    local -a grep_opts=(
+        --perl-regexp
+        --only-matching
+    )
+    if ! region_code="$(
+        grep \
+            "${grep_opts[@]}" \
+            '(?<="country": ")[[:alpha:]]+' \
+            <<<"${ip_reverse_lookup_service_response}"
+        )"; then
+        printf \
+            '%s: Warning: Unable to parse out the local region code.\n' \
+            "${FUNCNAME[0]}" \
+            1>&2
+        return 4
+    fi
+
+    # The returned region code may be capitalized, normalize it.
+    region_code="${region_code,,*}"
+
+    printf '%s' "${region_code}"
+    return 0
+}
+
 switch_ubuntu_local_mirror(){
     print_progress 'Switching to use the local Ubuntu software archive mirror to minimize package installation time...'
 
@@ -537,50 +584,19 @@ switch_ubuntu_local_mirror(){
 
         printf \
             'Info: Detecting local region code...\n'
-        local -a curl_opts=(
-            # Return non-zero exit status when HTTP error occurs
-            --fail
-
-            # Do not show progress meter but keep error messages
-            --silent
-            --show-error
-        )
-        local ip_reverse_lookup_service_response region_code
-        if ! ip_reverse_lookup_service_response="$(
-                curl \
-                    "${curl_opts[@]}" \
-                    https://ipinfo.io/json
-            )"; then
+        local region_code
+        if ! region_code="$(detect_local_region_code)"; then
             printf \
-                'Warning: Unable to detect the local region code(IP address reverse lookup service not available), falling back to the default.\n' \
+                'Warning: Unable to detect the local region code, falling back to the default.\n' \
                 1>&2
             region_code=
         else
-            local -a grep_opts=(
-                --perl-regexp
-                --only-matching
-            )
-            if ! region_code="$(
-                grep \
-                    "${grep_opts[@]}" \
-                    '(?<="country": ")[[:alpha:]]+' \
-                    <<<"${ip_reverse_lookup_service_response}"
-                )"; then
-                printf \
-                    'Warning: Unable to query the local region code, falling back to default.\n' \
-                    1>&2
-                region_code=
-            else
-                printf \
-                    'Info: Local region code determined to be "%s".\n' \
-                    "${region_code}"
-            fi
+            printf \
+                'Info: Local region code determined to be "%s".\n' \
+                "${region_code}"
         fi
 
         if test -n "${region_code}"; then
-            # The returned region code is capitalized, fixing it.
-            region_code="${region_code,,*}"
-
             printf \
                 'Info: Checking whether the local Ubuntu archive mirror exists...\n'
             local -a curl_opts=(
