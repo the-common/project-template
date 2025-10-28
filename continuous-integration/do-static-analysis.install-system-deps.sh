@@ -268,5 +268,12 @@ printf \
     'Info: ShellCheck version is "%s".\n' \
     "${shellcheck_version}"
 
+if ! workaround_git_dubious_ownership_error; then
+    printf \
+        "Error: Unable to workaround Git's \"detected dubious ownership...\" error.\\n" \
+        1>&2
+    exit 1
+fi
+
 printf \
     'Info: Operation completed without errors.\n'
