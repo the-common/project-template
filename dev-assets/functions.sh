@@ -507,22 +507,58 @@ refresh_package_manager_local_cache(){
 }
 
 detect_local_region_code(){
-    local -a curl_opts=(
-        # Return non-zero exit status when HTTP error occurs
-        --fail
+    local utility
+    if command -v curl >/dev/null; then
+        utility=curl
+    elif command -v wget >/dev/null; then
+        utility=wget
+    else
+        printf \
+            '%s: Error: Neither "curl" nor "wget" command is available for detecting the local region code.\n' \
+            "${FUNCNAME[0]}" \
+            1>&2
+        return 1
+    fi
 
-        # Do not show progress meter but keep error messages
-        --silent
-        --show-error
+    local -a utility_opts=()
+    case "${utility}" in
+        curl)
+            utility_opts=(
+                # Return non-zero exit status when HTTP error occurs
+                --fail
 
-        # Avoid hanged service
-        --max-time 15
-    )
+                # Do not show progress meter but keep error messages
+                --silent
+                --show-error
+
+                # Avoid hanged service
+                --max-time 15
+            )
+        ;;
+        wget)
+            utility_opts=(
+                # Output to the standard output device
+                --output-document=-
+
+                # Don't output debug messages
+                --quiet
+
+                # Avoid hanged service
+                --timeout=15
+            )
+        ;;
+        *)
+            printf \
+                '%s: Error: Unsupported utility "%s" for detecting the local region code.\n' \
+                "${FUNCNAME[0]}" \
+                "${utility}" \
+                1>&2
+            return 2
+        ;;
+    esac
     local ip_reverse_lookup_service_response
     if ! ip_reverse_lookup_service_response="$(
-            curl \
-                "${curl_opts[@]}" \
-                https://ipinfo.io/json
+            "${utility}" "${utility_opts[@]}" https://ipinfo.io/json
         )"; then
         printf \
             '%s: Warning: Unable to detect the local region code(IP address reverse lookup service not available).\n' \
