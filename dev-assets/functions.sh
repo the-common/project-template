@@ -559,100 +559,101 @@ switch_ubuntu_local_mirror(){
     if test -v CI; then
         printf \
             'Info: CI environment detected, will not attempt to change the software sources.\n'
-    else
-        local -a mirror_patch_dependency_pkgs=(
-            # For sending HTTP request to third-party IP address lookup
-            # services
-            curl
+        return 0
+    fi
 
-            # For parsing IP address lookup response
-            grep
+    local -a mirror_patch_dependency_pkgs=(
+        # For sending HTTP request to third-party IP address lookup
+        # services
+        curl
 
-            # For patching APT software source definition list
-            sed
-        )
-        if ! check_distro_packages_installed "${mirror_patch_dependency_pkgs[@]}"; then
-            printf \
-                'Info: Installing the runtime dependencies packages for the mirror patching functionality...\n'
-            if ! install_distro_packages "${mirror_patch_dependency_pkgs[@]}"; then
-                printf \
-                    'Error: Unable to install the runtime dependencies packages for the mirror patching functionality.\n' \
-                    1>&2
-                return 2
-            fi
-        fi
+        # For parsing IP address lookup response
+        grep
 
+        # For patching APT software source definition list
+        sed
+    )
+    if ! check_distro_packages_installed "${mirror_patch_dependency_pkgs[@]}"; then
         printf \
-            'Info: Detecting local region code...\n'
-        local region_code
-        if ! region_code="$(detect_local_region_code)"; then
+            'Info: Installing the runtime dependencies packages for the mirror patching functionality...\n'
+        if ! install_distro_packages "${mirror_patch_dependency_pkgs[@]}"; then
             printf \
-                'Warning: Unable to detect the local region code, falling back to the current settings.\n' \
+                'Error: Unable to install the runtime dependencies packages for the mirror patching functionality.\n' \
+                1>&2
+            return 2
+        fi
+    fi
+
+    printf \
+        'Info: Detecting local region code...\n'
+    local region_code
+    if ! region_code="$(detect_local_region_code)"; then
+        printf \
+            'Warning: Unable to detect the local region code, falling back to the current settings.\n' \
+            1>&2
+        return 0
+    else
+        printf \
+            'Info: Local region code determined to be "%s".\n' \
+            "${region_code}"
+    fi
+
+    if test -n "${region_code}"; then
+        printf \
+            'Info: Checking whether the local Ubuntu archive mirror exists...\n'
+        local -a curl_opts=(
+            # Return non-zero exit status when HTTP error occurs
+            --fail
+
+            # Do not show progress meter but keep error messages
+            --silent
+            --show-error
+        )
+        if ! \
+            curl \
+                "${curl_opts[@]}" \
+                "http://${region_code}.archive.ubuntu.com" \
+                >/dev/null; then
+            printf \
+                "Warning: The local Ubuntu archive mirror doesn't seem to exist, falling back to current settings...\\n" \
                 1>&2
             return 0
         else
             printf \
-                'Info: Local region code determined to be "%s".\n' \
-                "${region_code}"
+                'Info: The local Ubuntu archive mirror service seems to be available, using it.\n'
+        fi
+    fi
+
+    local sources_list_file_legacy=/etc/apt/sources.list
+    local sources_list_file_deb822=/etc/apt/sources.list.d/ubuntu.sources
+    local sources_list_file
+    if test -e "${sources_list_file_deb822}"; then
+        sources_list_file="${sources_list_file_deb822}"
+    else
+        sources_list_file="${sources_list_file_legacy}"
+    fi
+    if ! grep -q "${region_code}.archive.u" "${sources_list_file}"; then
+        printf \
+            'Info: Switching to use the local APT software repository mirror...\n'
+        if ! \
+            sed \
+                --regexp-extended \
+                --in-place \
+                "s@//([[:alpha:]]+\\.)?archive\\.ubuntu\\.com@//${region_code}.archive.ubuntu.com@g" \
+                "${sources_list_file}"; then
+            printf \
+                'Error: Unable to switch to use the local APT software repository mirror.\n' \
+                1>&2
+            return 2
         fi
 
-        if test -n "${region_code}"; then
+        printf \
+            'Info: Refreshing the local APT software archive cache...\n'
+        if ! apt-get update; then
             printf \
-                'Info: Checking whether the local Ubuntu archive mirror exists...\n'
-            local -a curl_opts=(
-                # Return non-zero exit status when HTTP error occurs
-                --fail
-
-                # Do not show progress meter but keep error messages
-                --silent
-                --show-error
-            )
-            if ! \
-                curl \
-                    "${curl_opts[@]}" \
-                    "http://${region_code}.archive.ubuntu.com" \
-                    >/dev/null; then
-                printf \
-                    "Warning: The local Ubuntu archive mirror doesn't seem to exist, falling back to current settings...\\n" \
-                    1>&2
-                return 0
-            else
-                printf \
-                    'Info: The local Ubuntu archive mirror service seems to be available, using it.\n'
-            fi
-        fi
-
-        local sources_list_file_legacy=/etc/apt/sources.list
-        local sources_list_file_deb822=/etc/apt/sources.list.d/ubuntu.sources
-        local sources_list_file
-        if test -e "${sources_list_file_deb822}"; then
-            sources_list_file="${sources_list_file_deb822}"
-        else
-            sources_list_file="${sources_list_file_legacy}"
-        fi
-        if ! grep -q "${region_code}.archive.u" "${sources_list_file}"; then
-            printf \
-                'Info: Switching to use the local APT software repository mirror...\n'
-            if ! \
-                sed \
-                    --regexp-extended \
-                    --in-place \
-                    "s@//([[:alpha:]]+\\.)?archive\\.ubuntu\\.com@//${region_code}.archive.ubuntu.com@g" \
-                    "${sources_list_file}"; then
-                printf \
-                    'Error: Unable to switch to use the local APT software repository mirror.\n' \
-                    1>&2
-                return 2
-            fi
-
-            printf \
-                'Info: Refreshing the local APT software archive cache...\n'
-            if ! apt-get update; then
-                printf \
-                    'Error: Unable to refresh the local APT software archive cache.\n' \
-                    1>&2
-                return 2
-            fi
+                'Error: Unable to refresh the local APT software archive cache.\n' \
+                1>&2
+            return 2
         fi
     fi
 }
