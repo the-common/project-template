@@ -64,23 +64,11 @@ if ! source "${dev_assets_dir}/functions.sh"; then
     exit 1
 fi
 
-apt_archive_cache_mtime_epoch="$(
-    stat \
-        --format=%Y \
-        /var/lib/apt/lists
-)"
-current_time_epoch="$(
-    date +%s
-)"
-if test "$((current_time_epoch - apt_archive_cache_mtime_epoch))" -ge 86400; then
+if ! refresh_debian_local_cache; then
     printf \
-        'Info: Refreshing the APT local package cache...\n'
-    if ! apt-get update; then
-        printf \
-            'Error: Unable to refresh the APT local package cache.\n' \
-            1>&2
-        exit 2
-    fi
+        'Error: Unable to refresh the APT local package cache.\n' \
+        1>&2
+    exit 2
 fi
 
 # Silence warnings regarding unavailable debconf frontends

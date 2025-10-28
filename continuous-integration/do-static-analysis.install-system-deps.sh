@@ -72,33 +72,11 @@ if ! test -e "${cache_dir}"; then
     fi
 fi
 
-if ! apt_archive_cache_mtime_epoch="$(
-    stat \
-        --format=%Y \
-        /var/lib/apt/lists
-    )"; then
+if ! refresh_debian_local_cache; then
     printf \
-        'Error: Unable to query the APT archive cache directory modification time.\n' \
+        'Error: Unable to refresh the APT local package cache.\n' \
         1>&2
-    exit 1
-fi
-
-if ! current_time_epoch="$(date +%s)"; then
-    printf \
-        'Error: Unable to query the current time.\n' \
-        1>&2
-    exit 1
-fi
-
-if test "$((current_time_epoch - apt_archive_cache_mtime_epoch))" -ge 86400; then
-    printf \
-        'Info: Refreshing the APT local package cache...\n'
-    if ! apt-get update; then
-        printf \
-            'Error: Unable to refresh the APT local package cache.\n' \
-            1>&2
-        exit 2
-    fi
+    exit 2
 fi
 
 # Silence warnings regarding unavailable debconf frontends
