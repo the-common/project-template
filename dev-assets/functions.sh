@@ -892,6 +892,8 @@ install_distro_packages(){
 }
 
 workaround_git_dubious_ownership_error(){
+    local project_dir="${1}"; shift
+
     local -a required_packages=(
         # Required for the workarounding Git's "detected dubious ownership..." error
         git
@@ -907,9 +909,6 @@ workaround_git_dubious_ownership_error(){
         fi
     fi
 
-    local script="${BASH_SOURCE[0]}"
-    local script_dir="${script%/*}"
-    local project_dir="${script_dir%/*}"
     local project_git_dir="${project_dir}/.git"
     local project_git_dir_uid
     if ! project_git_dir_uid="$(stat --format '%u' "${project_git_dir}")"; then
@@ -922,14 +921,14 @@ workaround_git_dubious_ownership_error(){
     if test "${project_git_dir_uid}" != "${SUDO_UID:-"${UID}"}"; then
         if test -v SUDO_UID; then
             if ! sudo -u "${SUDO_UID}" git config --global --get safe.directory &>/dev/null; then
-        printf \
-            "Warning: Working around Git's \"detected dubious ownership...\" error...\\n" \
-            1>&2
-            if ! sudo -u "${SUDO_UID}" git config --global --add safe.directory "${project_dir}"; then
                 printf \
-                    "Error: Unable to set Git's \"safe.directory\" config.\\n" \
+                    "Warning: Working around Git's \"detected dubious ownership...\" error...\\n" \
                     1>&2
-                return 2
+                if ! sudo -u "${SUDO_UID}" git config --global --add safe.directory "${project_dir}"; then
+                    printf \
+                        "Error: Unable to set Git's \"safe.directory\" config.\\n" \
+                        1>&2
+                    return 2
                 fi
             fi
         else

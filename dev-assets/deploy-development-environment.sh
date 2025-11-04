@@ -90,6 +90,8 @@ if ! trap trap_err ERR; then
     exit 1
 fi
 
+project_dir="${script_dir%/*}"
+
 printf \
     'Info: Loading common function definitions...\n'
 functions_file="${script_dir}/functions.sh"
@@ -157,7 +159,7 @@ if test "${distro_id}" == 'ubuntu'; then
     fi
 fi
 
-if ! workaround_git_dubious_ownership_error; then
+if ! workaround_git_dubious_ownership_error "${project_dir}"; then
     printf \
         "Error: Unable to workaround Git's \"detected dubious ownership...\" error.\\n" \
         1>&2
