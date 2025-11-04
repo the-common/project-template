@@ -920,19 +920,23 @@ workaround_git_dubious_ownership_error(){
     fi
 
     if test "${project_git_dir_uid}" != "${SUDO_UID:-"${UID}"}"; then
+        if test -v SUDO_UID; then
+            if ! sudo -u "${SUDO_UID}" git config --global --get safe.directory &>/dev/null; then
         printf \
             "Warning: Working around Git's \"detected dubious ownership...\" error...\\n" \
             1>&2
-        if test -v SUDO_UID \
-            && ! sudo -u "${SUDO_UID}" git config --global --get safe.directory &>/dev/null; then
             if ! sudo -u "${SUDO_UID}" git config --global --add safe.directory "${project_dir}"; then
                 printf \
                     "Error: Unable to set Git's \"safe.directory\" config.\\n" \
                     1>&2
                 return 2
+                fi
             fi
         else
             if ! git config --global --get safe.directory &>/dev/null; then
+                printf \
+                    "Warning: Working around Git's \"detected dubious ownership...\" error...\\n" \
+                    1>&2
                 if ! git config --global --add safe.directory "${project_dir}"; then
                     printf \
                         "Error: Unable to set Git's \"safe.directory\" config.\\n" \
