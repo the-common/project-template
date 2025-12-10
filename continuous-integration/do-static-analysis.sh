@@ -7,9 +7,9 @@ set \
     -o nounset
 
 required_commands=(
-    realpath
-    python3
     pip
+    python3
+    realpath
 )
 for command in "${required_commands[@]}"; do
     if ! command -v "${command}" >/dev/null; then
