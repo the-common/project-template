@@ -5,20 +5,20 @@
 # * Compose Specification | Compose file reference | Reference | Docker Docs
 #   https://docs.docker.com/compose/compose-file/
 #
-# Copyright 2025 林博仁(Buo-ren Lin) <buo.ren.lin@gmail.com>
+# Copyright 2026 林博仁(Buo-ren Lin) <buo.ren.lin@gmail.com>
 # SPDX-License-Identifier: CC-BY-SA-4.0
 name: project-name
 services:
-  # Environment for developing the project
-  dev-environment:
-    container_name: project-name-dev
-    hostname: project-name-dev
+  # Environment for testing the project
+  test-environment:
+    container_name: project-name-test
+    hostname: project-name-test
     image: ubuntu:24.04
     volumes:
       - type: bind
         source: ./
         target: /project
-    environment: &common-env
+    environment:
       # Pass host proxy settings to the container
       - http_proxy
       - HTTP_PROXY
@@ -34,20 +34,3 @@ services:
       - DEBIAN_FRONTEND=noninteractive
     init: true
     command: sleep infinity
-    profiles:
-      - dev
-
-  # Environment for testing the project
-  test-environment:
-    container_name: project-name-test
-    hostname: project-name-test
-    image: ubuntu:24.04
-    volumes:
-      - type: bind
-        source: ./
-        target: /project
-    environment: *common-env
-    init: true
-    command: sleep infinity
-    profiles:
-      - test
