@@ -55,9 +55,8 @@ fi
 project_dir="$(dirname "${script_dir}")"
 
 # Load the common functions
-dev_assets_dir="${project_dir}/dev-assets"
-# shellcheck source=SCRIPTDIR/../dev-assets/functions.sh
-if ! source "${dev_assets_dir}/functions.sh"; then
+# shellcheck source=SCRIPTDIR/../functions.sh
+if ! source "${project_dir}/functions.sh"; then
     printf \
         'Error: Unable to load the common functions.\n' \
         1>&2

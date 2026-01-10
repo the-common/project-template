@@ -94,8 +94,8 @@ project_dir="${script_dir%/*}"
 
 printf \
     'Info: Loading common function definitions...\n'
-functions_file="${script_dir}/functions.sh"
-# shellcheck source=SCRIPTDIR/functions.sh
+functions_file="${project_dir}/functions.sh"
+# shellcheck source=SCRIPTDIR/../functions.sh
 if ! source "${functions_file}"; then
     printf \
         'Error: Unable to load the common function definitions file.\n' \
