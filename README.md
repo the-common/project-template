@@ -18,16 +18,16 @@ A common project template to start of, batteries included.
         _project_directory_
     ```
 
-1. Downloading a copy of [The common project template release archive](https://gitlab.com/the-common/project-template/-/releases)
-1. Extract The common project template release archive to a temporary directory
-1. Copy all the files to the new project local repository's working tree(you may drop a few files that are irrevelant to your project)
-1. Continue the operation in [Common instructions](#common-instructions)
+1. Downloading a copy of [The common project template release archive](https://gitlab.com/the-common/project-template/-/releases).
+1. Extract The common project template release archive to a temporary directory.
+1. Copy all the files to the new project local repository's working tree(you may drop a few files that are irrevelant to your project).
+1. Continue the operation in [Common instructions](#common-instructions).
 
 ### If you're on GitHub
 
-1. Click the ["Use this template" green button](https://github.com/the-common/project-template/generate) on [the mirrored GitHub project page](https://github.com/the-common/project-template)
-1. Follow the instructions on the webpage to create a new project
-1. Continue the operation in [Common instructions](#common-instructions)
+1. Click the ["Use this template" green button](https://github.com/the-common/project-template/generate) on [the mirrored GitHub project page](https://github.com/the-common/project-template).
+1. Follow the instructions on the webpage to create a new project.
+1. Continue the operation in [Common instructions](#common-instructions).
 
 ### Common instructions
 
@@ -75,8 +75,8 @@ A common project template to start of, batteries included.
     pre-commit install
     ```
 
-1. Commit all changes as a new revision(commit summary for reference: `docs: Write project README prototype`)
-1. (If you've cloned the repository back to local) push local changes to the remote repository
+1. Commit all changes as a new revision(commit summary for reference: `docs: Write project README prototype`).
+1. (If you've cloned the repository back to local) push local changes to the remote repository.
 
 ### (OPTIONAL) Setting up Telegram notifications on GitLab
 
@@ -86,7 +86,7 @@ Refer to the following instructions to set up Telegram notifications on changes 
 1. Click the Add button at the right of the Telegram option in the Add an integration panel.
 1. Toggle the Active checkbox in the Enable integration field.
 1. Fill in your Telegram bot token(can be obtained from the @BotFather Telegram channel).
-1. Selecting events that you want to trigger the Telegram notifications
+1. Selecting events that you want to trigger the Telegram notifications.
 1. In the Notification settings section:
     1. Set the channel identifier where you want the Telgram bot to send notification to in the Channel identifier field.
     1. (OPTIONAL) Untoggle the Notify only broken pipelines checkbox in the Notify only broken pipelines field so that you'll also be notified of successful pipelines.
