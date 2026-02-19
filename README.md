@@ -20,7 +20,7 @@ A common project template to start of, batteries included.
 
 1. Downloading a copy of [The common project template release archive](https://gitlab.com/the-common/project-template/-/releases)
 1. Extract The common project template release archive to a temporary directory
-1. Copy all the files to the new project local repository's working tree
+1. Copy all the files to the new project local repository's working tree(you may drop a few files that are irrevelant to your project)
 1. Continue the operation in [Common instructions](#common-instructions)
 
 ### If you're on GitHub
