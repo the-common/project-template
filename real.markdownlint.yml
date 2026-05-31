@@ -44,3 +44,9 @@ no-inline-html: False
 # `title` property
 first-line-h1:
   front_matter_title: '.*'
+
+# Do not align GFM table delimiter columns, since it is not required and
+# may cause unnecessary diffs
+table:
+  aligned_delimiter: False
+  style: compact
