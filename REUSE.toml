@@ -12,6 +12,7 @@ version = 1
 
 [[annotations]]
 path = [
+    "**/AGENTS.md",
     "*.README.md",
     "**/README.md"
 ]
