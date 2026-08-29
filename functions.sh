@@ -319,7 +319,7 @@ print_progress(){
     local -i separator_length
 
     # NOTE: COLUMNS shell variable is not available in
-    # non-noninteractive shell
+    # non-interactive shell
     # FIXME: This calculation is not correct for double-width characters
     # (e.g. 中文)
     # https://www.reddit.com/r/bash/comments/gynqa0/how_to_determine_character_width_for_special/
