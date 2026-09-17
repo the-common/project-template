@@ -196,7 +196,86 @@ check_debian_packages_installed(){
         return 0
     fi
 
-    if ! dpkg --status "${packages[@]}" &>/dev/null; then
+    local -a packages_quantity="${#packages[@]}"
+    # This is dpkg-query syntax
+    # shellcheck disable=SC2016
+    local -a dpkg_query_opts=(
+        --showformat='${db:Status-Status}\n'
+        --show
+    )
+    local dpkg_query_result
+    if ! dpkg_query_result="$(
+        dpkg-query \
+            "${dpkg_query_opts[@]}" \
+            "${packages[@]}" 2>/dev/null
+        )"; then
+        case "${?}" in
+            0)
+                : # We're not done yet
+            ;;
+            1)
+                # Some packages not found
+                return 1
+            ;;
+            2)
+                # Fatal or unrecoverable error
+                printf \
+                    '%s: FATAL: dpkg-query failed with exit code 2.\n' \
+                    "${FUNCNAME[0]}" \
+                    1>&2
+                exit 99
+            ;;
+            *)
+                printf \
+                    '%s: FATAL: Unsupported retrun value of dpkg-query "%s".\n' \
+                    "${FUNCNAME[0]}" \
+                    "${?}" \
+                    1>&2
+                exit 99
+            ;;
+        esac
+    fi
+
+    local installed_count
+    local -a grep_opts=(
+        --quiet
+        --count
+        --line-regexp
+    )
+    if ! installed_count="$(
+        grep "${grep_opts[@]}" \
+            installed \
+            <<<"${dpkg_query_result}"
+        )"; then
+        case "${?}" in
+            0)
+                # Some packages are installed, but we aren't sure how
+                # many
+                :
+            ;;
+            1)
+                # Some packages not installed
+                return 1
+            ;;
+            2)
+                printf \
+                    '%s: Error: Failed to count installed packages.\n' \
+                    "${FUNCNAME[0]}" \
+                    1>&2
+                return 2
+            ;;
+            *)
+                printf \
+                    '%s: FATAL: Unsupported return value of grep "%s".\n' \
+                    "${FUNCNAME[0]}" \
+                    "${?}" \
+                    1>&2
+                exit 99
+            ;;
+        esac
+    fi
+
+    if test "${installed_count}" -lt "${packages_quantity}"; then
         return 1
     fi
 }
