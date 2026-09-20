@@ -32,6 +32,9 @@ repos:
         exclude: |
           (?ix)^(
             LICENSES/.*
+
+            # Trailing whitespace exists for lines that aren't changed in the context
+            |.*\.patch
           )$
         args:
           - --markdown-linebreak-ext=md
