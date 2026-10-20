@@ -18,7 +18,7 @@ do-static-analysis:
   rules:
     - if: $CI_COMMIT_TAG == null
   needs: []
-  image: ubuntu:22.04
+  image: debian:13
   variables:
     PIP_CACHE_DIR: ${CI_PROJECT_DIR}/.cache/pip
     PRE_COMMIT_HOME: ${CI_PROJECT_DIR}/.cache/pre-commit
@@ -40,7 +40,7 @@ generate-build-artifacts:
   rules:
     - if: $CI_COMMIT_TAG
   needs: []
-  image: ubuntu:22.04
+  image: debian:13
   artifacts:
     paths:
       - ${CI_PROJECT_NAME}-*.tar*
